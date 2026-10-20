@@ -1,0 +1,196 @@
+space: energy_dm
+externalId: PipingCorrosionInference
+name: Piping Corrosion Inference
+description: Databricks GP corrosion-rate scorecard linked to one EnergyPiping line (P10/P50/P90 rate and remaining life).
+implements:
+- space: cdf_cdm
+  externalId: CogniteDescribable
+  version: v1
+  type: view
+- space: cdf_cdm
+  externalId: CogniteSourceable
+  version: v1
+  type: view
+version: v1
+properties:
+  modelName:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: modelName
+    name: Model name
+    description: Scoring model identifier (e.g. cui-gp-matern).
+  modelVersion:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: modelVersion
+    name: Model version
+    description: Published model version (e.g. v1-demo).
+  predictedAt:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: predictedAt
+    name: Predicted at
+    description: When the scoring job wrote this posterior.
+  operatingTempC:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: operatingTempC
+    name: Operating temperature
+    description: Temperature the GP conditioned on (°C).
+  insulated:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: insulated
+    name: Insulated
+    description: Whether the line is treated as CUI-exposed.
+  posteriorSource:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: posteriorSource
+    name: Posterior source
+    description: UT-updated posterior vs prior-only.
+  predictedRateMmPerYr:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: predictedRateMmPerYr
+    name: Predicted rate
+    description: GP P50 corrosion rate (mm/yr).
+  rateStdMmPerYr:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: rateStdMmPerYr
+    name: Rate std
+    description: Posterior standard deviation of corrosion rate (mm/yr).
+  rateP10MmPerYr:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: rateP10MmPerYr
+    name: Rate P10
+    description: P10 corrosion rate (mm/yr).
+  rateP50MmPerYr:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: rateP50MmPerYr
+    name: Rate P50
+    description: P50 corrosion rate (mm/yr).
+  rateP90MmPerYr:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: rateP90MmPerYr
+    name: Rate P90
+    description: P90 corrosion rate (mm/yr).
+  remainingLifeP10Yr:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: remainingLifeP10Yr
+    name: Remaining life P10
+    description: P10 remaining life to tmin (years).
+  remainingLifeP50Yr:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: remainingLifeP50Yr
+    name: Remaining life P50
+    description: P50 remaining life to tmin (years).
+  remainingLifeP90Yr:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: remainingLifeP90Yr
+    name: Remaining life P90
+    description: P90 remaining life to tmin (years).
+  inspectNextCmlId:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: inspectNextCmlId
+    name: Inspect-next CML
+    description: Suggested CML external id for the next thickness measurement.
+  valueOfInformation:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: valueOfInformation
+    name: Value of information
+    description: 0–1 ranking for where another inspection reduces uncertainty or risk.
+  inCuiWindow:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: inCuiWindow
+    name: In CUI window
+    description: True when CUI-exposed and operating temperature is in 50–120°C.
+  nObservations:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: nObservations
+    name: N observations
+    description: UT campaigns in the GP training subset for this line.
+  registerRateMmPerYr:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: registerRateMmPerYr
+    name: Register rate
+    description: Snapshot of EnergyPiping corrosion rate at score time (mm/yr).
+  sourcePipingKey:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: sourcePipingKey
+    name: Source piping key
+    description: EnergyPiping external id from Databricks gold (PIPING-…).
+  uncertaintyFlag:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: uncertaintyFlag
+    name: Uncertainty flag
+    description: Coarse uncertainty badge (High, Medium, Low).
+  piping:
+    container:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      type: container
+    containerPropertyIdentifier: piping
+    name: Piping
+    description: EnergyPiping line this scorecard applies to.
+    source:
+      space: energy_dm
+      externalId: EnergyPiping
+      version: v1
+      type: view

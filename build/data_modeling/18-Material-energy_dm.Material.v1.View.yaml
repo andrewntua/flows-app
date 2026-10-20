@@ -1,0 +1,67 @@
+space: energy_dm
+externalId: Material
+name: Material
+description: Material grade (alloy) used on piping or equipment.
+implements:
+- space: cdf_cdm
+  externalId: CogniteDescribable
+  version: v1
+  type: view
+version: v1
+properties:
+  coated:
+    container:
+      space: energy_dm
+      externalId: Material
+      type: container
+    containerPropertyIdentifier: coated
+    name: Coated
+    description: Whether the material surface has an applied coating.
+  cuiSusceptibilityMinC:
+    container:
+      space: energy_dm
+      externalId: Material
+      type: container
+    containerPropertyIdentifier: cuiSusceptibilityMinC
+    name: CUI Susceptibility Min (°C)
+    description: Lower bound of the CUI susceptibility temperature window (°C).
+  cuiSusceptibilityMaxC:
+    container:
+      space: energy_dm
+      externalId: Material
+      type: container
+    containerPropertyIdentifier: cuiSusceptibilityMaxC
+    name: CUI Susceptibility Max (°C)
+    description: Upper bound of the CUI susceptibility temperature window (°C).
+  cuiPeakMinC:
+    container:
+      space: energy_dm
+      externalId: Material
+      type: container
+    containerPropertyIdentifier: cuiPeakMinC
+    name: CUI Peak Min (°C)
+    description: Lower bound of the peak CUI risk temperature band (°C).
+  cuiPeakMaxC:
+    container:
+      space: energy_dm
+      externalId: Material
+      type: container
+    containerPropertyIdentifier: cuiPeakMaxC
+    name: CUI Peak Max (°C)
+    description: Upper bound of the peak CUI risk temperature band (°C).
+  piping:
+    source:
+      space: energy_dm
+      externalId: EnergyPiping
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: EnergyPiping
+        version: v1
+        type: view
+      identifier: material
+    name: Piping
+    description: Piping lines using this material grade.
+    connectionType: multi_reverse_direct_relation

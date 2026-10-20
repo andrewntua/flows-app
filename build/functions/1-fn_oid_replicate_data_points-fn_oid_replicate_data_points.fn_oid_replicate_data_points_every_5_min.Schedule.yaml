@@ -1,0 +1,7 @@
+name: fn_oid_replicate_data_points_every_5_min
+functionExternalId: fn_oid_replicate_data_points
+description: Replicate OID datapoints every five minutes (UTC)
+cronExpression: '*/5 * * * *'
+authentication:
+  clientId: ${IDP_CLIENT_ID}
+  clientSecret: ${IDP_CLIENT_SECRET}

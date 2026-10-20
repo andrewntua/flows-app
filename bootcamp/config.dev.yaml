@@ -1,0 +1,45 @@
+# Pair with credentials: uv run cdf --env-path .env.dev <command>
+environment:
+  name: dev
+  # project defaults from CDF_PROJECT in the env file (uv run cdf --env-path .env.dev …)
+  validation-type: dev
+  selected:
+    - modules/custom/groups
+    - modules/custom/energy/energy_data_model
+    - modules/custom/energy/energy_base_raw_dm_ingestion
+    - modules/custom/energy/energy_diagram_contextualization
+    - modules/custom/energy/energy_oid_datapoint_replication
+    - modules/custom/energy/energy_corrosion_agent
+ 
+# Toolkit module variables ({{ name }} in YAML/SQL; ${NAME} resolved from .env)
+variables:
+  modules:
+    # --- Access control (modules/custom/groups) ---
+    # Entra ID object ID for the group mapped to read-write-all
+    azureGroupIdentifier: ${AZURE_GROUP_IDENTIFIER}
+    # Entra ID object ID for the group mapped to participants
+    participantsAzureGroupIdentifier: ${AZURE_GROUP_IDENTIFIER_PARTICIPANTS}
+    # Entra ID object ID for cognite_toolkit_service_principal (Toolkit deploy SP)
+    toolkitPrincipalAzureGroupIdentifier: ${AZURE_GROUP_IDENTIFIER_TOOLKIT_PRINCIPAL}
+ 
+    # --- Energy data model (spaces, views, demo asset prefix) ---
+    energyInstanceSpace: energy_instances
+    energyDataModelSpace: energy_dm
+    energyAssetPrefix: "WMT:"
+    viewVersion: v1
+    energyTimeSeriesSpace: energy_time_series
+ 
+    # --- Energy base RAW → DM ingestion ---
+    # RAW database name used in transformation SQL (`db`.`Table`)
+    energyBaseRawDb: energy_dm_base_demo
+    energy_base_raw_ingestion_dataset_external_id: ds_energy_base_raw_ingestion
+    energy_base_raw_ingestion_dataset_name: Energy Base RAW to DM
+ 
+    # --- Diagram contextualization workflow ---
+    diagramWorkflowVersion: "1"
+ 
+    # --- OID publicdata → bootcamp time series replication ---
+    oidRootAssetExternalId: "WMT:Aker BP"
+    # Schedule OAuth client (same IDP credentials as Toolkit deploy when using service principal)
+    oidScheduleClientId: ${IDP_CLIENT_ID}
+    oidScheduleClientSecret: ${IDP_CLIENT_SECRET}

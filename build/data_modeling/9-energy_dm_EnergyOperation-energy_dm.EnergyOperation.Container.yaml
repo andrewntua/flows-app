@@ -1,0 +1,544 @@
+space: energy_dm
+externalId: EnergyOperation
+name: Operations
+properties:
+  operationNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: operationNumber
+    description: SAP operation number. @name Operation Number
+  workCenter:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenter
+    description: SAP work center where the operation is performed. @name Work Center
+  plant:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: plant
+    description: SAP plant identifier. @name Plant
+  operationType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: operationType
+    description: SAP operation type. @name Operation Type
+  controlKey:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: controlKey
+    description: SAP operation control key. @name Control Key
+  controlKeyDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: controlKeyDescription
+    description: SAP operation control key description. @name Control Key Description
+  systemStatus:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: systemStatus
+    description: SAP operation system status. @name System Status
+  userStatus:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: userStatus
+    description: SAP operation user status. @name User Status
+  priority:
+    type:
+      list: false
+      type: int64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: priority
+    description: SAP operation priority. @name Priority
+  priorityDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: priorityDescription
+    description: SAP operation priority description. @name Priority Description
+  operationCategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: operationCategory
+    description: SAP operation category. @name Operation Category
+  operationSubcategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: operationSubcategory
+    description: SAP operation subcategory. @name Operation Subcategory
+  operationText:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: operationText
+    description: SAP operation text. @name Operation Text
+  operationLongText:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: operationLongText
+    description: SAP operation long text. @name Operation Long Text
+  workCenterResponsible:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenterResponsible
+    description: SAP operation work center responsible. @name Work Center Responsible
+  plannerGroup:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: plannerGroup
+    description: SAP operation planner group. @name Planner Group
+  planningPlant:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: planningPlant
+    description: SAP operation planning plant. @name Planning Plant
+  maintenancePlant:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenancePlant
+    description: SAP operation maintenance plant. @name Maintenance Plant
+  costCenter:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: costCenter
+    description: SAP operation cost center. @name Cost Center
+  basicStartDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: basicStartDate
+    description: SAP operation basic start date. @name Basic Start Date
+  basicFinishDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: basicFinishDate
+    description: SAP operation basic finish date. @name Basic Finish Date
+  scheduledStartDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: scheduledStartDate
+    description: SAP operation scheduled start date. @name Scheduled Start Date
+  scheduledFinishDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: scheduledFinishDate
+    description: SAP operation scheduled finish date. @name Scheduled Finish Date
+  suggestedScheduledStartDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: suggestedScheduledStartDate
+    description: AI-suggested alternative start date for work balancing. @name Suggested
+      Scheduled Start Date
+  suggestedScheduledFinishDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: suggestedScheduledFinishDate
+    description: AI-suggested alternative finish date for work balancing. @name Suggested
+      Scheduled Finish Date
+  actualStartDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: actualStartDate
+    description: SAP operation actual start date. @name Actual Start Date
+  actualFinishDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: actualFinishDate
+    description: SAP operation actual finish date. @name Actual Finish Date
+  plannedWorkHours:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: plannedWorkHours
+    description: SAP operation planned work hours. @name Planned Work Hours
+  actualWorkHours:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: actualWorkHours
+    description: SAP operation actual work hours. @name Actual Work Hours
+  plannedCosts:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: plannedCosts
+    description: SAP operation planned costs. @name Planned Costs
+  actualCosts:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: actualCosts
+    description: SAP operation actual costs. @name Actual Costs
+  currency:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: currency
+    description: SAP operation currency. @name Currency
+  equipmentNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: equipmentNumber
+    description: SAP operation equipment number. @name Equipment Number
+  functionalLocation:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: functionalLocation
+    description: SAP operation functional location. @name Functional Location
+  materialNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: materialNumber
+    description: SAP operation material number. @name Material Number
+  materialDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: materialDescription
+    description: SAP operation material description. @name Material Description
+  materialQuantity:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: materialQuantity
+    description: SAP operation material quantity. @name Material Quantity
+  materialUnit:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: materialUnit
+    description: SAP operation material unit. @name Material Unit
+  materialCost:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: materialCost
+    description: SAP operation material cost. @name Material Cost
+  activityType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: activityType
+    description: SAP operation activity type. @name Activity Type
+  activityTypeDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: activityTypeDescription
+    description: SAP operation activity type description. @name Activity Type Description
+  workCenterCapacity:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenterCapacity
+    description: SAP operation work center capacity. @name Work Center Capacity
+  workCenterCapacityUnit:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenterCapacityUnit
+    description: SAP operation work center capacity unit. @name Work Center Capacity
+      Unit
+  workCenterCapacityRequirement:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenterCapacityRequirement
+    description: SAP operation work center capacity requirement. @name Work Center
+      Capacity Requirement
+  workCenterCapacityRequirementUnit:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenterCapacityRequirementUnit
+    description: SAP operation work center capacity requirement unit. @name Work Center
+      Capacity Requirement Unit
+  workCenterCapacityActual:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenterCapacityActual
+    description: SAP operation work center capacity actual. @name Work Center Capacity
+      Actual
+  workCenterCapacityActualUnit:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenterCapacityActualUnit
+    description: SAP operation work center capacity actual unit. @name Work Center
+      Capacity Actual Unit
+  workCenterCapacityPlanned:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenterCapacityPlanned
+    description: SAP operation work center capacity planned. @name Work Center Capacity
+      Planned
+  workCenterCapacityPlannedUnit:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenterCapacityPlannedUnit
+    description: SAP operation work center capacity planned unit. @name Work Center
+      Capacity Planned Unit
+  workCenterCapacityActualStart:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenterCapacityActualStart
+    description: SAP operation work center capacity actual start. @name Work Center
+      Capacity Actual Start
+  workCenterCapacityActualFinish:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenterCapacityActualFinish
+    description: SAP operation work center capacity actual finish. @name Work Center
+      Capacity Actual Finish
+  workCenterCapacityPlannedStart:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenterCapacityPlannedStart
+    description: SAP operation work center capacity planned start. @name Work Center
+      Capacity Planned Start
+  workCenterCapacityPlannedFinish:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenterCapacityPlannedFinish
+    description: SAP operation work center capacity planned finish. @name Work Center
+      Capacity Planned Finish
+  workCenterCapacityRequirementStart:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenterCapacityRequirementStart
+    description: SAP operation work center capacity requirement start. @name Work
+      Center Capacity Requirement Start
+  workCenterCapacityRequirementFinish:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenterCapacityRequirementFinish
+    description: SAP operation work center capacity requirement finish. @name Work
+      Center Capacity Requirement Finish

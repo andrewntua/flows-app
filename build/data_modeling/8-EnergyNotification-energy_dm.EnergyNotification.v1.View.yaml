@@ -1,0 +1,601 @@
+space: energy_dm
+externalId: EnergyNotification
+name: Notifications
+description: 'A notification specific to energy industry maintenance issues, extending
+  CogniteNotification with SAP PM notification fields.
+
+  @name Notifications'
+implements:
+- space: cdf_cdm
+  externalId: CogniteSourceable
+  version: v1
+  type: view
+- space: cdf_cdm
+  externalId: CogniteDescribable
+  version: v1
+  type: view
+- space: cdf_cdm
+  externalId: CogniteSchedulable
+  version: v1
+  type: view
+- space: cdf_idm
+  externalId: CogniteNotification
+  version: v1
+  type: view
+version: v1
+properties:
+  maintenanceOrder:
+    container:
+      space: cdf_idm
+      externalId: CogniteNotification
+      type: container
+    containerPropertyIdentifier: maintenanceOrder
+    name: Maintenance order
+    description: 'The maintenance order that was created from the notification.
+
+      @name Maintenance order'
+    source:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      version: v1
+      type: view
+  asset:
+    container:
+      space: cdf_idm
+      externalId: CogniteNotification
+      type: container
+    containerPropertyIdentifier: asset
+    name: Asset
+    description: 'The asset (functional location) the notification is related to.
+
+      @name Asset'
+    source:
+      space: energy_dm
+      externalId: EnergyAsset
+      version: v1
+      type: view
+  equipment:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: equipment
+    name: Equipment
+    description: 'The equipment the notification is related to.
+
+      @name Equipment'
+    source:
+      space: energy_dm
+      externalId: EnergyEquipment
+      version: v1
+      type: view
+  failureMode:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: failureMode
+    name: Failure Mode
+    description: 'The failure mode associated with this notification.
+
+      @name Failure Mode'
+    source:
+      space: energy_dm
+      externalId: FailureMode
+      version: v1
+      type: view
+  failureMechanism:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: failureMechanism
+    name: Failure Mechanism
+    description: 'The underlying physical, chemical, or operational process leading
+      to a failure, e.g. contamination.
+
+      @name Failure Mechanism'
+    source:
+      space: energy_dm
+      externalId: FailureMechanism
+      version: v1
+      type: view
+  failureCause:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: failureCause
+    name: Failure Cause
+    description: 'The root cause that directly led to a failure, e.g. Improper material
+      as the Design-related cause. Usually observed and reported at component level.
+
+      @name Failure Cause'
+    source:
+      space: energy_dm
+      externalId: FailureCause
+      version: v1
+      type: view
+  notificationNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: notificationNumber
+    name: notificationNumber
+    description: SAP notification number. @name Notification Number
+  notificationType:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: notificationType
+    name: notificationType
+    description: SAP notification type. @name Notification Type
+  notificationTypeDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: notificationTypeDescription
+    name: notificationTypeDescription
+    description: SAP notification type description. @name Notification Type Description
+  notificationCategory:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: notificationCategory
+    name: notificationCategory
+    description: SAP notification category. @name Notification Category
+  notificationCategoryDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: notificationCategoryDescription
+    name: notificationCategoryDescription
+    description: SAP notification category description. @name Notification Category
+      Description
+  notificationSubcategory:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: notificationSubcategory
+    name: notificationSubcategory
+    description: SAP notification subcategory. @name Notification Subcategory
+  notificationSubcategoryDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: notificationSubcategoryDescription
+    name: notificationSubcategoryDescription
+    description: SAP notification subcategory description. @name Notification Subcategory
+      Description
+  systemStatus:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: systemStatus
+    name: systemStatus
+    description: SAP notification system status. @name System Status
+  userStatus:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: userStatus
+    name: userStatus
+    description: SAP notification user status. @name User Status
+  notificationText:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: notificationText
+    name: notificationText
+    description: SAP notification text. @name Notification Text
+  notificationLongText:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: notificationLongText
+    name: notificationLongText
+    description: SAP notification long text. @name Notification Long Text
+  notificationShortText:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: notificationShortText
+    name: notificationShortText
+    description: SAP notification short text. @name Notification Short Text
+  equipmentNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: equipmentNumber
+    name: equipmentNumber
+    description: SAP notification equipment number. @name Equipment Number
+  functionalLocation:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: functionalLocation
+    name: functionalLocation
+    description: SAP notification functional location. @name Functional Location
+  plant:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: plant
+    name: plant
+    description: SAP notification plant. @name Plant
+  workCenter:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: workCenter
+    name: workCenter
+    description: SAP notification work center. @name Work Center
+  plannerGroup:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: plannerGroup
+    name: plannerGroup
+    description: SAP notification planner group. @name Planner Group
+  maintenancePlant:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: maintenancePlant
+    name: maintenancePlant
+    description: SAP notification maintenance plant. @name Maintenance Plant
+  planningPlant:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: planningPlant
+    name: planningPlant
+    description: SAP notification planning plant. @name Planning Plant
+  costCenter:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: costCenter
+    name: costCenter
+    description: SAP notification cost center. @name Cost Center
+  createdBy:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: createdBy
+    name: createdBy
+    description: SAP notification created by. @name Created By
+  createdDate:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: createdDate
+    name: createdDate
+    description: SAP notification created date. @name Created Date
+  notificationCreatedTime:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: notificationCreatedTime
+    name: notificationCreatedTime
+    description: SAP notification created time. @name Created Time
+  changedBy:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: changedBy
+    name: changedBy
+    description: SAP notification changed by. @name Changed By
+  changedDate:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: changedDate
+    name: changedDate
+    description: SAP notification changed date. @name Changed Date
+  changedTime:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: changedTime
+    name: changedTime
+    description: SAP notification changed time. @name Changed Time
+  reportedBy:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: reportedBy
+    name: reportedBy
+    description: SAP notification reported by. @name Reported By
+  reportedDate:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: reportedDate
+    name: reportedDate
+    description: SAP notification reported date. @name Reported Date
+  reportedTime:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: reportedTime
+    name: reportedTime
+    description: SAP notification reported time. @name Reported Time
+  completionDate:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: completionDate
+    name: completionDate
+    description: SAP notification completion date. @name Completion Date
+  completionTime:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: completionTime
+    name: completionTime
+    description: SAP notification completion time. @name Completion Time
+  technicalCompletionDate:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: technicalCompletionDate
+    name: technicalCompletionDate
+    description: SAP notification technical completion date. @name Technical Completion
+      Date
+  technicalCompletionTime:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: technicalCompletionTime
+    name: technicalCompletionTime
+    description: SAP notification technical completion time. @name Technical Completion
+      Time
+  settlementDate:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: settlementDate
+    name: settlementDate
+    description: SAP notification settlement date. @name Settlement Date
+  settlementTime:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: settlementTime
+    name: settlementTime
+    description: SAP notification settlement time. @name Settlement Time
+  settlementRule:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: settlementRule
+    name: settlementRule
+    description: SAP notification settlement rule. @name Settlement Rule
+  settlementRuleDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: settlementRuleDescription
+    name: settlementRuleDescription
+    description: SAP notification settlement rule description. @name Settlement Rule
+      Description
+  settlementRuleType:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: settlementRuleType
+    name: settlementRuleType
+    description: SAP notification settlement rule type. @name Settlement Rule Type
+  settlementRuleTypeDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: settlementRuleTypeDescription
+    name: settlementRuleTypeDescription
+    description: SAP notification settlement rule type description. @name Settlement
+      Rule Type Description
+  settlementRuleCategory:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: settlementRuleCategory
+    name: settlementRuleCategory
+    description: SAP notification settlement rule category. @name Settlement Rule
+      Category
+  settlementRuleCategoryDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: settlementRuleCategoryDescription
+    name: settlementRuleCategoryDescription
+    description: SAP notification settlement rule category description. @name Settlement
+      Rule Category Description
+  settlementRuleSubcategory:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: settlementRuleSubcategory
+    name: settlementRuleSubcategory
+    description: SAP notification settlement rule subcategory. @name Settlement Rule
+      Subcategory
+  settlementRuleSubcategoryDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: settlementRuleSubcategoryDescription
+    name: settlementRuleSubcategoryDescription
+    description: SAP notification settlement rule subcategory description. @name Settlement
+      Rule Subcategory Description
+  objectType:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: objectType
+    name: objectType
+    description: SAP notification object type. @name Object Type
+  objectTypeDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: objectTypeDescription
+    name: objectTypeDescription
+    description: SAP notification object type description. @name Object Type Description
+  objectNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: objectNumber
+    name: objectNumber
+    description: SAP notification object number. @name Object Number
+  objectNumberDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: objectNumberDescription
+    name: objectNumberDescription
+    description: SAP notification object number description. @name Object Number Description
+  objectNumberType:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: objectNumberType
+    name: objectNumberType
+    description: SAP notification object number type. @name Object Number Type
+  objectNumberTypeDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: objectNumberTypeDescription
+    name: objectNumberTypeDescription
+    description: SAP notification object number type description. @name Object Number
+      Type Description
+  objectNumberCategory:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: objectNumberCategory
+    name: objectNumberCategory
+    description: SAP notification object number category. @name Object Number Category
+  objectNumberCategoryDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: objectNumberCategoryDescription
+    name: objectNumberCategoryDescription
+    description: SAP notification object number category description. @name Object
+      Number Category Description
+  objectNumberSubcategory:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: objectNumberSubcategory
+    name: objectNumberSubcategory
+    description: SAP notification object number subcategory. @name Object Number Subcategory
+  objectNumberSubcategoryDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: objectNumberSubcategoryDescription
+    name: objectNumberSubcategoryDescription
+    description: SAP notification object number subcategory description. @name Object
+      Number Subcategory Description
+  failureImpactOnHSE:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: failureImpactOnHSE
+    name: failureImpactOnHSE
+    description: The potential consequences of a failure on personnel safety and the
+      environment. @name Failure Impact on HSE
+  failureImpactOnOperations:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: failureImpactOnOperations
+    name: failureImpactOnOperations
+    description: The effect of a failure on production efficiency and economic performance.
+      @name Failure Impact on Operations
+  failureEffect:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: failureEffect
+    name: failureEffect
+    description: The observable outcome resulting from a failure, e.g. Incipient failure.
+      Usually observed at equipment level. @name Failure Effect
+  detectionMethod:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: detectionMethod
+    name: detectionMethod
+    description: The way in which this failure was observed, e.g. "Casual observation"
+      or "Inspection". @name Detection Method
+  operatingConditionAtFailure:
+    container:
+      space: energy_dm
+      externalId: EnergyNotification
+      type: container
+    containerPropertyIdentifier: operatingConditionAtFailure
+    name: operatingConditionAtFailure
+    description: The state of the asset at the time of failure, including load and
+      external influences, such as Run-down, Start-up, Running, Hot standby, Idle,
+      Cold standby, Testing. @name Operating Condition at Failure

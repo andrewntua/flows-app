@@ -1,0 +1,11 @@
+key,dmCategory,description,name
+DM-CUI-CSCC,CUI,CUI — CSCC,CSCC
+DM-CUI-NA,CUI,CUI — NA,NA
+DM-CUI-PITTING,CUI,CUI — Pitting,Pitting
+DM-CUI-THINNING-FERRITIC,CUI,CUI — CUI thinning (Ferritic),CUI thinning (Ferritic)
+DM-EXT-CREVICE,External,External — Crevice,Crevice
+DM-EXT-CSCC,External,External — CSCC,CSCC
+DM-EXT-FATIGUE,External,External — Fatigue,Fatigue
+DM-EXT-GENERAL-THINNING,External,External — General/atmospheric corrosion (thinning),General/atmospheric corrosion (thinning)
+DM-EXT-PITTING,External,External — Pitting,Pitting
+DM-INT-CO2-THINNING,Internal,Internal — CO₂ corrosion (thinning),CO₂ corrosion (thinning)

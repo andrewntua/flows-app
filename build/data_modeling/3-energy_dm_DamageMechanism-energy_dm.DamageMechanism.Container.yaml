@@ -1,0 +1,22 @@
+space: energy_dm
+externalId: DamageMechanism
+name: Damage Mechanism
+description: RBI damage mechanism with DM category (Internal, External, CUI).
+properties:
+  dmCategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: DM category
+    description: Damage mechanism category (Internal, External, or CUI).
+constraints:
+  cdf_cdm_CogniteDescribable:
+    require:
+      space: cdf_cdm
+      externalId: CogniteDescribable
+      type: container
+    constraintType: requires

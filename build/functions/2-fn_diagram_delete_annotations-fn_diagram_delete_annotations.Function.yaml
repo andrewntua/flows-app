@@ -1,0 +1,13 @@
+externalId: fn_diagram_delete_annotations
+name: Diagram Delete Annotations
+description: Remove CogniteDiagramAnnotation edges before re-detection
+space: energy_instances
+functionPath: ./handler.py
+runtime: py311
+envVars:
+  INSTANCE_SPACE: energy_instances
+  DATA_MODEL_SPACE: energy_dm
+  VIEW_VERSION: v1
+  ASSET_PREFIX: 'WMT:'
+metadata:
+  cognite-toolkit-hash: /=75ce016b;config.py=66c2c223;diagram_annotations.py=0d1a4397;handler.py=e35ce988;requirements.txt=265fa676

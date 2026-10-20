@@ -1,0 +1,868 @@
+space: energy_dm
+externalId: EnergyPiping
+name: Piping
+description: Piping lines from engineering systems (e.g. Aveva), with process and
+  design metadata.
+implements:
+- space: cdf_cdm
+  externalId: CogniteSourceable
+  version: v1
+  type: view
+- space: cdf_cdm
+  externalId: CogniteDescribable
+  version: v1
+  type: view
+version: v1
+properties:
+  asset:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: asset
+    name: Asset
+    description: The asset this piping line is related to.
+    source:
+      space: energy_dm
+      externalId: EnergyAsset
+      version: v1
+      type: view
+  area:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: area
+    name: Area
+    description: Plant area
+  avevaDirectUrl:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: avevaDirectUrl
+    name: Aveva direct URL
+    description: Link to the item in Aveva
+  categoryCode:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: categoryCode
+    name: Category code
+    description: Category code
+  classId:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: classId
+    name: Class ID
+    description: Class identifier
+  className:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: className
+    name: Class name
+    description: Class name (e.g. LINES)
+  compressibilityFactorZ:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: compressibilityFactorZ
+    name: Compressibility factor (Z)
+    description: Compressibility factor (Z)
+  corrosionAllowance:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: corrosionAllowance
+    name: Corrosion allowance
+    description: Corrosion allowance
+  corrosionRateMmPerYr:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: corrosionRateMmPerYr
+    name: Corrosion rate
+    description: Long-term corrosion / thinning rate (mm/yr) used for RBI remaining-life
+      screening.
+  corrosionLoop:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: corrosionLoop
+    name: Corrosion loop
+    description: Direct reference to the corrosion loop this piping belongs to.
+    source:
+      space: energy_dm
+      externalId: CorrosionLoop
+      version: v1
+      type: view
+  densityGas:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: densityGas
+    name: Density (gas)
+    description: Density of gas phase
+  densityGasUom:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: densityGasUom
+    name: Density (gas) UOM
+    description: Unit of measure for density (gas)
+  densityLiquid:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: densityLiquid
+    name: Density (liquid)
+    description: Density of liquid phase
+  designPressureMax:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: designPressureMax
+    name: Design pressure max
+    description: Maximum design pressure
+  designTemperatureMax:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: designTemperatureMax
+    name: Design temperature max
+    description: Maximum design temperature
+  designTemperatureMaxUom:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: designTemperatureMaxUom
+    name: Design temperature max UOM
+    description: Unit of measure for maximum design temperature
+  designTemperatureMin:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: designTemperatureMin
+    name: Design temperature min
+    description: Minimum design temperature
+  designTemperatureMinUom:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: designTemperatureMinUom
+    name: Design temperature min UOM
+    description: Unit of measure for minimum design temperature
+  facility:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: facility
+    name: Facility
+    description: Facility code
+  fromTag:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: fromTag
+    name: From tag
+    description: Upstream tag connection
+  functionCode:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: functionCode
+    name: Function code
+    description: Function code
+  functionCodeDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: functionCodeDescription
+    name: Function code description
+    description: Description of the function code
+  insulationClass:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: insulationClass
+    name: Insulation class
+    description: Insulation class
+  insulationThickness:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: insulationThickness
+    name: Insulation thickness
+    description: Insulation thickness
+  insulationThicknessUom:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: insulationThicknessUom
+    name: Insulation thickness UOM
+    description: Unit of measure for insulation thickness
+  insulationCondition:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: insulationCondition
+    name: Insulation condition
+    description: Assessed condition of insulation (e.g. Good, Fair). Blank when not
+      assessed.
+  insulated:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: insulated
+    name: Insulated
+    description: Whether the piping line is insulated.
+  insulationType:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: insulationType
+    name: Insulation type
+    description: Insulation product or system type.
+  originalInsulationDate:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: originalInsulationDate
+    name: Original insulation date
+    description: Date when insulation was originally applied.
+  priorAssessmentDate:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: priorAssessmentDate
+    name: Prior assessment date
+    description: Date anchoring the prior RBI / risk snapshot.
+  priorPofCategory:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: priorPofCategory
+    name: Prior PoF category
+    description: Prior probability of failure category.
+  priorCofCategory:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: priorCofCategory
+    name: Prior CoF category
+    description: Prior consequence of failure category.
+  priorRiskRank:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: priorRiskRank
+    name: Prior risk rank
+    description: Prior combined risk rank.
+  priorOperatingTemperature:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: priorOperatingTemperature
+    name: Prior operating temperature
+    description: Operating temperature used in the prior assessment snapshot.
+  priorInsulationAge:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: priorInsulationAge
+    name: Prior insulation age
+    description: Insulation age in years at the prior assessment snapshot.
+  pofCategory:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: pofCategory
+    name: PoF category
+    description: Current probability of failure category.
+  cofCategory:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: cofCategory
+    name: CoF category
+    description: Current consequence of failure category.
+  riskRank:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: riskRank
+    name: Risk rank
+    description: Current combined risk rank.
+  riskChanged:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: riskChanged
+    name: Risk Changed
+    description: Whether current risk rank differs from the prior assessment snapshot.
+  deferralOpportunity:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: deferralOpportunity
+    name: Deferral opportunity
+    description: Whether this line is an explicit RBI inspection deferral opportunity.
+  lineNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: lineNumber
+    name: Line number
+    description: Full line number
+  lineServiceCode:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: lineServiceCode
+    name: Line service code
+    description: Line service code
+  liquidFraction:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: liquidFraction
+    name: Liquid fraction
+    description: Liquid fraction
+  massFlow:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: massFlow
+    name: Mass flow
+    description: Mass flow rate
+  massFlowUom:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: massFlowUom
+    name: Mass flow UOM
+    description: Unit of measure for mass flow
+  ndtTestClass:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: ndtTestClass
+    name: NDT test class
+    description: Non-destructive testing class
+  currentSchedule:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: currentSchedule
+    name: Current schedule
+    description: Current inspection programme date (ISO date).
+  recommendedNextInspection:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: recommendedNextInspection
+    name: Recommended next inspection
+    description: RBI-recommended next inspection date (ISO date).
+  nominalDiameter:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: nominalDiameter
+    name: Nominal diameter
+    description: Nominal diameter
+  nominalDiameterUom:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: nominalDiameterUom
+    name: Nominal diameter UOM
+    description: Unit of measure for nominal diameter
+  operatingPressureNormal:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: operatingPressureNormal
+    name: Operating pressure normal
+    description: Normal operating pressure
+  operatingTemperatureMin:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: operatingTemperatureMin
+    name: Operating temperature min
+    description: Minimum operating temperature
+  operatingTemperatureMinUom:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: operatingTemperatureMinUom
+    name: Operating temperature min UOM
+    description: Unit of measure for minimum operating temperature
+  iowTempThresholdMin:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: iowTempThresholdMin
+    name: IOW temp threshold min
+    description: Minimum operating integrity window temperature threshold.
+  iowTempThresholdMax:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: iowTempThresholdMax
+    name: IOW temp threshold max
+    description: Maximum operating integrity window temperature threshold.
+  parentTag:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: parentTag
+    name: Parent tag
+    description: Parent tag identifier
+  pipeSchedule:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: pipeSchedule
+    name: Pipe schedule
+    description: Pipe schedule
+  pipingSpecificationClass:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: pipingSpecificationClass
+    name: Piping specification / class
+    description: Piping specification or class
+  platformCode:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: platformCode
+    name: Platform code
+    description: Platform code
+  potentialIgnitionSource1:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: potentialIgnitionSource1
+    name: Potential ignition source 1
+    description: Potential ignition source 1
+  potentialIgnitionSource2:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: potentialIgnitionSource2
+    name: Potential ignition source 2
+    description: Potential ignition source 2
+  potentialIgnitionSource3:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: potentialIgnitionSource3
+    name: Potential ignition source 3
+    description: Potential ignition source 3
+  potentialIgnitionSource4:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: potentialIgnitionSource4
+    name: Potential ignition source 4
+    description: Potential ignition source 4
+  potentialIgnitionSourceRemark:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: potentialIgnitionSourceRemark
+    name: Potential ignition source remark
+    description: Remark for potential ignition sources
+  remarks:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: remarks
+    name: Remarks
+    description: Remarks or notes
+  sapCatalogProfile:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: sapCatalogProfile
+    name: SAP catalog profile
+    description: SAP catalog profile
+  sapExportFlag:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: sapExportFlag
+    name: SAP export flag
+    description: SAP export flag
+  sapObjectType:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: sapObjectType
+    name: SAP object type
+    description: SAP object type
+  system:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: system
+    name: System
+    description: System identifier
+  tagDiscipline:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: tagDiscipline
+    name: Tag discipline
+    description: Tag discipline
+  tagNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: tagNumber
+    name: Tag number
+    description: Tag number
+  testMedium:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: testMedium
+    name: Test medium
+    description: Test medium
+  testPressure:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: testPressure
+    name: Test pressure
+    description: Test pressure
+  testPressureUom:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: testPressureUom
+    name: Test pressure UOM
+    description: Unit of measure for test pressure
+  toTag:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: toTag
+    name: To tag
+    description: Downstream tag connection
+  updatedDate:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: updatedDate
+    name: Updated date
+    description: Date when the record was last updated
+  useProjectStatus:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: useProjectStatus
+    name: Use project status
+    description: Use project status flag
+  velocity:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: velocity
+    name: Velocity
+    description: Flow velocity
+  velocityUom:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: velocityUom
+    name: Velocity UOM
+    description: Unit of measure for velocity
+  viscosityGas:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: viscosityGas
+    name: Viscosity (gas)
+    description: Viscosity of gas phase
+  viscosityGasUom:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: viscosityGasUom
+    name: Viscosity (gas) UOM
+    description: Unit of measure for viscosity (gas)
+  viscosityLiquid:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: viscosityLiquid
+    name: Viscosity (liquid)
+    description: Viscosity of liquid phase
+  wallThickness:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: wallThickness
+    name: Wall thickness
+    description: Wall thickness
+  workflowStatus:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: workflowStatus
+    name: Workflow status
+    description: Workflow status
+  objectId:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: objectId
+    name: Object ID
+    description: Object identifier
+  densityLiquidUom:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: densityLiquidUom
+    name: Density (liquid) UOM
+    description: Unit of measure for density (liquid)
+  designPressureMaxUom:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: designPressureMaxUom
+    name: Design pressure max UOM
+    description: Unit of measure for maximum design pressure
+  operatingPressureNormalUom:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: operatingPressureNormalUom
+    name: Operating pressure normal UOM
+    description: Unit of measure for normal operating pressure
+  viscosityLiquidUom:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: viscosityLiquidUom
+    name: Viscosity (liquid) UOM
+    description: Unit of measure for viscosity (liquid)
+  wallThicknessUom:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: wallThicknessUom
+    name: Wall thickness UOM
+    description: Unit of measure for wall thickness
+  state:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: state
+    name: State
+    description: State of the piping line
+  fromAsset:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: fromAsset
+    name: From asset
+    description: The upstream asset or equipment this piping line originates from
+      (P&ID FROM TAG).
+    source:
+      space: energy_dm
+      externalId: EnergyAsset
+      version: v1
+      type: view
+  toAsset:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: toAsset
+    name: To asset
+    description: The downstream asset or equipment this piping line connects to (P&ID
+      TO TAG).
+    source:
+      space: energy_dm
+      externalId: EnergyAsset
+      version: v1
+      type: view
+  timeSeries:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: timeSeries
+    name: Time series
+    description: Time series related to this piping line.
+    source:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      version: v1
+      type: view
+  documents:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: documents
+    name: Documents
+    description: Engineering documents (P&IDs, drawings) related to this piping line.
+    source:
+      space: energy_dm
+      externalId: EnergyFile
+      version: v1
+      type: view
+  damageMechanisms:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: damageMechanisms
+    name: Damage mechanisms
+    description: Active RBI damage mechanisms linked to this piping line.
+    source:
+      space: energy_dm
+      externalId: DamageMechanism
+      version: v1
+      type: view
+  material:
+    container:
+      space: energy_dm
+      externalId: EnergyPiping
+      type: container
+    containerPropertyIdentifier: material
+    name: Material
+    description: Material grade linked to this piping line.
+    source:
+      space: energy_dm
+      externalId: Material
+      version: v1
+      type: view
+  conditionMonitoringLocations:
+    connectionType: multi_reverse_direct_relation
+    name: Condition monitoring locations
+    description: Corrosion monitoring locations (CMLs) defined on this piping line.
+    source:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: ConditionMonitoringLocation
+        version: v1
+        type: view
+      identifier: piping
+  corrosionInferences:
+    connectionType: multi_reverse_direct_relation
+    name: Corrosion inferences
+    description: Databricks GP corrosion scorecards linked to this piping line.
+    source:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: PipingCorrosionInference
+        version: v1
+        type: view
+      identifier: piping

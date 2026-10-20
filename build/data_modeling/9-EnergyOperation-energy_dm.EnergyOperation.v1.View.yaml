@@ -1,0 +1,561 @@
+space: energy_dm
+externalId: EnergyOperation
+name: Operations
+description: 'An operation specific to energy industry maintenance activities, extending
+  CogniteOperation with SAP PM operation fields.
+
+  @name Operations'
+implements:
+- space: cdf_cdm
+  externalId: CogniteSourceable
+  version: v1
+  type: view
+- space: cdf_cdm
+  externalId: CogniteDescribable
+  version: v1
+  type: view
+- space: cdf_cdm
+  externalId: CogniteSchedulable
+  version: v1
+  type: view
+- space: cdf_cdm
+  externalId: CogniteActivity
+  version: v1
+  type: view
+- space: cdf_idm
+  externalId: CogniteOperation
+  version: v1
+  type: view
+version: v1
+properties:
+  assets:
+    container:
+      space: cdf_cdm
+      externalId: CogniteActivity
+      type: container
+    containerPropertyIdentifier: assets
+    name: Assets
+    description: 'A list of assets the activity is related to.
+
+      @name Assets'
+    source:
+      space: energy_dm
+      externalId: EnergyAsset
+      version: v1
+      type: view
+  equipment:
+    container:
+      space: cdf_cdm
+      externalId: CogniteActivity
+      type: container
+    containerPropertyIdentifier: equipment
+    name: Equipment
+    description: 'A list of equipment the activity is related to.
+
+      @name Equipment'
+    source:
+      space: energy_dm
+      externalId: EnergyEquipment
+      version: v1
+      type: view
+  timeSeries:
+    container:
+      space: cdf_cdm
+      externalId: CogniteActivity
+      type: container
+    containerPropertyIdentifier: timeSeries
+    name: Time series
+    description: 'A list of time series the activity is related to.
+
+      @name Time series'
+    source:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      version: v1
+      type: view
+  maintenanceOrder:
+    container:
+      space: cdf_idm
+      externalId: CogniteOperation
+      type: container
+    containerPropertyIdentifier: maintenanceOrder
+    name: Maintenance order
+    description: 'The maintenance order the operation is related to.
+
+      @name Maintenance order'
+    source:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      version: v1
+      type: view
+  mainAsset:
+    container:
+      space: cdf_idm
+      externalId: CogniteOperation
+      type: container
+    containerPropertyIdentifier: mainAsset
+    name: Main asset
+    description: 'The primary asset (functional location) the operation is related
+      to.
+
+      @name Main asset'
+    source:
+      space: energy_dm
+      externalId: EnergyAsset
+      version: v1
+      type: view
+  operationNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: operationNumber
+    name: operationNumber
+    description: SAP operation number. @name Operation Number
+  workCenter:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: workCenter
+    name: workCenter
+    description: SAP work center where the operation is performed. @name Work Center
+  plant:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: plant
+    name: plant
+    description: SAP plant identifier. @name Plant
+  operationType:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: operationType
+    name: operationType
+    description: SAP operation type. @name Operation Type
+  controlKey:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: controlKey
+    name: controlKey
+    description: SAP operation control key. @name Control Key
+  controlKeyDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: controlKeyDescription
+    name: controlKeyDescription
+    description: SAP operation control key description. @name Control Key Description
+  systemStatus:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: systemStatus
+    name: systemStatus
+    description: SAP operation system status. @name System Status
+  userStatus:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: userStatus
+    name: userStatus
+    description: SAP operation user status. @name User Status
+  priority:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: priority
+    name: priority
+    description: SAP operation priority. @name Priority
+  priorityDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: priorityDescription
+    name: priorityDescription
+    description: SAP operation priority description. @name Priority Description
+  operationCategory:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: operationCategory
+    name: operationCategory
+    description: SAP operation category. @name Operation Category
+  operationSubcategory:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: operationSubcategory
+    name: operationSubcategory
+    description: SAP operation subcategory. @name Operation Subcategory
+  operationText:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: operationText
+    name: operationText
+    description: SAP operation text. @name Operation Text
+  operationLongText:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: operationLongText
+    name: operationLongText
+    description: SAP operation long text. @name Operation Long Text
+  workCenterResponsible:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: workCenterResponsible
+    name: workCenterResponsible
+    description: SAP operation work center responsible. @name Work Center Responsible
+  plannerGroup:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: plannerGroup
+    name: plannerGroup
+    description: SAP operation planner group. @name Planner Group
+  planningPlant:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: planningPlant
+    name: planningPlant
+    description: SAP operation planning plant. @name Planning Plant
+  maintenancePlant:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: maintenancePlant
+    name: maintenancePlant
+    description: SAP operation maintenance plant. @name Maintenance Plant
+  costCenter:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: costCenter
+    name: costCenter
+    description: SAP operation cost center. @name Cost Center
+  basicStartDate:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: basicStartDate
+    name: basicStartDate
+    description: SAP operation basic start date. @name Basic Start Date
+  basicFinishDate:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: basicFinishDate
+    name: basicFinishDate
+    description: SAP operation basic finish date. @name Basic Finish Date
+  scheduledStartDate:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: scheduledStartDate
+    name: scheduledStartDate
+    description: SAP operation scheduled start date. @name Scheduled Start Date
+  scheduledFinishDate:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: scheduledFinishDate
+    name: scheduledFinishDate
+    description: SAP operation scheduled finish date. @name Scheduled Finish Date
+  suggestedScheduledStartDate:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: suggestedScheduledStartDate
+    name: suggestedScheduledStartDate
+    description: AI-suggested alternative start date for work balancing. @name Suggested
+      Scheduled Start Date
+  suggestedScheduledFinishDate:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: suggestedScheduledFinishDate
+    name: suggestedScheduledFinishDate
+    description: AI-suggested alternative finish date for work balancing. @name Suggested
+      Scheduled Finish Date
+  actualStartDate:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: actualStartDate
+    name: actualStartDate
+    description: SAP operation actual start date. @name Actual Start Date
+  actualFinishDate:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: actualFinishDate
+    name: actualFinishDate
+    description: SAP operation actual finish date. @name Actual Finish Date
+  plannedWorkHours:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: plannedWorkHours
+    name: plannedWorkHours
+    description: SAP operation planned work hours. @name Planned Work Hours
+  actualWorkHours:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: actualWorkHours
+    name: actualWorkHours
+    description: SAP operation actual work hours. @name Actual Work Hours
+  plannedCosts:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: plannedCosts
+    name: plannedCosts
+    description: SAP operation planned costs. @name Planned Costs
+  actualCosts:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: actualCosts
+    name: actualCosts
+    description: SAP operation actual costs. @name Actual Costs
+  currency:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: currency
+    name: currency
+    description: SAP operation currency. @name Currency
+  equipmentNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: equipmentNumber
+    name: equipmentNumber
+    description: SAP operation equipment number. @name Equipment Number
+  functionalLocation:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: functionalLocation
+    name: functionalLocation
+    description: SAP operation functional location. @name Functional Location
+  materialNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: materialNumber
+    name: materialNumber
+    description: SAP operation material number. @name Material Number
+  materialDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: materialDescription
+    name: materialDescription
+    description: SAP operation material description. @name Material Description
+  materialQuantity:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: materialQuantity
+    name: materialQuantity
+    description: SAP operation material quantity. @name Material Quantity
+  materialUnit:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: materialUnit
+    name: materialUnit
+    description: SAP operation material unit. @name Material Unit
+  materialCost:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: materialCost
+    name: materialCost
+    description: SAP operation material cost. @name Material Cost
+  activityType:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: activityType
+    name: activityType
+    description: SAP operation activity type. @name Activity Type
+  activityTypeDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: activityTypeDescription
+    name: activityTypeDescription
+    description: SAP operation activity type description. @name Activity Type Description
+  workCenterCapacity:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: workCenterCapacity
+    name: workCenterCapacity
+    description: SAP operation work center capacity. @name Work Center Capacity
+  workCenterCapacityUnit:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: workCenterCapacityUnit
+    name: workCenterCapacityUnit
+    description: SAP operation work center capacity unit. @name Work Center Capacity
+      Unit
+  workCenterCapacityRequirement:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: workCenterCapacityRequirement
+    name: workCenterCapacityRequirement
+    description: SAP operation work center capacity requirement. @name Work Center
+      Capacity Requirement
+  workCenterCapacityRequirementUnit:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: workCenterCapacityRequirementUnit
+    name: workCenterCapacityRequirementUnit
+    description: SAP operation work center capacity requirement unit. @name Work Center
+      Capacity Requirement Unit
+  workCenterCapacityActual:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: workCenterCapacityActual
+    name: workCenterCapacityActual
+    description: SAP operation work center capacity actual. @name Work Center Capacity
+      Actual
+  workCenterCapacityActualUnit:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: workCenterCapacityActualUnit
+    name: workCenterCapacityActualUnit
+    description: SAP operation work center capacity actual unit. @name Work Center
+      Capacity Actual Unit
+  workCenterCapacityPlanned:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: workCenterCapacityPlanned
+    name: workCenterCapacityPlanned
+    description: SAP operation work center capacity planned. @name Work Center Capacity
+      Planned
+  workCenterCapacityPlannedUnit:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: workCenterCapacityPlannedUnit
+    name: workCenterCapacityPlannedUnit
+    description: SAP operation work center capacity planned unit. @name Work Center
+      Capacity Planned Unit
+  workCenterCapacityActualStart:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: workCenterCapacityActualStart
+    name: workCenterCapacityActualStart
+    description: SAP operation work center capacity actual start. @name Work Center
+      Capacity Actual Start
+  workCenterCapacityActualFinish:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: workCenterCapacityActualFinish
+    name: workCenterCapacityActualFinish
+    description: SAP operation work center capacity actual finish. @name Work Center
+      Capacity Actual Finish
+  workCenterCapacityPlannedStart:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: workCenterCapacityPlannedStart
+    name: workCenterCapacityPlannedStart
+    description: SAP operation work center capacity planned start. @name Work Center
+      Capacity Planned Start
+  workCenterCapacityPlannedFinish:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: workCenterCapacityPlannedFinish
+    name: workCenterCapacityPlannedFinish
+    description: SAP operation work center capacity planned finish. @name Work Center
+      Capacity Planned Finish
+  workCenterCapacityRequirementStart:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: workCenterCapacityRequirementStart
+    name: workCenterCapacityRequirementStart
+    description: SAP operation work center capacity requirement start. @name Work
+      Center Capacity Requirement Start
+  workCenterCapacityRequirementFinish:
+    container:
+      space: energy_dm
+      externalId: EnergyOperation
+      type: container
+    containerPropertyIdentifier: workCenterCapacityRequirementFinish
+    name: workCenterCapacityRequirementFinish
+    description: SAP operation work center capacity requirement finish. @name Work
+      Center Capacity Requirement Finish

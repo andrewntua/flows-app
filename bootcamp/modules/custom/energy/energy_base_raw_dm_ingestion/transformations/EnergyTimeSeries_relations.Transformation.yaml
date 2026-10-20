@@ -1,0 +1,12 @@
+externalId: tr_energy_base_raw_EnergyTimeSeries_relations
+name: RAW → EnergyTimeSeries relations
+destination:
+  type: nodes
+  view:
+    space: energy_dm
+    externalId: EnergyTimeSeries
+    version: v1
+  instanceSpace: "{{energyTimeSeriesSpace}}"
+dataSetExternalId: '{{ energy_base_raw_ingestion_dataset_external_id }}'
+ignoreNullFields: true
+conflictMode: upsert

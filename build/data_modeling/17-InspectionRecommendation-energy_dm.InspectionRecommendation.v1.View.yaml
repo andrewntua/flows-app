@@ -1,0 +1,107 @@
+space: energy_dm
+externalId: InspectionRecommendation
+name: Inspection Recommendation
+description: RBI inspection recommendation linked to a piping EnergyAsset and corrosion
+  loop with risk, NDE scope, cost, and deadlines
+version: v1
+properties:
+  timeframe:
+    container:
+      space: energy_dm
+      externalId: InspectionRecommendation
+      type: container
+    containerPropertyIdentifier: timeframe
+    name: Timeframe
+    description: Recommended inspection urgency (Immediate, Near-term, Medium-term,
+      Deferral)
+  currentRisk:
+    container:
+      space: energy_dm
+      externalId: InspectionRecommendation
+      type: container
+    containerPropertyIdentifier: currentRisk
+    name: Current risk
+    description: Current RBI risk classification (Very High, High, Medium, Low)
+  futureRisk:
+    container:
+      space: energy_dm
+      externalId: InspectionRecommendation
+      type: container
+    containerPropertyIdentifier: futureRisk
+    name: Future risk
+    description: Projected RBI risk if inspection is deferred (Very High, High, Medium,
+      Low)
+  ndeMethod:
+    container:
+      space: energy_dm
+      externalId: InspectionRecommendation
+      type: container
+    containerPropertyIdentifier: ndeMethod
+    name: NDE method
+    description: Recommended non-destructive examination technique
+  coverage:
+    container:
+      space: energy_dm
+      externalId: InspectionRecommendation
+      type: container
+    containerPropertyIdentifier: coverage
+    name: Coverage
+    description: Required inspection coverage as a percentage (0–100)
+  inspectionEffectiveness:
+    container:
+      space: energy_dm
+      externalId: InspectionRecommendation
+      type: container
+    containerPropertyIdentifier: inspectionEffectiveness
+    name: Inspection effectiveness
+    description: API 581 target inspection effectiveness category (A–D)
+  latestDeadline:
+    container:
+      space: energy_dm
+      externalId: InspectionRecommendation
+      type: container
+    containerPropertyIdentifier: latestDeadline
+    name: Latest deadline
+    description: Latest allowable date to complete the recommended inspection
+  cost:
+    container:
+      space: energy_dm
+      externalId: InspectionRecommendation
+      type: container
+    containerPropertyIdentifier: cost
+    name: Cost
+    description: Estimated inspection cost as a whole number
+  costUnit:
+    container:
+      space: energy_dm
+      externalId: InspectionRecommendation
+      type: container
+    containerPropertyIdentifier: costUnit
+    name: Cost unit
+    description: Currency for the estimated inspection cost (USD, NOK)
+  loop:
+    container:
+      space: energy_dm
+      externalId: InspectionRecommendation
+      type: container
+    containerPropertyIdentifier: loop
+    name: Loop
+    description: Corrosion loop this recommendation belongs to
+    source:
+      space: energy_dm
+      externalId: CorrosionLoop
+      version: v1
+      type: view
+  asset:
+    container:
+      space: energy_dm
+      externalId: InspectionRecommendation
+      type: container
+    containerPropertyIdentifier: asset
+    name: Asset
+    description: Piping EnergyAsset this inspection recommendation applies to
+    source:
+      space: energy_dm
+      externalId: EnergyAsset
+      version: v1
+      type: view

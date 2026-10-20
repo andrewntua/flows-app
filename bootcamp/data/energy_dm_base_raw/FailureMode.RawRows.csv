@@ -1,0 +1,49 @@
+key,code,description,name
+air,AIR,Abnormal instrument reading,Abnormal instrument reading
+brd,BRD,Breakdown,Breakdown
+dop,DOP,Delayed operation,Delayed operation
+elf,ELF,External leakage - fuel,External leakage - fuel
+elp,ELP,External leakage - process medium,External leakage - process medium
+elu,ELU,External leakage - utility medium,External leakage - utility medium
+ero,ERO,Erratic output,Erratic output
+fco,FCO,Failure to connect,Failure to connect
+flp,FLP,Failure in lightning protection system,Failure in lightning protection system
+fof,FOF,Faulty output frequency,Faulty output frequency
+fov,FOV,Faulty output voltage,Faulty output voltage
+fro,FRO,Failure to rotate,Failure to rotate
+ftc,FTC,Failure to close on demand,Failure to close on demand
+ftd,FTD,Failure to disconnect,Failure to disconnect
+ftf,FTF,Failure to function on demand,Failure to function on demand
+fti,FTI,Failure to function as intended,Failure to function as intended
+fto,FTO,Failure to open on demand,Failure to open on demand
+ftr,FTR,Failure to regulate,Failure to regulate
+fts,FTS,Failure to start on demand,Failure to start on demand
+hio,HIO,High output,High output
+iht,IHT,Insufficient heat transfer,Insufficient heat transfer
+inl,INL,Internal leakage,Internal leakage
+lbp,LBP,Low oil supply pressure,Low oil supply pressure
+lcp,LCP,Leakage in closed position,Leakage in closed position
+loa,LOA,Load drop,Load drop
+lob,LOB,Loss of buoyancy,Loss of buoyancy
+loo,LOO,Low output,Low output
+mof,MOF,Mooring failure,Mooring failure
+noi,NOI,Noise,Noise
+noo,NOO,No output,No output
+ohe,OHE,Overheating,Overheating
+oth,OTH,Other,Other
+pde,PDE,Parameter deviation,Parameter deviation
+plu,PLU,Plugged / Choked,Plugged / Choked
+pow,POW,Insufficient power,Insufficient power
+ptf,PTF,Power/signal transmission failure,Power/signal transmission failure
+sbu,SBU,Sludge build-up,Sludge build-up
+ser,SER,Minor in-service problems,Minor in-service problems
+shh,SHH,Spurious high alarm level,Spurious high alarm level
+sll,SLL,Spurious low alarm level,Spurious low alarm level
+slp,SLP,Slippage,Slippage
+spo,SPO,Spurious operation,Spurious operation
+std,STD,Structural deficiency,Structural deficiency
+stp,STP,Failure to stop on demand,Failure to stop on demand
+unk,UNK,Unknown,Unknown
+ust,UST,Spurious stop,Spurious stop
+vib,VIB,Vibration,Vibration
+vlo,VLO,Very low output,Very low output

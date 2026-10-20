@@ -1,0 +1,518 @@
+workflowExternalId: wf_energy_base_raw_to_dm
+version: '1'
+workflowDefinition:
+  description: Parallel node upsert from RAW, then direct-relation overlays (source
+    and target nodes must exist).
+  tasks:
+  - externalId: wf_energy_base_raw_to_dm_nodes_EnergyAsset
+    type: transformation
+    name: EnergyAsset nodes
+    description: Upsert EnergyAsset scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EnergyAsset_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_EnergyEquipment
+    type: transformation
+    name: EnergyEquipment nodes
+    description: Upsert EnergyEquipment scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EnergyEquipment_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_EnergyFile
+    type: transformation
+    name: EnergyFile nodes
+    description: Upsert EnergyFile scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EnergyFile_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_EnergyTimeSeries
+    type: transformation
+    name: EnergyTimeSeries nodes
+    description: Upsert EnergyTimeSeries scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EnergyTimeSeries_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_EnergyMaintenanceOrder
+    type: transformation
+    name: EnergyMaintenanceOrder nodes
+    description: Upsert EnergyMaintenanceOrder scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EnergyMaintenanceOrder_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_EnergyNotification
+    type: transformation
+    name: EnergyNotification nodes
+    description: Upsert EnergyNotification scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EnergyNotification_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_EnergyOperation
+    type: transformation
+    name: EnergyOperation nodes
+    description: Upsert EnergyOperation scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EnergyOperation_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_EnergyPiping
+    type: transformation
+    name: EnergyPiping nodes
+    description: Upsert EnergyPiping scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EnergyPiping_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_CorrosionLoop
+    type: transformation
+    name: CorrosionLoop nodes
+    description: Upsert CorrosionLoop scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_CorrosionLoop_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_DamageMechanism
+    type: transformation
+    name: DamageMechanism nodes
+    description: Upsert DamageMechanism scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_DamageMechanism_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_Material
+    type: transformation
+    name: Material nodes
+    description: Upsert Material scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_Material_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_InspectionRecommendation
+    type: transformation
+    name: InspectionRecommendation nodes
+    description: Upsert InspectionRecommendation scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_InspectionRecommendation_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_PipingCorrosionInference
+    type: transformation
+    name: PipingCorrosionInference nodes
+    description: Upsert PipingCorrosionInference scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_PipingCorrosionInference_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_ConditionMonitoringLocation
+    type: transformation
+    name: ConditionMonitoringLocation nodes
+    description: Upsert ConditionMonitoringLocation scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_ConditionMonitoringLocation_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_WallThicknessMeasuringPoint
+    type: transformation
+    name: WallThicknessMeasuringPoint nodes
+    description: Upsert WallThicknessMeasuringPoint scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_WallThicknessMeasuringPoint_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_FailureMode
+    type: transformation
+    name: FailureMode nodes
+    description: Upsert FailureMode scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_FailureMode_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_FailureMechanism
+    type: transformation
+    name: FailureMechanism nodes
+    description: Upsert FailureMechanism scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_FailureMechanism_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_FailureCause
+    type: transformation
+    name: FailureCause nodes
+    description: Upsert FailureCause scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_FailureCause_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_EquipmentClass
+    type: transformation
+    name: EquipmentClass nodes
+    description: Upsert EquipmentClass scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EquipmentClass_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_nodes_EquipmentType
+    type: transformation
+    name: EquipmentType nodes
+    description: Upsert EquipmentType scalar properties from RAW.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EquipmentType_nodes
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_EnergyAsset
+    type: transformation
+    name: EnergyAsset relations
+    description: Overlay direct relations on EnergyAsset.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyAsset
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EnergyAsset_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_EnergyEquipment
+    type: transformation
+    name: EnergyEquipment relations
+    description: Overlay direct relations on EnergyEquipment.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyAsset
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyEquipment
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyFile
+    - externalId: wf_energy_base_raw_to_dm_nodes_EquipmentType
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EnergyEquipment_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_EnergyFile
+    type: transformation
+    name: EnergyFile relations
+    description: Overlay direct relations on EnergyFile.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyAsset
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyFile
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EnergyFile_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_EnergyTimeSeries
+    type: transformation
+    name: EnergyTimeSeries relations
+    description: Overlay direct relations on EnergyTimeSeries.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyAsset
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyEquipment
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyTimeSeries
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EnergyTimeSeries_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_EnergyMaintenanceOrder
+    type: transformation
+    name: EnergyMaintenanceOrder relations
+    description: Overlay direct relations on EnergyMaintenanceOrder.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyAsset
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyEquipment
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyMaintenanceOrder
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyTimeSeries
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EnergyMaintenanceOrder_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_EnergyNotification
+    type: transformation
+    name: EnergyNotification relations
+    description: Overlay direct relations on EnergyNotification.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyAsset
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyEquipment
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyMaintenanceOrder
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyNotification
+    - externalId: wf_energy_base_raw_to_dm_nodes_FailureCause
+    - externalId: wf_energy_base_raw_to_dm_nodes_FailureMechanism
+    - externalId: wf_energy_base_raw_to_dm_nodes_FailureMode
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EnergyNotification_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_EnergyOperation
+    type: transformation
+    name: EnergyOperation relations
+    description: Overlay direct relations on EnergyOperation.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyAsset
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyEquipment
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyMaintenanceOrder
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyOperation
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyTimeSeries
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EnergyOperation_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_EnergyPiping
+    type: transformation
+    name: EnergyPiping relations
+    description: Overlay direct relations on EnergyPiping.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_CorrosionLoop
+    - externalId: wf_energy_base_raw_to_dm_nodes_DamageMechanism
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyAsset
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyFile
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyPiping
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyTimeSeries
+    - externalId: wf_energy_base_raw_to_dm_nodes_Material
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EnergyPiping_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_CorrosionLoop
+    type: transformation
+    name: CorrosionLoop relations
+    description: Overlay direct relations on CorrosionLoop.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_CorrosionLoop
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_CorrosionLoop_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_DamageMechanism
+    type: transformation
+    name: DamageMechanism relations
+    description: Overlay direct relations on DamageMechanism.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_DamageMechanism
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_DamageMechanism_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_Material
+    type: transformation
+    name: Material relations
+    description: Overlay direct relations on Material.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_Material
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_Material_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_InspectionRecommendation
+    type: transformation
+    name: InspectionRecommendation relations
+    description: Overlay direct relations on InspectionRecommendation.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_CorrosionLoop
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyAsset
+    - externalId: wf_energy_base_raw_to_dm_nodes_InspectionRecommendation
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_InspectionRecommendation_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_PipingCorrosionInference
+    type: transformation
+    name: PipingCorrosionInference relations
+    description: Overlay direct relations on PipingCorrosionInference.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyPiping
+    - externalId: wf_energy_base_raw_to_dm_nodes_PipingCorrosionInference
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_PipingCorrosionInference_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_ConditionMonitoringLocation
+    type: transformation
+    name: ConditionMonitoringLocation relations
+    description: Overlay direct relations on ConditionMonitoringLocation.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_ConditionMonitoringLocation
+    - externalId: wf_energy_base_raw_to_dm_nodes_EnergyPiping
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_ConditionMonitoringLocation_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_WallThicknessMeasuringPoint
+    type: transformation
+    name: WallThicknessMeasuringPoint relations
+    description: Overlay direct relations on WallThicknessMeasuringPoint.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_ConditionMonitoringLocation
+    - externalId: wf_energy_base_raw_to_dm_nodes_WallThicknessMeasuringPoint
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_WallThicknessMeasuringPoint_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_FailureMode
+    type: transformation
+    name: FailureMode relations
+    description: Overlay direct relations on FailureMode.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_FailureMode
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_FailureMode_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_FailureMechanism
+    type: transformation
+    name: FailureMechanism relations
+    description: Overlay direct relations on FailureMechanism.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_FailureMechanism
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_FailureMechanism_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_FailureCause
+    type: transformation
+    name: FailureCause relations
+    description: Overlay direct relations on FailureCause.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_FailureCause
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_FailureCause_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_EquipmentClass
+    type: transformation
+    name: EquipmentClass relations
+    description: Overlay direct relations on EquipmentClass.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_EquipmentClass
+    - externalId: wf_energy_base_raw_to_dm_nodes_FailureMode
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EquipmentClass_relations
+        concurrencyPolicy: fail
+  - externalId: wf_energy_base_raw_to_dm_relations_EquipmentType
+    type: transformation
+    name: EquipmentType relations
+    description: Overlay direct relations on EquipmentType.
+    retries: 2
+    timeout: 7200
+    onFailure: abortWorkflow
+    dependsOn:
+    - externalId: wf_energy_base_raw_to_dm_nodes_EquipmentClass
+    - externalId: wf_energy_base_raw_to_dm_nodes_EquipmentType
+    parameters:
+      transformation:
+        externalId: tr_energy_base_raw_EquipmentType_relations
+        concurrencyPolicy: fail

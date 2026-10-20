@@ -1,0 +1,136 @@
+space: energy_dm
+externalId: ConditionMonitoringLocation
+name: Condition Monitoring Location Container
+description: Corrosion monitoring location (CML) on a piping line — a defined zone for wall thickness inspection.
+usedFor: node
+properties:
+  cmlId:
+    type:
+      list: false
+      type: text
+    nullable: false
+    name: CML ID
+    description: Identifier (e.g. CML-80L0042-01)
+  name:
+    type:
+      list: false
+      type: text
+    nullable: true
+    name: Name
+    description: Short display name
+  description:
+    type:
+      list: false
+      type: text
+    nullable: true
+    name: Description
+    description: Position description (e.g. elbow upstream of tie-in)
+  componentType:
+    type:
+      type: enum
+      values:
+        StraightRun:
+          name: Straight run
+        Elbow:
+          name: Elbow
+        Tee:
+          name: Tee
+        Reducer:
+          name: Reducer
+        Weld:
+          name: Weld
+        LowPoint:
+          name: Low point
+        Support:
+          name: Support / clamp
+    nullable: true
+    name: Component type
+    description: Piping component at this monitoring zone
+  nominalThicknessMm:
+    type:
+      list: false
+      type: float64
+    nullable: true
+    name: Nominal thickness
+    description: Nominal wall thickness at this location (mm)
+  tminMm:
+    type:
+      list: false
+      type: float64
+    nullable: true
+    name: Minimum thickness
+    description: Minimum required wall thickness tmin (mm)
+  clockPosition:
+    type:
+      list: false
+      type: text
+    nullable: true
+    name: Clock position
+    description: UT clock position (e.g. 12 o'clock)
+  axialFraction:
+    type:
+      list: false
+      type: float64
+    nullable: true
+    name: Axial fraction
+    description: Approximate position along the line centreline (0 = from end, 1 = to end)
+  modelId:
+    type:
+      list: false
+      type: int64
+    nullable: true
+    name: 3D model ID
+    description: CDF 3D model identifier for Platform VPH (or site model)
+  revisionId:
+    type:
+      list: false
+      type: int64
+    nullable: true
+    name: 3D revision ID
+    description: CDF 3D revision identifier
+  cadNodeId:
+    type:
+      list: false
+      type: int64
+    nullable: true
+    name: CAD node ID
+    description: 3D node ID of the piping line or segment (from contextualized EnergyAsset)
+  positionX:
+    type:
+      list: false
+      type: float64
+    nullable: true
+    name: Position X
+    description: Model-space X coordinate on pipe surface (metres)
+  positionY:
+    type:
+      list: false
+      type: float64
+    nullable: true
+    name: Position Y
+    description: Model-space Y coordinate on pipe surface (metres)
+  positionZ:
+    type:
+      list: false
+      type: float64
+    nullable: true
+    name: Position Z
+    description: Model-space Z coordinate on pipe surface (metres)
+  piping:
+    type:
+      list: false
+      type: direct
+    nullable: true
+    name: Piping
+    description: Parent EnergyPiping line
+indexes:
+  byPiping:
+    indexType: btree
+    properties:
+      - piping
+    cursorable: true
+  byCmlId:
+    indexType: btree
+    properties:
+      - cmlId
+    cursorable: true

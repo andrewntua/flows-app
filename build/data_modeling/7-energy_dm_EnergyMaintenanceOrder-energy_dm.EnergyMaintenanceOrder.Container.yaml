@@ -1,0 +1,678 @@
+space: energy_dm
+externalId: EnergyMaintenanceOrder
+name: Maint Orders
+properties:
+  orderNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: orderNumber
+    description: SAP maintenance order number. @name Order Number
+  workCenter:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenter
+    description: SAP work center where the maintenance is performed. @name Work Center
+  plant:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: plant
+    description: SAP plant identifier. @name Plant
+  maintenanceType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceType
+    description: SAP maintenance type (PM01, PM02, etc.). @name Maintenance Type
+  systemStatus:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: systemStatus
+    description: SAP system status. @name System Status
+  userStatus:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: userStatus
+    description: SAP user status. @name User Status
+  orderType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: orderType
+    description: SAP order type. @name Order Type
+  planningPlant:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: planningPlant
+    description: SAP planning plant. @name Planning Plant
+  maintenancePlant:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenancePlant
+    description: SAP maintenance plant. @name Maintenance Plant
+  costCenter:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: costCenter
+    description: SAP cost center. @name Cost Center
+  plannerGroup:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: plannerGroup
+    description: SAP planner group. @name Planner Group
+  maintenancePlanningGroup:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenancePlanningGroup
+    description: SAP maintenance planning group. @name Maintenance Planning Group
+  workCenterResponsible:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenterResponsible
+    description: SAP work center responsible person. @name Work Center Responsible
+  orderCategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: orderCategory
+    description: SAP maintenance order category. @name Order Category
+  orderSubcategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: orderSubcategory
+    description: SAP maintenance order subcategory. @name Order Subcategory
+  basicStartDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: basicStartDate
+    description: SAP basic start date. @name Basic Start Date
+  basicFinishDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: basicFinishDate
+    description: SAP basic finish date. @name Basic Finish Date
+  scheduledStartDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: scheduledStartDate
+    description: SAP scheduled start date. @name Scheduled Start Date
+  scheduledFinishDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: scheduledFinishDate
+    description: SAP scheduled finish date. @name Scheduled Finish Date
+  suggestedScheduledStartDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: suggestedScheduledStartDate
+    description: AI-suggested alternative start date for work balancing. @name Suggested
+      Scheduled Start Date
+  suggestedScheduledFinishDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: suggestedScheduledFinishDate
+    description: AI-suggested alternative finish date for work balancing. @name Suggested
+      Scheduled Finish Date
+  actualStartDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: actualStartDate
+    description: SAP actual start date. @name Actual Start Date
+  actualFinishDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: actualFinishDate
+    description: SAP actual finish date. @name Actual Finish Date
+  plannedWorkHours:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: plannedWorkHours
+    description: SAP planned work hours. @name Planned Work Hours
+  actualWorkHours:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: actualWorkHours
+    description: SAP actual work hours. @name Actual Work Hours
+  plannedCosts:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: plannedCosts
+    description: SAP planned costs. @name Planned Costs
+  actualCosts:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: actualCosts
+    description: SAP actual costs. @name Actual Costs
+  currency:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: currency
+    description: SAP currency. @name Currency
+  orderText:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: orderText
+    description: SAP maintenance order text. @name Order Text
+  orderLongText:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: orderLongText
+    description: SAP maintenance order long text. @name Order Long Text
+  notificationNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: notificationNumber
+    description: SAP notification number. @name Notification Number
+  equipmentNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: equipmentNumber
+    description: SAP equipment number. @name Equipment Number
+  functionalLocation:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: functionalLocation
+    description: SAP functional location. @name Functional Location
+  maintenanceItem:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceItem
+    description: SAP maintenance item. @name Maintenance Item
+  maintenanceStrategy:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceStrategy
+    description: SAP maintenance strategy. @name Maintenance Strategy
+  maintenancePackage:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenancePackage
+    description: SAP maintenance package. @name Maintenance Package
+  maintenancePlan:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenancePlan
+    description: SAP maintenance plan. @name Maintenance Plan
+  maintenanceCallObject:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallObject
+    description: SAP maintenance call object. @name Maintenance Call Object
+  maintenanceCallObjectNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallObjectNumber
+    description: SAP maintenance call object number. @name Maintenance Call Object
+      Number
+  maintenanceCallHorizon:
+    type:
+      list: false
+      type: int64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallHorizon
+    description: SAP maintenance call horizon. @name Maintenance Call Horizon
+  maintenanceCallHorizonUnit:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallHorizonUnit
+    description: SAP maintenance call horizon unit. @name Maintenance Call Horizon
+      Unit
+  maintenanceCallDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallDate
+    description: SAP maintenance call date. @name Maintenance Call Date
+  maintenanceCallTime:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallTime
+    description: SAP maintenance call time. @name Maintenance Call Time
+  maintenanceCallPerson:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallPerson
+    description: SAP maintenance call person. @name Maintenance Call Person
+  maintenanceCallText:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallText
+    description: SAP maintenance call text. @name Maintenance Call Text
+  maintenanceCallLongText:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallLongText
+    description: SAP maintenance call long text. @name Maintenance Call Long Text
+  maintenanceCallPriority:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallPriority
+    description: SAP maintenance call priority. @name Maintenance Call Priority
+  maintenanceCallPriorityDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallPriorityDescription
+    description: SAP maintenance call priority description. @name Maintenance Call
+      Priority Description
+  maintenanceCallStatus:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallStatus
+    description: SAP maintenance call status. @name Maintenance Call Status
+  maintenanceCallStatusDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallStatusDescription
+    description: SAP maintenance call status description. @name Maintenance Call Status
+      Description
+  maintenanceCallType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallType
+    description: SAP maintenance call type. @name Maintenance Call Type
+  maintenanceCallTypeDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallTypeDescription
+    description: SAP maintenance call type description. @name Maintenance Call Type
+      Description
+  maintenanceCallCategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallCategory
+    description: SAP maintenance call category. @name Maintenance Call Category
+  maintenanceCallCategoryDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallCategoryDescription
+    description: SAP maintenance call category description. @name Maintenance Call
+      Category Description
+  maintenanceCallSubcategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallSubcategory
+    description: SAP maintenance call subcategory. @name Maintenance Call Subcategory
+  maintenanceCallSubcategoryDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallSubcategoryDescription
+    description: SAP maintenance call subcategory description. @name Maintenance Call
+      Subcategory Description
+  maintenanceCallObjectType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallObjectType
+    description: SAP maintenance call object type. @name Maintenance Call Object Type
+  maintenanceCallObjectTypeDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallObjectTypeDescription
+    description: SAP maintenance call object type description. @name Maintenance Call
+      Object Type Description
+  maintenanceCallObjectNumberDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallObjectNumberDescription
+    description: SAP maintenance call object number description. @name Maintenance
+      Call Object Number Description
+  maintenanceCallObjectNumberType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallObjectNumberType
+    description: SAP maintenance call object number type. @name Maintenance Call Object
+      Number Type
+  maintenanceCallObjectNumberTypeDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallObjectNumberTypeDescription
+    description: SAP maintenance call object number type description. @name Maintenance
+      Call Object Number Type Description
+  maintenanceCallObjectNumberCategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallObjectNumberCategory
+    description: SAP maintenance call object number category. @name Maintenance Call
+      Object Number Category
+  maintenanceCallObjectNumberCategoryDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallObjectNumberCategoryDescription
+    description: SAP maintenance call object number category description. @name Maintenance
+      Call Object Number Category Description
+  maintenanceCallObjectNumberSubcategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallObjectNumberSubcategory
+    description: SAP maintenance call object number subcategory. @name Maintenance
+      Call Object Number Subcategory
+  maintenanceCallObjectNumberSubcategoryDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceCallObjectNumberSubcategoryDescription
+    description: SAP maintenance call object number subcategory description. @name
+      Maintenance Call Object Number Subcategory Description
+  activeMaintenanceTime:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: activeMaintenanceTime
+    description: The duration for which maintenance was actively performed on an asset.
+      @name Active Maintenance Time
+  maintenanceActivityType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenanceActivityType
+    description: The type of activity carried out for this maintenance order according
+      to ISO 14224. @name Maintenance Activity Type

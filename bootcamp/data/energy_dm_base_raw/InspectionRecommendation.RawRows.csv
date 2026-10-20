@@ -1,0 +1,13 @@
+key,assetSpace,assetExternalId,cost,costUnit,coverage,currentRisk,futureRisk,inspectionEffectiveness,latestDeadline,loopSpace,loopExternalId,ndeMethod,timeframe
+IR-DEMO-DEF-01,energy_instances,WMT:84L97847,8000,USD,,Low,Low,,2031-05-10T00:00:00+00:00,energy_instances,CL-BF-84-2,,Deferral
+IR-DEMO-DEF-02,energy_instances,WMT:43L1332,5500,USD,,Low,Low,,2034-01-12T00:00:00+00:00,energy_instances,CL-BF-43-8,,Deferral
+IR-DEMO-DEF-03,energy_instances,WMT:31L0052,1500,USD,,Low,Low,,2032-06-14T00:00:00+00:00,energy_instances,CL-BF-31-2b,,Deferral
+IR-DEMO-DEF-04,energy_instances,WMT:48L99702,4000,USD,,Low,Low,,2033-02-28T00:00:00+00:00,energy_instances,CL-BF-48-1,,Deferral
+IR-DEMO-IMM-01,energy_instances,WMT:80L0042,20000,USD,80,High,Medium,B,2024-07-18T00:00:00+00:00,energy_instances,CL-VRD-P17-80-1,PulsedEddyCurrentPEC,Immediate
+IR-DEMO-MT-01,energy_instances,WMT:80L0009,7000,USD,10,Medium,Low,C,2025-01-15T00:00:00+00:00,energy_instances,CL-BF-80-2,UTGridMapping,MediumTerm
+IR-DEMO-MT-02,energy_instances,WMT:85L0032,12000,USD,10,High,Medium,C,2025-02-01T00:00:00+00:00,energy_instances,CL-BF-85-2,PulsedEddyCurrentPEC,MediumTerm
+IR-DEMO-MT-03,energy_instances,WMT:16L0001,5000,USD,10,Medium,Low,C,2025-03-01T00:00:00+00:00,energy_instances,CL-GF-16-1,UTGridMapping,MediumTerm
+IR-DEMO-NR-01,energy_instances,WMT:80L0040,16000,USD,60,High,Medium,B,2024-08-18T00:00:00+00:00,energy_instances,CL-VRD-P17-80-1,PulsedEddyCurrentPEC,NearTerm
+IR-DEMO-NR-02,energy_instances,WMT:43L1338,18000,USD,60,High,Medium,B,2024-09-02T00:00:00+00:00,energy_instances,CL-BF-43-8,PulsedEddyCurrentPEC,NearTerm
+IR-DEMO-NR-03,energy_instances,WMT:81L0451,9000,USD,40,Medium,Low,C,2024-10-02T00:00:00+00:00,energy_instances,CL-BF-81-4,PulsedEddyCurrentPEC,NearTerm
+IR-DEMO-NR-04,energy_instances,WMT:40L0015,9000,USD,40,Medium,Low,C,2024-10-02T00:00:00+00:00,energy_instances,CL-BF-40-1,PulsedEddyCurrentPEC,NearTerm

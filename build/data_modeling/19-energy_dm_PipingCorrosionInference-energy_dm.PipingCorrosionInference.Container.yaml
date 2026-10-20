@@ -1,0 +1,243 @@
+space: energy_dm
+externalId: PipingCorrosionInference
+name: Piping Corrosion Inference Container
+description: Databricks GP corrosion-rate scorecard for one EnergyPiping line (P10/P50/P90
+  rate and remaining life).
+usedFor: node
+properties:
+  modelName:
+    type:
+      list: false
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Model name
+    description: Scoring model identifier (e.g. cui-gp-matern).
+  modelVersion:
+    type:
+      list: false
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Model version
+    description: Published model version (e.g. v1-demo).
+  predictedAt:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Predicted at
+    description: When the scoring job wrote this posterior.
+  operatingTempC:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Operating temperature
+    description: Temperature the GP conditioned on (°C).
+  insulated:
+    type:
+      list: false
+      type: boolean
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Insulated
+    description: Whether the line is treated as CUI-exposed (insulated or loop-level
+      CUI story).
+  posteriorSource:
+    type:
+      type: enum
+      values:
+        UtUpdated:
+          name: UT updated
+          description: Posterior updated from ultrasonic inspection campaigns.
+        PriorOnly:
+          name: Prior only
+          description: No UT in the training subset; prior GP only.
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Posterior source
+    description: Whether the GP posterior was updated from UT or is prior-only.
+  predictedRateMmPerYr:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Predicted rate
+    description: GP P50 corrosion rate (mm/yr).
+  rateStdMmPerYr:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Rate std
+    description: Posterior standard deviation of corrosion rate (mm/yr).
+  rateP10MmPerYr:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Rate P10
+    description: P10 corrosion rate (mm/yr).
+  rateP50MmPerYr:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Rate P50
+    description: P50 corrosion rate (mm/yr).
+  rateP90MmPerYr:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Rate P90
+    description: P90 corrosion rate (mm/yr).
+  remainingLifeP10Yr:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Remaining life P10
+    description: P10 remaining life to tmin (years). May be negative if already past
+      tmin.
+  remainingLifeP50Yr:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Remaining life P50
+    description: P50 remaining life to tmin (years).
+  remainingLifeP90Yr:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Remaining life P90
+    description: P90 remaining life to tmin (years).
+  inspectNextCmlId:
+    type:
+      list: false
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Inspect-next CML
+    description: Suggested CML external id for the next thickness measurement.
+  valueOfInformation:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Value of information
+    description: 0–1 ranking for where another inspection reduces uncertainty or risk.
+  inCuiWindow:
+    type:
+      list: false
+      type: boolean
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: In CUI window
+    description: True when CUI-exposed and operating temperature is in 50–120°C.
+  nObservations:
+    type:
+      list: false
+      type: int32
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: N observations
+    description: UT campaigns in the GP training subset for this line.
+  registerRateMmPerYr:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Register rate
+    description: Snapshot of EnergyPiping.corrosionRateMmPerYr at score time (not
+      written back).
+  sourcePipingKey:
+    type:
+      list: false
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Source piping key
+    description: EnergyPiping external id from Databricks gold (PIPING-…). Kept after
+      linking.
+  uncertaintyFlag:
+    type:
+      type: enum
+      values:
+        High:
+          name: High
+          description: Wide posterior or unobserved CUI-exposed line.
+        Medium:
+          name: Medium
+          description: Moderate posterior width.
+        Low:
+          name: Low
+          description: Tight posterior (typically UT-updated or CRA).
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Uncertainty flag
+    description: Coarse uncertainty badge for UI.
+  piping:
+    type:
+      list: false
+      type: direct
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Piping
+    description: Parent EnergyPiping line this scorecard applies to.
+indexes:
+  byPiping:
+    indexType: btree
+    properties:
+    - piping
+    bySpace: false
+    cursorable: true
+  byPredictedAt:
+    indexType: btree
+    properties:
+    - predictedAt
+    bySpace: false
+    cursorable: true
+  byValueOfInformation:
+    indexType: btree
+    properties:
+    - valueOfInformation
+    bySpace: false
+    cursorable: true

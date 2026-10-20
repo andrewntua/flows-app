@@ -1,0 +1,627 @@
+space: energy_dm
+externalId: EnergyNotification
+name: Notifications
+properties:
+  notificationNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: notificationNumber
+    description: SAP notification number. @name Notification Number
+  notificationType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: notificationType
+    description: SAP notification type. @name Notification Type
+  notificationTypeDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: notificationTypeDescription
+    description: SAP notification type description. @name Notification Type Description
+  notificationCategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: notificationCategory
+    description: SAP notification category. @name Notification Category
+  notificationCategoryDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: notificationCategoryDescription
+    description: SAP notification category description. @name Notification Category
+      Description
+  notificationSubcategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: notificationSubcategory
+    description: SAP notification subcategory. @name Notification Subcategory
+  notificationSubcategoryDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: notificationSubcategoryDescription
+    description: SAP notification subcategory description. @name Notification Subcategory
+      Description
+  systemStatus:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: systemStatus
+    description: SAP notification system status. @name System Status
+  userStatus:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: userStatus
+    description: SAP notification user status. @name User Status
+  notificationText:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: notificationText
+    description: SAP notification text. @name Notification Text
+  notificationLongText:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: notificationLongText
+    description: SAP notification long text. @name Notification Long Text
+  notificationShortText:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: notificationShortText
+    description: SAP notification short text. @name Notification Short Text
+  equipmentNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: equipmentNumber
+    description: SAP notification equipment number. @name Equipment Number
+  functionalLocation:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: functionalLocation
+    description: SAP notification functional location. @name Functional Location
+  plant:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: plant
+    description: SAP notification plant. @name Plant
+  workCenter:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workCenter
+    description: SAP notification work center. @name Work Center
+  plannerGroup:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: plannerGroup
+    description: SAP notification planner group. @name Planner Group
+  maintenancePlant:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenancePlant
+    description: SAP notification maintenance plant. @name Maintenance Plant
+  planningPlant:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: planningPlant
+    description: SAP notification planning plant. @name Planning Plant
+  costCenter:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: costCenter
+    description: SAP notification cost center. @name Cost Center
+  createdBy:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: createdBy
+    description: SAP notification created by. @name Created By
+  createdDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: createdDate
+    description: SAP notification created date. @name Created Date
+  notificationCreatedTime:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: notificationCreatedTime
+    description: SAP notification created time. @name Created Time
+  changedBy:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: changedBy
+    description: SAP notification changed by. @name Changed By
+  changedDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: changedDate
+    description: SAP notification changed date. @name Changed Date
+  changedTime:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: changedTime
+    description: SAP notification changed time. @name Changed Time
+  reportedBy:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: reportedBy
+    description: SAP notification reported by. @name Reported By
+  reportedDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: reportedDate
+    description: SAP notification reported date. @name Reported Date
+  reportedTime:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: reportedTime
+    description: SAP notification reported time. @name Reported Time
+  completionDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: completionDate
+    description: SAP notification completion date. @name Completion Date
+  completionTime:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: completionTime
+    description: SAP notification completion time. @name Completion Time
+  technicalCompletionDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: technicalCompletionDate
+    description: SAP notification technical completion date. @name Technical Completion
+      Date
+  technicalCompletionTime:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: technicalCompletionTime
+    description: SAP notification technical completion time. @name Technical Completion
+      Time
+  settlementDate:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: settlementDate
+    description: SAP notification settlement date. @name Settlement Date
+  settlementTime:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: settlementTime
+    description: SAP notification settlement time. @name Settlement Time
+  settlementRule:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: settlementRule
+    description: SAP notification settlement rule. @name Settlement Rule
+  settlementRuleDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: settlementRuleDescription
+    description: SAP notification settlement rule description. @name Settlement Rule
+      Description
+  settlementRuleType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: settlementRuleType
+    description: SAP notification settlement rule type. @name Settlement Rule Type
+  settlementRuleTypeDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: settlementRuleTypeDescription
+    description: SAP notification settlement rule type description. @name Settlement
+      Rule Type Description
+  settlementRuleCategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: settlementRuleCategory
+    description: SAP notification settlement rule category. @name Settlement Rule
+      Category
+  settlementRuleCategoryDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: settlementRuleCategoryDescription
+    description: SAP notification settlement rule category description. @name Settlement
+      Rule Category Description
+  settlementRuleSubcategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: settlementRuleSubcategory
+    description: SAP notification settlement rule subcategory. @name Settlement Rule
+      Subcategory
+  settlementRuleSubcategoryDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: settlementRuleSubcategoryDescription
+    description: SAP notification settlement rule subcategory description. @name Settlement
+      Rule Subcategory Description
+  objectType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: objectType
+    description: SAP notification object type. @name Object Type
+  objectTypeDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: objectTypeDescription
+    description: SAP notification object type description. @name Object Type Description
+  objectNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: objectNumber
+    description: SAP notification object number. @name Object Number
+  objectNumberDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: objectNumberDescription
+    description: SAP notification object number description. @name Object Number Description
+  objectNumberType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: objectNumberType
+    description: SAP notification object number type. @name Object Number Type
+  objectNumberTypeDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: objectNumberTypeDescription
+    description: SAP notification object number type description. @name Object Number
+      Type Description
+  objectNumberCategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: objectNumberCategory
+    description: SAP notification object number category. @name Object Number Category
+  objectNumberCategoryDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: objectNumberCategoryDescription
+    description: SAP notification object number category description. @name Object
+      Number Category Description
+  objectNumberSubcategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: objectNumberSubcategory
+    description: SAP notification object number subcategory. @name Object Number Subcategory
+  objectNumberSubcategoryDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: objectNumberSubcategoryDescription
+    description: SAP notification object number subcategory description. @name Object
+      Number Subcategory Description
+  failureMode:
+    type:
+      list: false
+      type: direct
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Failure Mode
+    description: The failure mode associated with this notification. @name Failure Mode
+  failureMechanism:
+    type:
+      list: false
+      type: direct
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Failure Mechanism
+    description: The underlying physical, chemical, or operational process leading to a failure, e.g. contamination. @name Failure Mechanism
+  failureCause:
+    type:
+      list: false
+      type: direct
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Failure Cause
+    description: The root cause that directly led to a failure, e.g. Improper material as the Design-related cause. Usually observed and reported at component level. @name Failure Cause
+  failureImpactOnHSE:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: failureImpactOnHSE
+    description: The potential consequences of a failure on personnel safety and the environment. @name Failure Impact on HSE
+  failureImpactOnOperations:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: failureImpactOnOperations
+    description: The effect of a failure on production efficiency and economic performance. @name Failure Impact on Operations
+  failureEffect:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: failureEffect
+    description: The observable outcome resulting from a failure, e.g. Incipient failure. Usually observed at equipment level. @name Failure Effect
+  detectionMethod:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: detectionMethod
+    description: The way in which this failure was observed, e.g. "Casual observation" or "Inspection". @name Detection Method
+  operatingConditionAtFailure:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: operatingConditionAtFailure
+    description: The state of the asset at the time of failure, including load and external influences, such as Run-down, Start-up, Running, Hot standby, Idle, Cold standby, Testing. @name Operating Condition at Failure
+  equipment:
+    type:
+      list: false
+      type: direct
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Equipment
+    description: The equipment the notification is related to. @name Equipment

@@ -1,0 +1,28 @@
+space: energy_dm
+externalId: EquipmentType
+name: Equipment Type
+description: Represents the type of equipment.
+implements:
+- space: cdf_cdm
+  externalId: CogniteEquipmentType
+  version: v1
+  type: view
+- space: cdf_cdm
+  externalId: CogniteDescribable
+  version: v1
+  type: view
+version: v1
+properties:
+  class:
+    container:
+      space: energy_dm
+      externalId: EquipmentType
+      type: container
+    containerPropertyIdentifier: class
+    name: Class
+    description: Specifies the class of the equipment.
+    source:
+      space: energy_dm
+      externalId: EquipmentClass
+      version: v1
+      type: view

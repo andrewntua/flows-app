@@ -1,0 +1,606 @@
+space: energy_dm
+externalId: EnergyTimeSeries
+name: Time Series
+properties:
+  pointId:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Point ID
+    description: 'A unique numeric identifier assigned by the PI Data Archive
+
+      @name Point ID'
+  pointSource:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Point Source
+    description: 'A 1- or 2-character code that identifies the source of the data
+      (e.g., a system or interface). Used in naming conventions and data routing.
+
+      @name Point Source'
+  pointType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Point Type
+    description: 'The data type of the value (e.g., float32, float64, int32, digital,
+      string, timestamp).
+
+      @name Point Type'
+  compdev:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Comp Dev
+    description: 'Source metadata: compdev
+
+      @name Comp Dev'
+  location5:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Location 5
+    description: 'Source metadata: location5
+
+      @name Location 5'
+  convers:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Convers
+    description: 'Source metadata: convers
+
+      @name Convers'
+  descriptor:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Descriptor
+    description: 'Source metadata: descriptor
+
+      @name Descriptor'
+  contextMatchString:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Context Match String
+    description: 'Source metadata: contextMatchString
+
+      @name Context Match String'
+  contextClass:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Context Class
+    description: 'Source metadata: contextClass
+
+      @name Context Class'
+  digitalset:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Digital Set
+    description: 'Source metadata: digitalset
+
+      @name Digital Set'
+  zero:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Zero
+    description: 'Source metadata: zero
+
+      @name Zero'
+  filtercode:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Filter Code
+    description: 'Source metadata: filtercode
+
+      @name Filter Code'
+  compdevpercent:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Comp Dev Percent
+    description: 'Source metadata: compdevpercent
+
+      @name Comp Dev Percent'
+  compressing:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Compressing
+    description: 'Source metadata: compressing
+
+      @name Compressing'
+  tag:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Tag
+    description: 'Source metadata: tag
+
+      @name Tag'
+  srcptid:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Source Point ID
+    description: 'Source metadata: srcptid
+
+      @name Source Point ID'
+  displaydigits:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Display Digits
+    description: 'Source metadata: displaydigits
+
+      @name Display Digits'
+  recno:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Record Number
+    description: 'Source metadata: recno
+
+      @name Record Number'
+  excdev:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Exc Dev
+    description: 'Source metadata: excdev
+
+      @name Exc Dev'
+  userreal2:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: User Real 2
+    description: 'Source metadata: userreal2
+
+      @name User Real 2'
+  userreal1:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: User Real 1
+    description: 'Source metadata: userreal1
+
+      @name User Real 1'
+  contextAlgorithm:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Context Algorithm
+    description: 'Source metadata: contextAlgorithm
+
+      @name Context Algorithm'
+  totalcode:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Total Code
+    description: 'Source metadata: totalcode
+
+      @name Total Code'
+  ptclassname:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Point Class Name
+    description: 'Source metadata: ptclassname
+
+      @name Point Class Name'
+  typicalvalue:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Typical Value
+    description: 'Source metadata: typicalvalue
+
+      @name Typical Value'
+  location1:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Location 1
+    description: 'Source metadata: location1
+
+      @name Location 1'
+  location2:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Location 2
+    description: 'Source metadata: location2
+
+      @name Location 2'
+  location3:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Location 3
+    description: 'Source metadata: location3
+
+      @name Location 3'
+  location4:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Location 4
+    description: 'Source metadata: location4
+
+      @name Location 4'
+  shutdown:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Shutdown
+    description: 'Source metadata: shutdown
+
+      @name Shutdown'
+  compmin:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Comp Min
+    description: 'Source metadata: compmin
+
+      @name Comp Min'
+  ptclassrev:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Point Class Rev
+    description: 'Source metadata: ptclassrev
+
+      @name Point Class Rev'
+  scan:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Scan
+    description: 'Source metadata: scan
+
+      @name Scan'
+  userint2:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: User Int 2
+    description: 'Source metadata: userint2
+
+      @name User Int 2'
+  userint1:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: User Int 1
+    description: 'Source metadata: userint1
+
+      @name User Int 1'
+  excdevpercent:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Exc Dev Percent
+    description: 'Source metadata: excdevpercent
+
+      @name Exc Dev Percent'
+  archiving:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Archiving
+    description: 'Source metadata: archiving
+
+      @name Archiving'
+  instrumenttag:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Instrument Tag
+    description: 'Source metadata: instrumenttag
+
+      @name Instrument Tag'
+  compmax:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Comp Max
+    description: 'Source metadata: compmax
+
+      @name Comp Max'
+  ptclassid:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Point Class ID
+    description: 'Source metadata: ptclassid
+
+      @name Point Class ID'
+  squareroot:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Square Root
+    description: 'Source metadata: squareroot
+
+      @name Square Root'
+  sourcetag:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Source Tag
+    description: 'Source metadata: sourcetag
+
+      @name Source Tag'
+  excmin:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Exc Min
+    description: 'Source metadata: excmin
+
+      @name Exc Min'
+  contextConfidenceScore:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Context Confidence Score
+    description: 'Source metadata: contextConfidenceScore
+
+      @name Context Confidence Score'
+  contextAgent:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Context Agent
+    description: 'Source metadata: contextAgent
+
+      @name Context Agent'
+  future:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Future
+    description: 'Source metadata: future
+
+      @name Future'
+  excmax:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Exc Max
+    description: 'Source metadata: excmax
+
+      @name Exc Max'
+  step:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Step
+    description: 'Source metadata: step
+
+      @name Step'
+  engunits:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Engineering Units
+    description: 'Source metadata: engunits
+
+      @name Engineering Units'
+  span:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Span
+    description: 'Source metadata: span
+
+      @name Span'

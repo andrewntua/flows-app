@@ -1,0 +1,12 @@
+# File metadata (name, assets, mimeType) must already exist in energy_instances
+# (via RAW upload + wf_energy_base_raw_to_dm). Each filename in "files/" must match
+# the EnergyFile instance externalId (same as `key` in EnergyFile.RawRows.csv).
+kind: CogniteFileContent
+type: CogniteFileTemplate
+# Relative to repo root (run upload from project root per docs/DEPLOY.md).
+fileDirectory: bootcamp/data/energy_files_content/files
+guessMimeType: true
+template:
+  space: energy_instances
+  externalId: $FILENAME
+  name: $FILENAME

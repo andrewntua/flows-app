@@ -1,0 +1,169 @@
+name: participants
+sourceId: ${AZURE_GROUP_IDENTIFIER_PARTICIPANTS}
+capabilities:
+- locationFiltersAcl:
+    actions:
+    - READ
+    - WRITE
+    scope:
+      all: {}
+- dataModelsAcl:
+    actions:
+    - READ
+    - WRITE
+    scope:
+      all: {}
+- dataModelInstancesAcl:
+    actions:
+    - READ
+    - WRITE
+    - WRITE_PROPERTIES
+    scope:
+      all: {}
+- streamsAcl:
+    actions:
+    - READ
+    - CREATE
+    - DELETE
+    scope:
+      all: {}
+- streamRecordsAcl:
+    actions:
+    - READ
+    - WRITE
+    scope:
+      all: {}
+- timeSeriesAcl:
+    actions:
+    - READ
+    - WRITE
+    scope:
+      all: {}
+- rawAcl:
+    actions:
+    - READ
+    - WRITE
+    - LIST
+    scope:
+      all: {}
+- assetsAcl:
+    actions:
+    - READ
+    scope:
+      all: {}
+- transformationsAcl:
+    actions:
+    - READ
+    - WRITE
+    scope:
+      all: {}
+- workflowOrchestrationAcl:
+    actions:
+    - READ
+    - WRITE
+    scope:
+      all: {}
+- projectsAcl:
+    actions:
+    - LIST
+    scope:
+      all: {}
+- threedAcl:
+    actions:
+    - READ
+    - CREATE
+    - UPDATE
+    - DELETE
+    scope:
+      all: {}
+- filesAcl:
+    actions:
+    - READ
+    - WRITE
+    scope:
+      all: {}
+- sessionsAcl:
+    actions:
+    - CREATE
+    scope:
+      all: {}
+- functionsAcl:
+    actions:
+    - READ
+    - WRITE
+    scope:
+      all: {}
+- datasetsAcl:
+    actions:
+    - READ
+    - WRITE
+    - OWNER
+    scope:
+      all: {}
+- groupsAcl:
+    actions:
+    - LIST
+    - READ
+    - CREATE
+    - UPDATE
+    - DELETE
+    scope:
+      all: {}
+- diagramParsingAcl:
+    actions:
+    - READ
+    - WRITE
+    scope:
+      all: {}
+- entitymatchingAcl:
+    actions:
+    - READ
+    - WRITE
+    scope:
+      all: {}
+- agentsAcl:
+    actions:
+    - READ
+    - WRITE
+    - RUN
+    scope:
+      all: {}
+- dataProductsAcl:
+    actions:
+    - READ
+    - CREATE
+    - UPDATE
+    - DELETE
+    scope:
+      all: {}
+- appHostingAcl:
+    actions:
+    - READ
+    - WRITE
+    - RUN
+    scope:
+      all: {}
+- extractionPipelinesAcl:
+    actions:
+    - READ
+    - WRITE
+    scope:
+      all: {}
+- extractionRunsAcl:
+    actions:
+    - READ
+    - WRITE
+    scope:
+      all: {}
+- extractionConfigsAcl:
+    actions:
+    - READ
+    - WRITE
+    scope:
+      all: {}
+- documentPipelinesAcl:
+    actions:
+    - READ
+    - WRITE
+    scope:
+      all: {}

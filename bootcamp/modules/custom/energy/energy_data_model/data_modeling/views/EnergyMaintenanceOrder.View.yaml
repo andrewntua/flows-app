@@ -1,0 +1,661 @@
+space: energy_dm
+externalId: EnergyMaintenanceOrder
+name: Maint Orders
+description: 'A maintenance order specific to energy industry operations, extending
+  CogniteMaintenanceOrder with SAP PM fields.
+
+  @name Maint Orders'
+implements:
+- space: cdf_cdm
+  externalId: CogniteSourceable
+  version: v1
+  type: view
+- space: cdf_cdm
+  externalId: CogniteDescribable
+  version: v1
+  type: view
+- space: cdf_cdm
+  externalId: CogniteSchedulable
+  version: v1
+  type: view
+- space: cdf_cdm
+  externalId: CogniteActivity
+  version: v1
+  type: view
+- space: cdf_idm
+  externalId: CogniteMaintenanceOrder
+  version: v1
+  type: view
+version: v1
+properties:
+  assets:
+    container:
+      space: cdf_cdm
+      externalId: CogniteActivity
+      type: container
+    containerPropertyIdentifier: assets
+    name: Assets
+    description: 'A list of assets the activity is related to.
+
+      @name Assets'
+    source:
+      space: energy_dm
+      externalId: EnergyAsset
+      version: v1
+      type: view
+  equipment:
+    container:
+      space: cdf_cdm
+      externalId: CogniteActivity
+      type: container
+    containerPropertyIdentifier: equipment
+    name: Equipment
+    description: 'A list of equipment the activity is related to.
+
+      @name Equipment'
+    source:
+      space: energy_dm
+      externalId: EnergyEquipment
+      version: v1
+      type: view
+  timeSeries:
+    container:
+      space: cdf_cdm
+      externalId: CogniteActivity
+      type: container
+    containerPropertyIdentifier: timeSeries
+    name: Time series
+    description: 'A list of time series the activity is related to.
+
+      @name Time series'
+    source:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      version: v1
+      type: view
+  mainAsset:
+    container:
+      space: cdf_idm
+      externalId: CogniteMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: mainAsset
+    name: Main asset
+    description: 'The primary asset (functional location) the maintenance order refers
+      to.
+
+      @name Main asset'
+    source:
+      space: energy_dm
+      externalId: EnergyAsset
+      version: v1
+      type: view
+  operations:
+    source:
+      space: energy_dm
+      externalId: EnergyOperation
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: EnergyOperation
+        version: v1
+        type: view
+      identifier: maintenanceOrder
+    name: Operations
+    description: 'Lists the individual work items on the maintenance order. An automatically
+      populated list of operations related to the maintenance order.
+
+      @name Operations'
+    connectionType: multi_reverse_direct_relation
+  orderNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: orderNumber
+    name: orderNumber
+    description: SAP maintenance order number. @name Order Number
+  workCenter:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: workCenter
+    name: workCenter
+    description: SAP work center where the maintenance is performed. @name Work Center
+  plant:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: plant
+    name: plant
+    description: SAP plant identifier. @name Plant
+  maintenanceType:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceType
+    name: maintenanceType
+    description: SAP maintenance type (PM01, PM02, etc.). @name Maintenance Type
+  systemStatus:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: systemStatus
+    name: systemStatus
+    description: SAP system status. @name System Status
+  userStatus:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: userStatus
+    name: userStatus
+    description: SAP user status. @name User Status
+  orderType:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: orderType
+    name: orderType
+    description: SAP order type. @name Order Type
+  planningPlant:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: planningPlant
+    name: planningPlant
+    description: SAP planning plant. @name Planning Plant
+  maintenancePlant:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenancePlant
+    name: maintenancePlant
+    description: SAP maintenance plant. @name Maintenance Plant
+  costCenter:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: costCenter
+    name: costCenter
+    description: SAP cost center. @name Cost Center
+  plannerGroup:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: plannerGroup
+    name: plannerGroup
+    description: SAP planner group. @name Planner Group
+  maintenancePlanningGroup:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenancePlanningGroup
+    name: maintenancePlanningGroup
+    description: SAP maintenance planning group. @name Maintenance Planning Group
+  workCenterResponsible:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: workCenterResponsible
+    name: workCenterResponsible
+    description: SAP work center responsible person. @name Work Center Responsible
+  orderCategory:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: orderCategory
+    name: orderCategory
+    description: SAP maintenance order category. @name Order Category
+  orderSubcategory:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: orderSubcategory
+    name: orderSubcategory
+    description: SAP maintenance order subcategory. @name Order Subcategory
+  basicStartDate:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: basicStartDate
+    name: basicStartDate
+    description: SAP basic start date. @name Basic Start Date
+  basicFinishDate:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: basicFinishDate
+    name: basicFinishDate
+    description: SAP basic finish date. @name Basic Finish Date
+  scheduledStartDate:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: scheduledStartDate
+    name: scheduledStartDate
+    description: SAP scheduled start date. @name Scheduled Start Date
+  scheduledFinishDate:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: scheduledFinishDate
+    name: scheduledFinishDate
+    description: SAP scheduled finish date. @name Scheduled Finish Date
+  suggestedScheduledStartDate:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: suggestedScheduledStartDate
+    name: suggestedScheduledStartDate
+    description: AI-suggested alternative start date for work balancing. @name Suggested Scheduled Start Date
+  suggestedScheduledFinishDate:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: suggestedScheduledFinishDate
+    name: suggestedScheduledFinishDate
+    description: AI-suggested alternative finish date for work balancing. @name Suggested Scheduled Finish Date
+  actualStartDate:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: actualStartDate
+    name: actualStartDate
+    description: SAP actual start date. @name Actual Start Date
+  actualFinishDate:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: actualFinishDate
+    name: actualFinishDate
+    description: SAP actual finish date. @name Actual Finish Date
+  plannedWorkHours:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: plannedWorkHours
+    name: plannedWorkHours
+    description: SAP planned work hours. @name Planned Work Hours
+  actualWorkHours:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: actualWorkHours
+    name: actualWorkHours
+    description: SAP actual work hours. @name Actual Work Hours
+  plannedCosts:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: plannedCosts
+    name: plannedCosts
+    description: SAP planned costs. @name Planned Costs
+  actualCosts:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: actualCosts
+    name: actualCosts
+    description: SAP actual costs. @name Actual Costs
+  currency:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: currency
+    name: currency
+    description: SAP currency. @name Currency
+  orderText:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: orderText
+    name: orderText
+    description: SAP maintenance order text. @name Order Text
+  orderLongText:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: orderLongText
+    name: orderLongText
+    description: SAP maintenance order long text. @name Order Long Text
+  notificationNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: notificationNumber
+    name: notificationNumber
+    description: SAP notification number. @name Notification Number
+  equipmentNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: equipmentNumber
+    name: equipmentNumber
+    description: SAP equipment number. @name Equipment Number
+  functionalLocation:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: functionalLocation
+    name: functionalLocation
+    description: SAP functional location. @name Functional Location
+  maintenanceItem:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceItem
+    name: maintenanceItem
+    description: SAP maintenance item. @name Maintenance Item
+  maintenanceStrategy:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceStrategy
+    name: maintenanceStrategy
+    description: SAP maintenance strategy. @name Maintenance Strategy
+  maintenancePackage:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenancePackage
+    name: maintenancePackage
+    description: SAP maintenance package. @name Maintenance Package
+  maintenancePlan:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenancePlan
+    name: maintenancePlan
+    description: SAP maintenance plan. @name Maintenance Plan
+  maintenanceCallObject:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallObject
+    name: maintenanceCallObject
+    description: SAP maintenance call object. @name Maintenance Call Object
+  maintenanceCallObjectNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallObjectNumber
+    name: maintenanceCallObjectNumber
+    description: SAP maintenance call object number. @name Maintenance Call Object
+      Number
+  maintenanceCallHorizon:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallHorizon
+    name: maintenanceCallHorizon
+    description: SAP maintenance call horizon. @name Maintenance Call Horizon
+  maintenanceCallHorizonUnit:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallHorizonUnit
+    name: maintenanceCallHorizonUnit
+    description: SAP maintenance call horizon unit. @name Maintenance Call Horizon
+      Unit
+  maintenanceCallDate:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallDate
+    name: maintenanceCallDate
+    description: SAP maintenance call date. @name Maintenance Call Date
+  maintenanceCallTime:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallTime
+    name: maintenanceCallTime
+    description: SAP maintenance call time. @name Maintenance Call Time
+  maintenanceCallPerson:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallPerson
+    name: maintenanceCallPerson
+    description: SAP maintenance call person. @name Maintenance Call Person
+  maintenanceCallText:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallText
+    name: maintenanceCallText
+    description: SAP maintenance call text. @name Maintenance Call Text
+  maintenanceCallLongText:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallLongText
+    name: maintenanceCallLongText
+    description: SAP maintenance call long text. @name Maintenance Call Long Text
+  maintenanceCallPriority:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallPriority
+    name: maintenanceCallPriority
+    description: SAP maintenance call priority. @name Maintenance Call Priority
+  maintenanceCallPriorityDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallPriorityDescription
+    name: maintenanceCallPriorityDescription
+    description: SAP maintenance call priority description. @name Maintenance Call
+      Priority Description
+  maintenanceCallStatus:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallStatus
+    name: maintenanceCallStatus
+    description: SAP maintenance call status. @name Maintenance Call Status
+  maintenanceCallStatusDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallStatusDescription
+    name: maintenanceCallStatusDescription
+    description: SAP maintenance call status description. @name Maintenance Call Status
+      Description
+  maintenanceCallType:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallType
+    name: maintenanceCallType
+    description: SAP maintenance call type. @name Maintenance Call Type
+  maintenanceCallTypeDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallTypeDescription
+    name: maintenanceCallTypeDescription
+    description: SAP maintenance call type description. @name Maintenance Call Type
+      Description
+  maintenanceCallCategory:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallCategory
+    name: maintenanceCallCategory
+    description: SAP maintenance call category. @name Maintenance Call Category
+  maintenanceCallCategoryDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallCategoryDescription
+    name: maintenanceCallCategoryDescription
+    description: SAP maintenance call category description. @name Maintenance Call
+      Category Description
+  maintenanceCallSubcategory:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallSubcategory
+    name: maintenanceCallSubcategory
+    description: SAP maintenance call subcategory. @name Maintenance Call Subcategory
+  maintenanceCallSubcategoryDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallSubcategoryDescription
+    name: maintenanceCallSubcategoryDescription
+    description: SAP maintenance call subcategory description. @name Maintenance Call
+      Subcategory Description
+  maintenanceCallObjectType:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallObjectType
+    name: maintenanceCallObjectType
+    description: SAP maintenance call object type. @name Maintenance Call Object Type
+  maintenanceCallObjectTypeDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallObjectTypeDescription
+    name: maintenanceCallObjectTypeDescription
+    description: SAP maintenance call object type description. @name Maintenance Call
+      Object Type Description
+  maintenanceCallObjectNumberDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallObjectNumberDescription
+    name: maintenanceCallObjectNumberDescription
+    description: SAP maintenance call object number description. @name Maintenance
+      Call Object Number Description
+  maintenanceCallObjectNumberType:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallObjectNumberType
+    name: maintenanceCallObjectNumberType
+    description: SAP maintenance call object number type. @name Maintenance Call Object
+      Number Type
+  maintenanceCallObjectNumberTypeDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallObjectNumberTypeDescription
+    name: maintenanceCallObjectNumberTypeDescription
+    description: SAP maintenance call object number type description. @name Maintenance
+      Call Object Number Type Description
+  maintenanceCallObjectNumberCategory:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallObjectNumberCategory
+    name: maintenanceCallObjectNumberCategory
+    description: SAP maintenance call object number category. @name Maintenance Call
+      Object Number Category
+  maintenanceCallObjectNumberCategoryDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallObjectNumberCategoryDescription
+    name: maintenanceCallObjectNumberCategoryDescription
+    description: SAP maintenance call object number category description. @name Maintenance
+      Call Object Number Category Description
+  maintenanceCallObjectNumberSubcategory:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallObjectNumberSubcategory
+    name: maintenanceCallObjectNumberSubcategory
+    description: SAP maintenance call object number subcategory. @name Maintenance
+      Call Object Number Subcategory
+  maintenanceCallObjectNumberSubcategoryDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceCallObjectNumberSubcategoryDescription
+    name: maintenanceCallObjectNumberSubcategoryDescription
+    description: SAP maintenance call object number subcategory description. @name
+      Maintenance Call Object Number Subcategory Description
+  activeMaintenanceTime:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: activeMaintenanceTime
+    name: activeMaintenanceTime
+    description: The duration for which maintenance was actively performed on an asset. @name Active Maintenance Time
+  maintenanceActivityType:
+    container:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      type: container
+    containerPropertyIdentifier: maintenanceActivityType
+    name: maintenanceActivityType
+    description: The type of activity carried out for this maintenance order according to ISO 14224. @name Maintenance Activity Type

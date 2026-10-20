@@ -1,0 +1,35 @@
+space: energy_dm
+externalId: DamageMechanism
+name: Damage mechanism
+description: RBI damage mechanism identified on piping or equipment, with DM category.
+implements:
+- space: cdf_cdm
+  externalId: CogniteDescribable
+  version: v1
+  type: view
+version: v1
+properties:
+  dmCategory:
+    container:
+      space: energy_dm
+      externalId: DamageMechanism
+      type: container
+    containerPropertyIdentifier: dmCategory
+    name: DM category
+    description: Damage mechanism category (Internal, External, or CUI).
+  piping:
+    source:
+      space: energy_dm
+      externalId: EnergyPiping
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: EnergyPiping
+        version: v1
+        type: view
+      identifier: damageMechanisms
+    name: Piping
+    description: Piping lines linked to this damage mechanism.
+    connectionType: multi_reverse_direct_relation

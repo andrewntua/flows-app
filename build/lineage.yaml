@@ -1,0 +1,1451 @@
+timestamp: '2026-10-16T13:43:40+00:00'
+duration: 20.03
+organizationDir: C:/Users/aandroutsopoulos/OneDrive - MOH/Documents/Cognite_CDF/training-bootcamp/bootcamp
+buildDir: C:/Users/aandroutsopoulos/OneDrive - MOH/Documents/Cognite_CDF/training-bootcamp/build
+cdfProject: bootcamp-3
+configHash: 0ca0ba22
+modulesSummary:
+  processed: 6
+  succeeded: 6
+  failed: 0
+insightsSummary: {}
+moduleLineage:
+- moduleId: modules/custom/groups
+  modulePath: modules/custom/groups
+  moduleHash: c418b8f9
+  insightsSummary: {}
+  variables:
+  - id: modules\azureGroupIdentifier
+    value: ${AZURE_GROUP_IDENTIFIER}
+    is_selected: true
+    iteration: null
+  - id: modules\participantsAzureGroupIdentifier
+    value: ${AZURE_GROUP_IDENTIFIER_PARTICIPANTS}
+    is_selected: true
+    iteration: null
+  - id: modules\toolkitPrincipalAzureGroupIdentifier
+    value: ${AZURE_GROUP_IDENTIFIER_TOOLKIT_PRINCIPAL}
+    is_selected: true
+    iteration: null
+  - id: modules\energyInstanceSpace
+    value: energy_instances
+    is_selected: true
+    iteration: null
+  - id: modules\energyDataModelSpace
+    value: energy_dm
+    is_selected: true
+    iteration: null
+  - id: modules\energyAssetPrefix
+    value: 'WMT:'
+    is_selected: true
+    iteration: null
+  - id: modules\viewVersion
+    value: v1
+    is_selected: true
+    iteration: null
+  - id: modules\energyTimeSeriesSpace
+    value: energy_time_series
+    is_selected: true
+    iteration: null
+  - id: modules\energyBaseRawDb
+    value: energy_dm_base_demo
+    is_selected: true
+    iteration: null
+  - id: modules\energy_base_raw_ingestion_dataset_external_id
+    value: ds_energy_base_raw_ingestion
+    is_selected: true
+    iteration: null
+  - id: modules\energy_base_raw_ingestion_dataset_name
+    value: Energy Base RAW to DM
+    is_selected: true
+    iteration: null
+  - id: modules\diagramWorkflowVersion
+    value: '1'
+    is_selected: true
+    iteration: null
+  - id: modules\oidRootAssetExternalId
+    value: WMT:Aker BP
+    is_selected: true
+    iteration: null
+  - id: modules\oidScheduleClientId
+    value: ${IDP_CLIENT_ID}
+    is_selected: true
+    iteration: null
+  - id: modules\oidScheduleClientSecret
+    value: ${IDP_CLIENT_SECRET}
+    is_selected: true
+    iteration: null
+  resourceLineage:
+  - sourceFile: modules/custom/groups/auth/participants.Group.yaml
+    sourceHash: e70cf416
+    type:
+      resource_folder: auth
+      kind: Group
+    builtFile: auth/1-participants-participants.Group.yaml
+    identifier:
+      name: participants
+  - sourceFile: modules/custom/groups/auth/read-write-all.Group.yaml
+    sourceHash: 3ab7aabe
+    type:
+      resource_folder: auth
+      kind: Group
+    builtFile: auth/2-read-write-all-read-write-all.Group.yaml
+    identifier:
+      name: read-write-all
+  status: SUCCESS
+- moduleId: modules/custom/energy/energy_oid_datapoint_replication
+  modulePath: modules/custom/energy/energy_oid_datapoint_replication
+  moduleHash: c700abd2
+  insightsSummary: {}
+  variables:
+  - id: modules\azureGroupIdentifier
+    value: ${AZURE_GROUP_IDENTIFIER}
+    is_selected: true
+    iteration: null
+  - id: modules\participantsAzureGroupIdentifier
+    value: ${AZURE_GROUP_IDENTIFIER_PARTICIPANTS}
+    is_selected: true
+    iteration: null
+  - id: modules\toolkitPrincipalAzureGroupIdentifier
+    value: ${AZURE_GROUP_IDENTIFIER_TOOLKIT_PRINCIPAL}
+    is_selected: true
+    iteration: null
+  - id: modules\energyInstanceSpace
+    value: energy_instances
+    is_selected: true
+    iteration: null
+  - id: modules\energyDataModelSpace
+    value: energy_dm
+    is_selected: true
+    iteration: null
+  - id: modules\energyAssetPrefix
+    value: 'WMT:'
+    is_selected: true
+    iteration: null
+  - id: modules\viewVersion
+    value: v1
+    is_selected: true
+    iteration: null
+  - id: modules\energyTimeSeriesSpace
+    value: energy_time_series
+    is_selected: true
+    iteration: null
+  - id: modules\energyBaseRawDb
+    value: energy_dm_base_demo
+    is_selected: true
+    iteration: null
+  - id: modules\energy_base_raw_ingestion_dataset_external_id
+    value: ds_energy_base_raw_ingestion
+    is_selected: true
+    iteration: null
+  - id: modules\energy_base_raw_ingestion_dataset_name
+    value: Energy Base RAW to DM
+    is_selected: true
+    iteration: null
+  - id: modules\diagramWorkflowVersion
+    value: '1'
+    is_selected: true
+    iteration: null
+  - id: modules\oidRootAssetExternalId
+    value: WMT:Aker BP
+    is_selected: true
+    iteration: null
+  - id: modules\oidScheduleClientId
+    value: ${IDP_CLIENT_ID}
+    is_selected: true
+    iteration: null
+  - id: modules\oidScheduleClientSecret
+    value: ${IDP_CLIENT_SECRET}
+    is_selected: true
+    iteration: null
+  resourceLineage:
+  - sourceFile: modules/custom/energy/energy_oid_datapoint_replication/functions/fn_oid_replicate_data_points.Function.yaml
+    sourceHash: cf9dda4f
+    type:
+      resource_folder: functions
+      kind: Function
+    builtFile: functions/1-fn_oid_replicate_data_points-fn_oid_replicate_data_points.Function.yaml
+    identifier:
+      externalId: fn_oid_replicate_data_points
+  - sourceFile: modules/custom/energy/energy_oid_datapoint_replication/functions/fn_oid_replicate_data_points.Schedule.yaml
+    sourceHash: c939cde7
+    type:
+      resource_folder: functions
+      kind: Schedule
+    builtFile: functions/1-fn_oid_replicate_data_points-fn_oid_replicate_data_points.fn_oid_replicate_data_points_every_5_min.Schedule.yaml
+    identifier:
+      functionExternalId: fn_oid_replicate_data_points
+      name: fn_oid_replicate_data_points_every_5_min
+  status: SUCCESS
+- moduleId: modules/custom/energy/energy_diagram_contextualization
+  modulePath: modules/custom/energy/energy_diagram_contextualization
+  moduleHash: 4805560a
+  insightsSummary: {}
+  variables:
+  - id: modules\azureGroupIdentifier
+    value: ${AZURE_GROUP_IDENTIFIER}
+    is_selected: true
+    iteration: null
+  - id: modules\participantsAzureGroupIdentifier
+    value: ${AZURE_GROUP_IDENTIFIER_PARTICIPANTS}
+    is_selected: true
+    iteration: null
+  - id: modules\toolkitPrincipalAzureGroupIdentifier
+    value: ${AZURE_GROUP_IDENTIFIER_TOOLKIT_PRINCIPAL}
+    is_selected: true
+    iteration: null
+  - id: modules\energyInstanceSpace
+    value: energy_instances
+    is_selected: true
+    iteration: null
+  - id: modules\energyDataModelSpace
+    value: energy_dm
+    is_selected: true
+    iteration: null
+  - id: modules\energyAssetPrefix
+    value: 'WMT:'
+    is_selected: true
+    iteration: null
+  - id: modules\viewVersion
+    value: v1
+    is_selected: true
+    iteration: null
+  - id: modules\energyTimeSeriesSpace
+    value: energy_time_series
+    is_selected: true
+    iteration: null
+  - id: modules\energyBaseRawDb
+    value: energy_dm_base_demo
+    is_selected: true
+    iteration: null
+  - id: modules\energy_base_raw_ingestion_dataset_external_id
+    value: ds_energy_base_raw_ingestion
+    is_selected: true
+    iteration: null
+  - id: modules\energy_base_raw_ingestion_dataset_name
+    value: Energy Base RAW to DM
+    is_selected: true
+    iteration: null
+  - id: modules\diagramWorkflowVersion
+    value: '1'
+    is_selected: true
+    iteration: null
+  - id: modules\oidRootAssetExternalId
+    value: WMT:Aker BP
+    is_selected: true
+    iteration: null
+  - id: modules\oidScheduleClientId
+    value: ${IDP_CLIENT_ID}
+    is_selected: true
+    iteration: null
+  - id: modules\oidScheduleClientSecret
+    value: ${IDP_CLIENT_SECRET}
+    is_selected: true
+    iteration: null
+  resourceLineage:
+  - sourceFile: modules/custom/energy/energy_diagram_contextualization/functions/fn_diagram_delete_annotations.Function.yaml
+    sourceHash: 313c8cf3
+    type:
+      resource_folder: functions
+      kind: Function
+    builtFile: functions/2-fn_diagram_delete_annotations-fn_diagram_delete_annotations.Function.yaml
+    identifier:
+      externalId: fn_diagram_delete_annotations
+  - sourceFile: modules/custom/energy/energy_diagram_contextualization/functions/fn_diagram_detect_file_annotations.Function.yaml
+    sourceHash: f554db18
+    type:
+      resource_folder: functions
+      kind: Function
+    builtFile: functions/3-fn_diagram_detect_file_annotations-fn_diagram_detect_file_annotations.Function.yaml
+    identifier:
+      externalId: fn_diagram_detect_file_annotations
+  - sourceFile: modules/custom/energy/energy_diagram_contextualization/functions/fn_diagram_detect_tag_annotations.Function.yaml
+    sourceHash: 22d14928
+    type:
+      resource_folder: functions
+      kind: Function
+    builtFile: functions/4-fn_diagram_detect_tag_annotations-fn_diagram_detect_tag_annotations.Function.yaml
+    identifier:
+      externalId: fn_diagram_detect_tag_annotations
+  - sourceFile: modules/custom/energy/energy_diagram_contextualization/workflows/wf_energy_diagram_contextualization.Workflow.yaml
+    sourceHash: 9db81ce6
+    type:
+      resource_folder: workflows
+      kind: Workflow
+    builtFile: workflows/1-wf_energy_diagram_contextualization-wf_energy_diagram_contextualization.Workflow.yaml
+    identifier:
+      externalId: wf_energy_diagram_contextualization
+  - sourceFile: modules/custom/energy/energy_diagram_contextualization/workflows/wf_energy_diagram_contextualization.WorkflowVersion.yaml
+    sourceHash: 8db2d02d
+    type:
+      resource_folder: workflows
+      kind: WorkflowVersion
+    builtFile: workflows/1-wf_energy_diagram_contextualization-wf_energy_diagram_contextualization.1.WorkflowVersion.yaml
+    identifier:
+      workflowExternalId: wf_energy_diagram_contextualization
+      version: '1'
+  status: SUCCESS
+- moduleId: modules/custom/energy/energy_data_model
+  modulePath: modules/custom/energy/energy_data_model
+  moduleHash: 0b4fb0a8
+  insightsSummary: {}
+  variables:
+  - id: modules\azureGroupIdentifier
+    value: ${AZURE_GROUP_IDENTIFIER}
+    is_selected: true
+    iteration: null
+  - id: modules\participantsAzureGroupIdentifier
+    value: ${AZURE_GROUP_IDENTIFIER_PARTICIPANTS}
+    is_selected: true
+    iteration: null
+  - id: modules\toolkitPrincipalAzureGroupIdentifier
+    value: ${AZURE_GROUP_IDENTIFIER_TOOLKIT_PRINCIPAL}
+    is_selected: true
+    iteration: null
+  - id: modules\energyInstanceSpace
+    value: energy_instances
+    is_selected: true
+    iteration: null
+  - id: modules\energyDataModelSpace
+    value: energy_dm
+    is_selected: true
+    iteration: null
+  - id: modules\energyAssetPrefix
+    value: 'WMT:'
+    is_selected: true
+    iteration: null
+  - id: modules\viewVersion
+    value: v1
+    is_selected: true
+    iteration: null
+  - id: modules\energyTimeSeriesSpace
+    value: energy_time_series
+    is_selected: true
+    iteration: null
+  - id: modules\energyBaseRawDb
+    value: energy_dm_base_demo
+    is_selected: true
+    iteration: null
+  - id: modules\energy_base_raw_ingestion_dataset_external_id
+    value: ds_energy_base_raw_ingestion
+    is_selected: true
+    iteration: null
+  - id: modules\energy_base_raw_ingestion_dataset_name
+    value: Energy Base RAW to DM
+    is_selected: true
+    iteration: null
+  - id: modules\diagramWorkflowVersion
+    value: '1'
+    is_selected: true
+    iteration: null
+  - id: modules\oidRootAssetExternalId
+    value: WMT:Aker BP
+    is_selected: true
+    iteration: null
+  - id: modules\oidScheduleClientId
+    value: ${IDP_CLIENT_ID}
+    is_selected: true
+    iteration: null
+  - id: modules\oidScheduleClientSecret
+    value: ${IDP_CLIENT_SECRET}
+    is_selected: true
+    iteration: null
+  resourceLineage:
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/energy_dm.DataModel.yaml
+    sourceHash: 8da36c96
+    type:
+      resource_folder: data_modeling
+      kind: DataModel
+    builtFile: data_modeling/1-energy_dm-energy_dm.energy_dm.v1.DataModel.yaml
+    identifier:
+      space: energy_dm
+      externalId: energy_dm
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/energy_dm.Space.yaml
+    sourceHash: 7510ba70
+    type:
+      resource_folder: data_modeling
+      kind: Space
+    builtFile: data_modeling/1-energy_dm-energy_dm.Space.yaml
+    identifier:
+      space: energy_dm
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/energy_dm.Space.yaml
+    sourceHash: 7510ba70
+    type:
+      resource_folder: data_modeling
+      kind: Space
+    builtFile: data_modeling/2-energy_dm-energy_instances.Space.yaml
+    identifier:
+      space: energy_instances
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/energy_dm.Space.yaml
+    sourceHash: 7510ba70
+    type:
+      resource_folder: data_modeling
+      kind: Space
+    builtFile: data_modeling/3-energy_dm-energy_time_series.Space.yaml
+    identifier:
+      space: energy_time_series
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_ConditionMonitoringLocation.Container.yaml
+    sourceHash: 0b8c1fd0
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/1-energy_dm_ConditionMonitoringLocation-energy_dm.ConditionMonitoringLocation.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_CorrosionLoop.Container.yaml
+    sourceHash: 662b4bd4
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/2-energy_dm_CorrosionLoop-energy_dm.CorrosionLoop.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: CorrosionLoop
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_DamageMechanism.Container.yaml
+    sourceHash: accfe604
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/3-energy_dm_DamageMechanism-energy_dm.DamageMechanism.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: DamageMechanism
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_EnergyAsset.Container.yaml
+    sourceHash: e2593eb2
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/4-energy_dm_EnergyAsset-energy_dm.EnergyAsset.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: EnergyAsset
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_EnergyEquipment.Container.yaml
+    sourceHash: 70a11183
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/5-energy_dm_EnergyEquipment-energy_dm.EnergyEquipment.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: EnergyEquipment
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_EnergyFile.Container.yaml
+    sourceHash: a355e90b
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/6-energy_dm_EnergyFile-energy_dm.EnergyFile.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: EnergyFile
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_EnergyMaintenanceOrder.Container.yaml
+    sourceHash: a783dbdf
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/7-energy_dm_EnergyMaintenanceOrder-energy_dm.EnergyMaintenanceOrder.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_EnergyNotification.Container.yaml
+    sourceHash: 18e4b02f
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/8-energy_dm_EnergyNotification-energy_dm.EnergyNotification.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: EnergyNotification
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_EnergyOperation.Container.yaml
+    sourceHash: 579d7e94
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/9-energy_dm_EnergyOperation-energy_dm.EnergyOperation.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: EnergyOperation
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_EnergyPiping.Container.yaml
+    sourceHash: 9ddf6fd9
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/10-energy_dm_EnergyPiping-energy_dm.EnergyPiping.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: EnergyPiping
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_EnergyTimeSeries.Container.yaml
+    sourceHash: 02f1265e
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/11-energy_dm_EnergyTimeSeries-energy_dm.EnergyTimeSeries.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_EquipmentClass.Container.yaml
+    sourceHash: f39f0575
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/12-energy_dm_EquipmentClass-energy_dm.EquipmentClass.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: EquipmentClass
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_EquipmentType.Container.yaml
+    sourceHash: 239b416c
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/13-energy_dm_EquipmentType-energy_dm.EquipmentType.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: EquipmentType
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_FailureCause.Container.yaml
+    sourceHash: 0c07311f
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/14-energy_dm_FailureCause-energy_dm.FailureCause.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: FailureCause
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_FailureMechanism.Container.yaml
+    sourceHash: e54d5833
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/15-energy_dm_FailureMechanism-energy_dm.FailureMechanism.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: FailureMechanism
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_FailureMode.Container.yaml
+    sourceHash: ed1e3857
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/16-energy_dm_FailureMode-energy_dm.FailureMode.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: FailureMode
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_InspectionRecommendation.Container.yaml
+    sourceHash: 5c3d8497
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/17-energy_dm_InspectionRecommendation-energy_dm.InspectionRecommendation.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: InspectionRecommendation
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_Material.Container.yaml
+    sourceHash: 1068cb26
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/18-energy_dm_Material-energy_dm.Material.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: Material
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_PipingCorrosionInference.Container.yaml
+    sourceHash: f0e6b8bb
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/19-energy_dm_PipingCorrosionInference-energy_dm.PipingCorrosionInference.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/containers/energy_dm_WallThicknessMeasuringPoint.Container.yaml
+    sourceHash: 60f7fbef
+    type:
+      resource_folder: data_modeling
+      kind: Container
+    builtFile: data_modeling/20-energy_dm_WallThicknessMeasuringPoint-energy_dm.WallThicknessMeasuringPoint.Container.yaml
+    identifier:
+      space: energy_dm
+      externalId: WallThicknessMeasuringPoint
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/ConditionMonitoringLocation.View.yaml
+    sourceHash: 12f0e88b
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/1-ConditionMonitoringLocation-energy_dm.ConditionMonitoringLocation.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/CorrosionLoop.View.yaml
+    sourceHash: c3d8e65e
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/2-CorrosionLoop-energy_dm.CorrosionLoop.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: CorrosionLoop
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/DamageMechanism.View.yaml
+    sourceHash: 16e8e811
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/3-DamageMechanism-energy_dm.DamageMechanism.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: DamageMechanism
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/EnergyAsset.View.yaml
+    sourceHash: 764bbc39
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/4-EnergyAsset-energy_dm.EnergyAsset.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: EnergyAsset
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/EnergyEquipment.View.yaml
+    sourceHash: e55f9311
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/5-EnergyEquipment-energy_dm.EnergyEquipment.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: EnergyEquipment
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/EnergyFile.View.yaml
+    sourceHash: 35611e6d
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/6-EnergyFile-energy_dm.EnergyFile.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: EnergyFile
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/EnergyMaintenanceOrder.View.yaml
+    sourceHash: 20ccf90e
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/7-EnergyMaintenanceOrder-energy_dm.EnergyMaintenanceOrder.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/EnergyNotification.View.yaml
+    sourceHash: c72be0d8
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/8-EnergyNotification-energy_dm.EnergyNotification.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: EnergyNotification
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/EnergyOperation.View.yaml
+    sourceHash: 09cff1b1
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/9-EnergyOperation-energy_dm.EnergyOperation.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: EnergyOperation
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/EnergyPiping.View.yaml
+    sourceHash: d23688ca
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/10-EnergyPiping-energy_dm.EnergyPiping.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: EnergyPiping
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/EnergyTimeSeries.View.yaml
+    sourceHash: ebd9f793
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/11-EnergyTimeSeries-energy_dm.EnergyTimeSeries.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/EquipmentClass.view.yaml
+    sourceHash: '13027597'
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/12-EquipmentClass-energy_dm.EquipmentClass.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: EquipmentClass
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/EquipmentType.View.yaml
+    sourceHash: 76482e57
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/13-EquipmentType-energy_dm.EquipmentType.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: EquipmentType
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/FailureCause.view.yaml
+    sourceHash: b868a2b5
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/14-FailureCause-energy_dm.FailureCause.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: FailureCause
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/FailureMechanism.view.yaml
+    sourceHash: 781ba72c
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/15-FailureMechanism-energy_dm.FailureMechanism.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: FailureMechanism
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/FailureMode.view.yaml
+    sourceHash: 190a61a4
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/16-FailureMode-energy_dm.FailureMode.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: FailureMode
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/InspectionRecommendation.View.yaml
+    sourceHash: 1e8bb306
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/17-InspectionRecommendation-energy_dm.InspectionRecommendation.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: InspectionRecommendation
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/Material.View.yaml
+    sourceHash: c9da4b42
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/18-Material-energy_dm.Material.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: Material
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/PipingCorrosionInference.View.yaml
+    sourceHash: d33e11c3
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/19-PipingCorrosionInference-energy_dm.PipingCorrosionInference.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: PipingCorrosionInference
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/data_modeling/views/WallThicknessMeasuringPoint.View.yaml
+    sourceHash: fc5b19b0
+    type:
+      resource_folder: data_modeling
+      kind: View
+    builtFile: data_modeling/20-WallThicknessMeasuringPoint-energy_dm.WallThicknessMeasuringPoint.v1.View.yaml
+    identifier:
+      space: energy_dm
+      externalId: WallThicknessMeasuringPoint
+      version: v1
+  - sourceFile: modules/custom/energy/energy_data_model/locations/energy_location.LocationFilter.yaml
+    sourceHash: d946427c
+    type:
+      resource_folder: locations
+      kind: LocationFilter
+    builtFile: locations/1-energy_location-energy_location.LocationFilter.yaml
+    identifier:
+      externalId: energy_location
+  status: SUCCESS
+- moduleId: modules/custom/energy/energy_corrosion_agent
+  modulePath: modules/custom/energy/energy_corrosion_agent
+  moduleHash: f8e8483c
+  insightsSummary: {}
+  variables:
+  - id: modules\azureGroupIdentifier
+    value: ${AZURE_GROUP_IDENTIFIER}
+    is_selected: true
+    iteration: null
+  - id: modules\participantsAzureGroupIdentifier
+    value: ${AZURE_GROUP_IDENTIFIER_PARTICIPANTS}
+    is_selected: true
+    iteration: null
+  - id: modules\toolkitPrincipalAzureGroupIdentifier
+    value: ${AZURE_GROUP_IDENTIFIER_TOOLKIT_PRINCIPAL}
+    is_selected: true
+    iteration: null
+  - id: modules\energyInstanceSpace
+    value: energy_instances
+    is_selected: true
+    iteration: null
+  - id: modules\energyDataModelSpace
+    value: energy_dm
+    is_selected: true
+    iteration: null
+  - id: modules\energyAssetPrefix
+    value: 'WMT:'
+    is_selected: true
+    iteration: null
+  - id: modules\viewVersion
+    value: v1
+    is_selected: true
+    iteration: null
+  - id: modules\energyTimeSeriesSpace
+    value: energy_time_series
+    is_selected: true
+    iteration: null
+  - id: modules\energyBaseRawDb
+    value: energy_dm_base_demo
+    is_selected: true
+    iteration: null
+  - id: modules\energy_base_raw_ingestion_dataset_external_id
+    value: ds_energy_base_raw_ingestion
+    is_selected: true
+    iteration: null
+  - id: modules\energy_base_raw_ingestion_dataset_name
+    value: Energy Base RAW to DM
+    is_selected: true
+    iteration: null
+  - id: modules\diagramWorkflowVersion
+    value: '1'
+    is_selected: true
+    iteration: null
+  - id: modules\oidRootAssetExternalId
+    value: WMT:Aker BP
+    is_selected: true
+    iteration: null
+  - id: modules\oidScheduleClientId
+    value: ${IDP_CLIENT_ID}
+    is_selected: true
+    iteration: null
+  - id: modules\oidScheduleClientSecret
+    value: ${IDP_CLIENT_SECRET}
+    is_selected: true
+    iteration: null
+  resourceLineage:
+  - sourceFile: modules/custom/energy/energy_corrosion_agent/agents/energy_corrosion_piping.Agent.yaml
+    sourceHash: 50ca73f8
+    type:
+      resource_folder: agents
+      kind: Agent
+    builtFile: agents/1-energy_corrosion_piping-f3a9c2e1-8d4b-4f67-a1c0-9e7b5d3a2f81.Agent.yaml
+    identifier:
+      externalId: f3a9c2e1-8d4b-4f67-a1c0-9e7b5d3a2f81
+  status: SUCCESS
+- moduleId: modules/custom/energy/energy_base_raw_dm_ingestion
+  modulePath: modules/custom/energy/energy_base_raw_dm_ingestion
+  moduleHash: 9d80ff4f
+  insightsSummary: {}
+  variables:
+  - id: modules\azureGroupIdentifier
+    value: ${AZURE_GROUP_IDENTIFIER}
+    is_selected: true
+    iteration: null
+  - id: modules\participantsAzureGroupIdentifier
+    value: ${AZURE_GROUP_IDENTIFIER_PARTICIPANTS}
+    is_selected: true
+    iteration: null
+  - id: modules\toolkitPrincipalAzureGroupIdentifier
+    value: ${AZURE_GROUP_IDENTIFIER_TOOLKIT_PRINCIPAL}
+    is_selected: true
+    iteration: null
+  - id: modules\energyInstanceSpace
+    value: energy_instances
+    is_selected: true
+    iteration: null
+  - id: modules\energyDataModelSpace
+    value: energy_dm
+    is_selected: true
+    iteration: null
+  - id: modules\energyAssetPrefix
+    value: 'WMT:'
+    is_selected: true
+    iteration: null
+  - id: modules\viewVersion
+    value: v1
+    is_selected: true
+    iteration: null
+  - id: modules\energyTimeSeriesSpace
+    value: energy_time_series
+    is_selected: true
+    iteration: null
+  - id: modules\energyBaseRawDb
+    value: energy_dm_base_demo
+    is_selected: true
+    iteration: null
+  - id: modules\energy_base_raw_ingestion_dataset_external_id
+    value: ds_energy_base_raw_ingestion
+    is_selected: true
+    iteration: null
+  - id: modules\energy_base_raw_ingestion_dataset_name
+    value: Energy Base RAW to DM
+    is_selected: true
+    iteration: null
+  - id: modules\diagramWorkflowVersion
+    value: '1'
+    is_selected: true
+    iteration: null
+  - id: modules\oidRootAssetExternalId
+    value: WMT:Aker BP
+    is_selected: true
+    iteration: null
+  - id: modules\oidScheduleClientId
+    value: ${IDP_CLIENT_ID}
+    is_selected: true
+    iteration: null
+  - id: modules\oidScheduleClientSecret
+    value: ${IDP_CLIENT_SECRET}
+    is_selected: true
+    iteration: null
+  resourceLineage:
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/data_sets/energy_base_raw_ingestion.DataSet.yaml
+    sourceHash: 02b2e0ca
+    type:
+      resource_folder: data_sets
+      kind: DataSet
+    builtFile: data_sets/1-energy_base_raw_ingestion-ds_energy_base_raw_ingestion.DataSet.yaml
+    identifier:
+      externalId: ds_energy_base_raw_ingestion
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/ConditionMonitoringLocation.Table.yaml
+    sourceHash: f0535e74
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/1-ConditionMonitoringLocation-energy_dm_base_demo.ConditionMonitoringLocation.Table.yaml
+    identifier:
+      name: ConditionMonitoringLocation
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/CorrosionLoop.Table.yaml
+    sourceHash: 096a57e5
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/2-CorrosionLoop-energy_dm_base_demo.CorrosionLoop.Table.yaml
+    identifier:
+      name: CorrosionLoop
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/DamageMechanism.Table.yaml
+    sourceHash: ca9b88f1
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/3-DamageMechanism-energy_dm_base_demo.DamageMechanism.Table.yaml
+    identifier:
+      name: DamageMechanism
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/EnergyAsset.Table.yaml
+    sourceHash: c4cb6642
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/4-EnergyAsset-energy_dm_base_demo.EnergyAsset.Table.yaml
+    identifier:
+      name: EnergyAsset
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/EnergyEquipment.Table.yaml
+    sourceHash: baefad34
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/5-EnergyEquipment-energy_dm_base_demo.EnergyEquipment.Table.yaml
+    identifier:
+      name: EnergyEquipment
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/EnergyFile.Table.yaml
+    sourceHash: 174ad660
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/6-EnergyFile-energy_dm_base_demo.EnergyFile.Table.yaml
+    identifier:
+      name: EnergyFile
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/EnergyMaintenanceOrder.Table.yaml
+    sourceHash: 04c1a1f1
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/7-EnergyMaintenanceOrder-energy_dm_base_demo.EnergyMaintenanceOrder.Table.yaml
+    identifier:
+      name: EnergyMaintenanceOrder
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/EnergyNotification.Table.yaml
+    sourceHash: 6d4e6fdf
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/8-EnergyNotification-energy_dm_base_demo.EnergyNotification.Table.yaml
+    identifier:
+      name: EnergyNotification
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/EnergyOperation.Table.yaml
+    sourceHash: 30f224f1
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/9-EnergyOperation-energy_dm_base_demo.EnergyOperation.Table.yaml
+    identifier:
+      name: EnergyOperation
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/EnergyPiping.Table.yaml
+    sourceHash: bec56bde
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/10-EnergyPiping-energy_dm_base_demo.EnergyPiping.Table.yaml
+    identifier:
+      name: EnergyPiping
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/EnergyTimeSeries.Table.yaml
+    sourceHash: db9d76ca
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/11-EnergyTimeSeries-energy_dm_base_demo.EnergyTimeSeries.Table.yaml
+    identifier:
+      name: EnergyTimeSeries
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/energy_dm_base_demo.Database.yaml
+    sourceHash: 8fff17bc
+    type:
+      resource_folder: raw
+      kind: Database
+    builtFile: raw/1-energy_dm_base_demo-energy_dm_base_demo.Database.yaml
+    identifier:
+      name: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/EquipmentClass.Table.yaml
+    sourceHash: bb3aaa2b
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/12-EquipmentClass-energy_dm_base_demo.EquipmentClass.Table.yaml
+    identifier:
+      name: EquipmentClass
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/EquipmentType.Table.yaml
+    sourceHash: c1b65ae7
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/13-EquipmentType-energy_dm_base_demo.EquipmentType.Table.yaml
+    identifier:
+      name: EquipmentType
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/FailureCause.Table.yaml
+    sourceHash: b744150a
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/14-FailureCause-energy_dm_base_demo.FailureCause.Table.yaml
+    identifier:
+      name: FailureCause
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/FailureMechanism.Table.yaml
+    sourceHash: 8cf06a88
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/15-FailureMechanism-energy_dm_base_demo.FailureMechanism.Table.yaml
+    identifier:
+      name: FailureMechanism
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/FailureMode.Table.yaml
+    sourceHash: 794914ab
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/16-FailureMode-energy_dm_base_demo.FailureMode.Table.yaml
+    identifier:
+      name: FailureMode
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/InspectionRecommendation.Table.yaml
+    sourceHash: 4c8434b1
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/17-InspectionRecommendation-energy_dm_base_demo.InspectionRecommendation.Table.yaml
+    identifier:
+      name: InspectionRecommendation
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/Material.Table.yaml
+    sourceHash: 04d87a31
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/18-Material-energy_dm_base_demo.Material.Table.yaml
+    identifier:
+      name: Material
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/PipingCorrosionInference.Table.yaml
+    sourceHash: 5a6d42f6
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/19-PipingCorrosionInference-energy_dm_base_demo.PipingCorrosionInference.Table.yaml
+    identifier:
+      name: PipingCorrosionInference
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/raw/WallThicknessMeasuringPoint.Table.yaml
+    sourceHash: 6a804973
+    type:
+      resource_folder: raw
+      kind: Table
+    builtFile: raw/20-WallThicknessMeasuringPoint-energy_dm_base_demo.WallThicknessMeasuringPoint.Table.yaml
+    identifier:
+      name: WallThicknessMeasuringPoint
+      dbName: energy_dm_base_demo
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/ConditionMonitoringLocation_nodes.Transformation.yaml
+    sourceHash: f795feda
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/1-ConditionMonitoringLocation_nodes-tr_energy_base_raw_ConditionMonitoringLocation_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_ConditionMonitoringLocation_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/ConditionMonitoringLocation_relations.Transformation.yaml
+    sourceHash: 9ff5ba77
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/2-ConditionMonitoringLocation_relations-tr_energy_base_raw_ConditionMonitoringLocation_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_ConditionMonitoringLocation_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/CorrosionLoop_nodes.Transformation.yaml
+    sourceHash: 750636aa
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/3-CorrosionLoop_nodes-tr_energy_base_raw_CorrosionLoop_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_CorrosionLoop_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/CorrosionLoop_relations.Transformation.yaml
+    sourceHash: 1d7eaede
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/4-CorrosionLoop_relations-tr_energy_base_raw_CorrosionLoop_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_CorrosionLoop_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/DamageMechanism_nodes.Transformation.yaml
+    sourceHash: 016b06e2
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/5-DamageMechanism_nodes-tr_energy_base_raw_DamageMechanism_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_DamageMechanism_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/DamageMechanism_relations.Transformation.yaml
+    sourceHash: 2eb27674
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/6-DamageMechanism_relations-tr_energy_base_raw_DamageMechanism_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_DamageMechanism_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EnergyAsset_nodes.Transformation.yaml
+    sourceHash: 3891b009
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/7-EnergyAsset_nodes-tr_energy_base_raw_EnergyAsset_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EnergyAsset_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EnergyAsset_relations.Transformation.yaml
+    sourceHash: 3f989e95
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/8-EnergyAsset_relations-tr_energy_base_raw_EnergyAsset_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EnergyAsset_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EnergyEquipment_nodes.Transformation.yaml
+    sourceHash: 19019b90
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/9-EnergyEquipment_nodes-tr_energy_base_raw_EnergyEquipment_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EnergyEquipment_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EnergyEquipment_relations.Transformation.yaml
+    sourceHash: 1a60e616
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/10-EnergyEquipment_relations-tr_energy_base_raw_EnergyEquipment_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EnergyEquipment_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EnergyFile_nodes.Transformation.yaml
+    sourceHash: 697cf978
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/11-EnergyFile_nodes-tr_energy_base_raw_EnergyFile_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EnergyFile_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EnergyFile_relations.Transformation.yaml
+    sourceHash: 946c8177
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/12-EnergyFile_relations-tr_energy_base_raw_EnergyFile_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EnergyFile_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EnergyMaintenanceOrder_nodes.Transformation.yaml
+    sourceHash: f54dff32
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/13-EnergyMaintenanceOrder_nodes-tr_energy_base_raw_EnergyMaintenanceOrder_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EnergyMaintenanceOrder_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EnergyMaintenanceOrder_relations.Transformation.yaml
+    sourceHash: f3834885
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/14-EnergyMaintenanceOrder_relations-tr_energy_base_raw_EnergyMaintenanceOrder_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EnergyMaintenanceOrder_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EnergyNotification_nodes.Transformation.yaml
+    sourceHash: bb9af181
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/15-EnergyNotification_nodes-tr_energy_base_raw_EnergyNotification_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EnergyNotification_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EnergyNotification_relations.Transformation.yaml
+    sourceHash: 5fd9b015
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/16-EnergyNotification_relations-tr_energy_base_raw_EnergyNotification_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EnergyNotification_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EnergyOperation_nodes.Transformation.yaml
+    sourceHash: 595d8939
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/17-EnergyOperation_nodes-tr_energy_base_raw_EnergyOperation_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EnergyOperation_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EnergyOperation_relations.Transformation.yaml
+    sourceHash: 58357b21
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/18-EnergyOperation_relations-tr_energy_base_raw_EnergyOperation_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EnergyOperation_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EnergyPiping_nodes.Transformation.yaml
+    sourceHash: 96843d0c
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/19-EnergyPiping_nodes-tr_energy_base_raw_EnergyPiping_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EnergyPiping_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EnergyPiping_relations.Transformation.yaml
+    sourceHash: f66c1340
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/20-EnergyPiping_relations-tr_energy_base_raw_EnergyPiping_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EnergyPiping_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EnergyTimeSeries_nodes.Transformation.yaml
+    sourceHash: b6b44dfb
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/21-EnergyTimeSeries_nodes-tr_energy_base_raw_EnergyTimeSeries_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EnergyTimeSeries_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EnergyTimeSeries_relations.Transformation.yaml
+    sourceHash: 5b9ba827
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/22-EnergyTimeSeries_relations-tr_energy_base_raw_EnergyTimeSeries_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EnergyTimeSeries_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EquipmentClass_nodes.Transformation.yaml
+    sourceHash: 6454c09b
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/23-EquipmentClass_nodes-tr_energy_base_raw_EquipmentClass_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EquipmentClass_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EquipmentClass_relations.Transformation.yaml
+    sourceHash: ac60ade0
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/24-EquipmentClass_relations-tr_energy_base_raw_EquipmentClass_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EquipmentClass_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EquipmentType_nodes.Transformation.yaml
+    sourceHash: ce09ddfa
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/25-EquipmentType_nodes-tr_energy_base_raw_EquipmentType_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EquipmentType_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/EquipmentType_relations.Transformation.yaml
+    sourceHash: e6bba5a2
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/26-EquipmentType_relations-tr_energy_base_raw_EquipmentType_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_EquipmentType_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/FailureCause_nodes.Transformation.yaml
+    sourceHash: 951bfa4f
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/27-FailureCause_nodes-tr_energy_base_raw_FailureCause_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_FailureCause_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/FailureCause_relations.Transformation.yaml
+    sourceHash: 48f17983
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/28-FailureCause_relations-tr_energy_base_raw_FailureCause_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_FailureCause_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/FailureMechanism_nodes.Transformation.yaml
+    sourceHash: 15adaa3c
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/29-FailureMechanism_nodes-tr_energy_base_raw_FailureMechanism_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_FailureMechanism_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/FailureMechanism_relations.Transformation.yaml
+    sourceHash: 11b08ba9
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/30-FailureMechanism_relations-tr_energy_base_raw_FailureMechanism_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_FailureMechanism_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/FailureMode_nodes.Transformation.yaml
+    sourceHash: 0ca7ed49
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/31-FailureMode_nodes-tr_energy_base_raw_FailureMode_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_FailureMode_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/FailureMode_relations.Transformation.yaml
+    sourceHash: 8ac5f121
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/32-FailureMode_relations-tr_energy_base_raw_FailureMode_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_FailureMode_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/InspectionRecommendation_nodes.Transformation.yaml
+    sourceHash: 52253e63
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/33-InspectionRecommendation_nodes-tr_energy_base_raw_InspectionRecommendation_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_InspectionRecommendation_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/InspectionRecommendation_relations.Transformation.yaml
+    sourceHash: 8cbc237e
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/34-InspectionRecommendation_relations-tr_energy_base_raw_InspectionRecommendation_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_InspectionRecommendation_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/Material_nodes.Transformation.yaml
+    sourceHash: 73be3c46
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/35-Material_nodes-tr_energy_base_raw_Material_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_Material_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/Material_relations.Transformation.yaml
+    sourceHash: 4f93ac4c
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/36-Material_relations-tr_energy_base_raw_Material_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_Material_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/PipingCorrosionInference_nodes.Transformation.yaml
+    sourceHash: 34128d32
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/37-PipingCorrosionInference_nodes-tr_energy_base_raw_PipingCorrosionInference_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_PipingCorrosionInference_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/PipingCorrosionInference_relations.Transformation.yaml
+    sourceHash: cf72050e
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/38-PipingCorrosionInference_relations-tr_energy_base_raw_PipingCorrosionInference_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_PipingCorrosionInference_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/WallThicknessMeasuringPoint_nodes.Transformation.yaml
+    sourceHash: 9a8db7b5
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/39-WallThicknessMeasuringPoint_nodes-tr_energy_base_raw_WallThicknessMeasuringPoint_nodes.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_WallThicknessMeasuringPoint_nodes
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/transformations/WallThicknessMeasuringPoint_relations.Transformation.yaml
+    sourceHash: bd64e57f
+    type:
+      resource_folder: transformations
+      kind: Transformation
+    builtFile: transformations/40-WallThicknessMeasuringPoint_relations-tr_energy_base_raw_WallThicknessMeasuringPoint_relations.Transformation.yaml
+    identifier:
+      externalId: tr_energy_base_raw_WallThicknessMeasuringPoint_relations
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/workflows/energy_base_raw_to_dm.Workflow.yaml
+    sourceHash: 82f898c2
+    type:
+      resource_folder: workflows
+      kind: Workflow
+    builtFile: workflows/2-energy_base_raw_to_dm-wf_energy_base_raw_to_dm.Workflow.yaml
+    identifier:
+      externalId: wf_energy_base_raw_to_dm
+  - sourceFile: modules/custom/energy/energy_base_raw_dm_ingestion/workflows/energy_base_raw_to_dm.WorkflowVersion.yaml
+    sourceHash: 3896bf86
+    type:
+      resource_folder: workflows
+      kind: WorkflowVersion
+    builtFile: workflows/2-energy_base_raw_to_dm-wf_energy_base_raw_to_dm.1.WorkflowVersion.yaml
+    identifier:
+      workflowExternalId: wf_energy_base_raw_to_dm
+      version: '1'
+  status: SUCCESS

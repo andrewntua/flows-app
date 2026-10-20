@@ -1,0 +1,153 @@
+space: energy_dm
+externalId: ConditionMonitoringLocation
+name: Condition Monitoring Location
+description: Corrosion monitoring location (CML) on an EnergyPiping line with optional
+  3D placement.
+implements:
+- space: cdf_cdm
+  externalId: CogniteDescribable
+  version: v1
+  type: view
+version: v1
+properties:
+  name:
+    container:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+      type: container
+    containerPropertyIdentifier: name
+    name: Name
+    description: Short display name
+  cmlId:
+    container:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+      type: container
+    containerPropertyIdentifier: cmlId
+    name: CML ID
+    description: Identifier (e.g. CML-80L0042-01)
+  description:
+    container:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+      type: container
+    containerPropertyIdentifier: description
+    name: Description
+    description: Position description
+  componentType:
+    container:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+      type: container
+    containerPropertyIdentifier: componentType
+    name: Component type
+    description: Piping component at this monitoring zone
+  nominalThicknessMm:
+    container:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+      type: container
+    containerPropertyIdentifier: nominalThicknessMm
+    name: Nominal thickness
+    description: Nominal wall thickness (mm)
+  tminMm:
+    container:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+      type: container
+    containerPropertyIdentifier: tminMm
+    name: Minimum thickness
+    description: Minimum required wall thickness tmin (mm)
+  clockPosition:
+    container:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+      type: container
+    containerPropertyIdentifier: clockPosition
+    name: Clock position
+    description: UT clock position
+  axialFraction:
+    container:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+      type: container
+    containerPropertyIdentifier: axialFraction
+    name: Axial fraction
+    description: Position along line centreline (0–1)
+  modelId:
+    container:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+      type: container
+    containerPropertyIdentifier: modelId
+    name: 3D model ID
+    description: CDF 3D model ID
+  revisionId:
+    container:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+      type: container
+    containerPropertyIdentifier: revisionId
+    name: 3D revision ID
+    description: CDF 3D revision ID
+  cadNodeId:
+    container:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+      type: container
+    containerPropertyIdentifier: cadNodeId
+    name: CAD node ID
+    description: Contextualized 3D node for the piping line
+  positionX:
+    container:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+      type: container
+    containerPropertyIdentifier: positionX
+    name: Position X
+    description: Model-space X (m)
+  positionY:
+    container:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+      type: container
+    containerPropertyIdentifier: positionY
+    name: Position Y
+    description: Model-space Y (m)
+  positionZ:
+    container:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+      type: container
+    containerPropertyIdentifier: positionZ
+    name: Position Z
+    description: Model-space Z (m)
+  piping:
+    container:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+      type: container
+    containerPropertyIdentifier: piping
+    name: Piping
+    description: Parent piping line
+    source:
+      space: energy_dm
+      externalId: EnergyPiping
+      version: v1
+      type: view
+  measuringPoints:
+    connectionType: multi_reverse_direct_relation
+    name: Measuring points
+    description: Wall thickness readings at this CML
+    source:
+      space: energy_dm
+      externalId: WallThicknessMeasuringPoint
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: WallThicknessMeasuringPoint
+        version: v1
+        type: view
+      identifier: conditionMonitoringLocation

@@ -1,0 +1,6 @@
+externalId: ds_energy_base_raw_ingestion
+name: Energy Base RAW to DM
+description: Dataset for energy_dm RAW to DM transformations and workflow
+writeProtected: false
+metadata:
+  origin: cognite-toolkit

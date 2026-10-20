@@ -1,0 +1,471 @@
+space: energy_dm
+externalId: EnergyEquipment
+name: Equipment
+properties:
+  area:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: area
+    description: Area where the equipment is located
+  categoryCode:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: categoryCode
+    description: Category code for the equipment
+  classId:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: classId
+    description: Class identifier for the equipment
+  className:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: className
+    description: Class name for the equipment
+  continuousVibrationMonitoring:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: continuousVibrationMonitoring
+    description: Continuous vibration monitoring flag
+  equipmentIdentifier:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: equipmentIdentifier
+    description: Equipment identifier
+  equipmentLineNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: equipmentLineNumber
+    description: Equipment line number
+  exCertificateNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: exCertificateNumber
+    description: Ex certificate number
+  exEquipmentFlag:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: exEquipmentFlag
+    description: Ex equipment flag
+  explosionProtection:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: explosionProtection
+    description: Explosion protection information
+  eqHubLink:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: eqHubLink
+    description: Equipment hub link URL
+  facility:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: facility
+    description: Facility where the equipment is located
+  functionCode:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: functionCode
+    description: Function code for the equipment
+  functionCodeDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: functionCodeDescription
+    description: Description of the function code
+  gasGroup:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: gasGroup
+    description: Gas group classification
+  hazardousAreaClassificationArea:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: hazardousAreaClassificationArea
+    description: Hazardous area classification area
+  intrinsicallySafeFlag:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: intrinsicallySafeFlag
+    description: Intrinsically safe flag
+  ipRating:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: ipRating
+    description: IP rating for the equipment
+  originatingContractor:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: originatingContractor
+    description: Originating contractor for the equipment
+  parentTag:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: parentTag
+    description: Parent tag identifier
+  partNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: partNumber
+    description: Part number for the equipment
+  platformCode:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: platformCode
+    description: Platform code for the equipment
+  powerConsumption:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: powerConsumption
+    description: Power consumption of the equipment
+  purchaseOrderNo:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: purchaseOrderNo
+    description: Purchase order number
+  remarks:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: remarks
+    description: Remarks or notes about the equipment
+  sapCatalogProfile:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: sapCatalogProfile
+    description: SAP catalog profile
+  sapExportFlag:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: sapExportFlag
+    description: SAP export flag
+  sapMmNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: sapMmNumber
+    description: SAP MM number
+  sapObjectType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: sapObjectType
+    description: SAP object type
+  serialNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: serialNumber
+    description: Serial number of the equipment
+  setPointCritFlag:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: setPointCritFlag
+    description: Set point critical flag
+  subSystemNo:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: subSystemNo
+    description: Sub-system number
+  system:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: system
+    description: System identifier
+  tagDiscipline:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: tagDiscipline
+    description: Tag discipline
+  tagNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: tagNumber
+    description: Tag number for the equipment
+  temperatureClass:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: temperatureClass
+    description: Temperature class classification
+  thermodynamicConditionMonitoring:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: thermodynamicConditionMonitoring
+    description: Thermodynamic condition monitoring flag
+  updatedDate:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: updatedDate
+    description: Date when the equipment was last updated
+  useProjectStatus:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: useProjectStatus
+    description: Use project status flag
+  weightDry:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: weightDry
+    description: Dry weight of the equipment
+  weightOperating:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: weightOperating
+    description: Operating weight of the equipment
+  weightFlag:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: weightFlag
+    description: Weight flag
+  workflowStatus:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workflowStatus
+    description: Workflow status of the equipment
+  workingSetId:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: workingSetId
+    description: Working set identifier
+  objectId:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: objectId
+    description: Object identifier
+  state:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: state
+    description: State of the equipment
+constraints:
+  cdf_cdm_CogniteEquipment:
+    require:
+      space: cdf_cdm
+      externalId: CogniteEquipment
+      type: container
+    constraintType: requires

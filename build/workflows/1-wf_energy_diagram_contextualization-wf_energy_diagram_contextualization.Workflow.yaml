@@ -1,0 +1,3 @@
+externalId: wf_energy_diagram_contextualization
+description: Delete diagram annotations then run tag and file detection on P&ID PDFs
+dataSetExternalId: ds_energy_base_raw_ingestion

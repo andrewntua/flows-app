@@ -1,0 +1,75 @@
+space: energy_dm
+externalId: CorrosionLoop
+name: Corrosion loop
+description: Corrosion loop definitions from VRD process and utility systems risk assessment.
+implements:
+- space: cdf_cdm
+  externalId: CogniteDescribable
+  version: v1
+  type: view
+version: v1
+properties:
+  system:
+    container:
+      space: energy_dm
+      externalId: CorrosionLoop
+      type: container
+    containerPropertyIdentifier: system
+    name: System
+    description: Process system number for the corrosion loop.
+  loopNo:
+    container:
+      space: energy_dm
+      externalId: CorrosionLoop
+      type: container
+    containerPropertyIdentifier: loopNo
+    name: Loop no
+    description: Corrosion loop number from risk assessment.
+  loopComment:
+    container:
+      space: energy_dm
+      externalId: CorrosionLoop
+      type: container
+    containerPropertyIdentifier: loopComment
+    name: Loop comment
+    description: Corrosion loop description/comment.
+  material:
+    container:
+      space: energy_dm
+      externalId: CorrosionLoop
+      type: container
+    containerPropertyIdentifier: material
+    name: Material
+    description: Primary material listed for the corrosion loop.
+  developmentType:
+    container:
+      space: energy_dm
+      externalId: CorrosionLoop
+      type: container
+    containerPropertyIdentifier: developmentType
+    name: Development type
+    description: Greenfield, Brownfield, or existing VRD list.
+  sourceTable:
+    container:
+      space: energy_dm
+      externalId: CorrosionLoop
+      type: container
+    containerPropertyIdentifier: sourceTable
+    name: Source table
+    description: Source table/page in the risk assessment document.
+  piping:
+    source:
+      space: energy_dm
+      externalId: EnergyPiping
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: EnergyPiping
+        version: v1
+        type: view
+      identifier: corrosionLoop
+    name: Piping
+    description: An automatically updated list of piping lines connected to this corrosion loop.
+    connectionType: multi_reverse_direct_relation

@@ -1,0 +1,980 @@
+space: energy_dm
+externalId: EnergyPiping
+name: Piping
+properties:
+  area:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Area
+    description: Plant area
+  avevaDirectUrl:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Aveva direct URL
+    description: Link to the item in Aveva
+  categoryCode:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Category code
+    description: Category code
+  classId:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Class ID
+    description: Class identifier
+  className:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Class name
+    description: Class name (e.g. LINES)
+  compressibilityFactorZ:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Compressibility factor (Z)
+    description: Compressibility factor (Z)
+  corrosionAllowance:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Corrosion allowance
+    description: Corrosion allowance
+  corrosionRateMmPerYr:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Corrosion rate
+    description: Long-term corrosion / thinning rate (mm/yr) used for RBI remaining-life
+      screening.
+  corrosionLoop:
+    type:
+      list: false
+      type: direct
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Corrosion loop
+    description: Direct reference to the corrosion loop this piping belongs to.
+  densityGas:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Density (gas)
+    description: Density of gas phase
+  densityGasUom:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Density (gas) UOM
+    description: Unit of measure for density (gas)
+  densityLiquid:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Density (liquid)
+    description: Density of liquid phase
+  designPressureMax:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Design pressure max
+    description: Maximum design pressure
+  designTemperatureMax:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Design temperature max
+    description: Maximum design temperature
+  designTemperatureMaxUom:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Design temperature max UOM
+    description: Unit of measure for maximum design temperature
+  designTemperatureMin:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Design temperature min
+    description: Minimum design temperature
+  designTemperatureMinUom:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Design temperature min UOM
+    description: Unit of measure for minimum design temperature
+  facility:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Facility
+    description: Facility code
+  fromTag:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: From tag
+    description: Upstream tag connection
+  functionCode:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Function code
+    description: Function code
+  functionCodeDescription:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Function code description
+    description: Description of the function code
+  insulationClass:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Insulation class
+    description: Insulation class
+  insulationThickness:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Insulation thickness
+    description: Insulation thickness
+  insulationThicknessUom:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Insulation thickness UOM
+    description: Unit of measure for insulation thickness
+  insulationCondition:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Insulation condition
+    description: Assessed condition of insulation (e.g. Good, Fair). Blank when not
+      assessed.
+  insulated:
+    type:
+      list: false
+      type: boolean
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Insulated
+    description: Whether the piping line is insulated (derived from insulation class
+      in source data).
+  insulationType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Insulation type
+    description: Insulation product or system type (e.g. Mineral Wool, Calcium Silicate).
+  originalInsulationDate:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Original insulation date
+    description: Date when insulation was originally applied (ISO date when known).
+  priorAssessmentDate:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Prior assessment date
+    description: Date anchoring the prior RBI / risk snapshot (ISO date).
+  priorPofCategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Prior PoF category
+    description: Prior probability of failure category (e.g. 1–5 per API 581).
+  priorCofCategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Prior CoF category
+    description: Prior consequence of failure category (e.g. 1–5 per API 581).
+  priorRiskRank:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Prior risk rank
+    description: Prior combined risk rank (e.g. Low, Medium, High, Very High).
+  priorOperatingTemperature:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Prior operating temperature
+    description: Operating temperature (°C) used in the prior assessment snapshot.
+  priorInsulationAge:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Prior insulation age
+    description: Insulation age in years at the prior assessment snapshot.
+  pofCategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: PoF category
+    description: Current probability of failure category (e.g. 1–5 per API 581).
+  cofCategory:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: CoF category
+    description: Current consequence of failure category (e.g. 1–5 per API 581).
+  riskRank:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Risk rank
+    description: Current combined risk rank (e.g. Low, Medium, High, Very High).
+  riskChanged:
+    type:
+      list: false
+      type: boolean
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Risk Changed
+    description: Whether current risk rank differs from the prior assessment snapshot.
+  deferralOpportunity:
+    type:
+      list: false
+      type: boolean
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Deferral opportunity
+    description: Whether this line is an explicit RBI inspection deferral opportunity.
+  lineNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Line number
+    description: Full line number
+  lineServiceCode:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Line service code
+    description: Line service code
+  liquidFraction:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Liquid fraction
+    description: Liquid fraction
+  massFlow:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Mass flow
+    description: Mass flow rate
+  massFlowUom:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Mass flow UOM
+    description: Unit of measure for mass flow
+  ndtTestClass:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: NDT test class
+    description: Non-destructive testing class
+  currentSchedule:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Current schedule
+    description: Current inspection programme date (ISO date).
+  recommendedNextInspection:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Recommended next inspection
+    description: RBI-recommended next inspection date (ISO date).
+  nominalDiameter:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Nominal diameter
+    description: Nominal diameter
+  nominalDiameterUom:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Nominal diameter UOM
+    description: Unit of measure for nominal diameter
+  operatingPressureNormal:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Operating pressure normal
+    description: Normal operating pressure
+  operatingTemperatureMin:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Operating temperature min
+    description: Minimum operating temperature
+  operatingTemperatureMinUom:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Operating temperature min UOM
+    description: Unit of measure for minimum operating temperature
+  iowTempThresholdMin:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: IOW temp threshold min
+    description: Minimum operating integrity window temperature threshold.
+  iowTempThresholdMax:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: IOW temp threshold max
+    description: Maximum operating integrity window temperature threshold.
+  parentTag:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Parent tag
+    description: Parent tag identifier
+  pipeSchedule:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Pipe schedule
+    description: Pipe schedule
+  pipingSpecificationClass:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Piping specification / class
+    description: Piping specification or class
+  platformCode:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Platform code
+    description: Platform code
+  potentialIgnitionSource1:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Potential ignition source 1
+    description: Potential ignition source 1
+  potentialIgnitionSource2:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Potential ignition source 2
+    description: Potential ignition source 2
+  potentialIgnitionSource3:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Potential ignition source 3
+    description: Potential ignition source 3
+  potentialIgnitionSource4:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Potential ignition source 4
+    description: Potential ignition source 4
+  potentialIgnitionSourceRemark:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Potential ignition source remark
+    description: Remark for potential ignition sources
+  remarks:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Remarks
+    description: Remarks or notes
+  sapCatalogProfile:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: SAP catalog profile
+    description: SAP catalog profile
+  sapExportFlag:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: SAP export flag
+    description: SAP export flag
+  sapObjectType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: SAP object type
+    description: SAP object type
+  system:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: System
+    description: System identifier
+  tagDiscipline:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Tag discipline
+    description: Tag discipline
+  tagNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Tag number
+    description: Tag number
+  testMedium:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Test medium
+    description: Test medium
+  testPressure:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Test pressure
+    description: Test pressure
+  testPressureUom:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Test pressure UOM
+    description: Unit of measure for test pressure
+  toTag:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: To tag
+    description: Downstream tag connection
+  updatedDate:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Updated date
+    description: Date when the record was last updated
+  useProjectStatus:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Use project status
+    description: Use project status flag
+  velocity:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Velocity
+    description: Flow velocity
+  velocityUom:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Velocity UOM
+    description: Unit of measure for velocity
+  viscosityGas:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Viscosity (gas)
+    description: Viscosity of gas phase
+  viscosityGasUom:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Viscosity (gas) UOM
+    description: Unit of measure for viscosity (gas)
+  viscosityLiquid:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Viscosity (liquid)
+    description: Viscosity of liquid phase
+  wallThickness:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Wall thickness
+    description: Wall thickness
+  workflowStatus:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Workflow status
+    description: Workflow status
+  objectId:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Object ID
+    description: Object identifier
+  state:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: State
+    description: State of the piping line
+  asset:
+    type:
+      list: false
+      type: direct
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Asset
+    description: The asset this piping line is related to.
+  densityLiquidUom:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Density (liquid) UOM
+    description: Unit of measure for density (liquid)
+  designPressureMaxUom:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Design pressure max UOM
+    description: Unit of measure for maximum design pressure
+  operatingPressureNormalUom:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Operating pressure normal UOM
+    description: Unit of measure for normal operating pressure
+  viscosityLiquidUom:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Viscosity (liquid) UOM
+    description: Unit of measure for viscosity (liquid)
+  wallThicknessUom:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Wall thickness UOM
+    description: Unit of measure for wall thickness
+  fromAsset:
+    type:
+      list: false
+      type: direct
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: From asset
+    description: The upstream asset or equipment this piping line originates from
+      (P&ID FROM TAG).
+  toAsset:
+    type:
+      list: false
+      type: direct
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: To asset
+    description: The downstream asset or equipment this piping line connects to (P&ID
+      TO TAG).
+  timeSeries:
+    type:
+      list: true
+      type: direct
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Time series
+    description: Time series related to this piping line.
+  documents:
+    type:
+      list: true
+      type: direct
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Documents
+    description: Engineering documents (P&IDs, drawings) related to this piping line.
+  damageMechanisms:
+    type:
+      list: true
+      type: direct
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Damage mechanisms
+    description: Active RBI damage mechanisms linked to this piping line.
+  material:
+    type:
+      list: false
+      type: direct
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Material
+    description: Material grade linked to this piping line.
+constraints:
+  cdf_cdm_CogniteDescribable:
+    require:
+      space: cdf_cdm
+      externalId: CogniteDescribable
+      type: container
+    constraintType: requires
+  cdf_cdm_CogniteSourceable:
+    require:
+      space: cdf_cdm
+      externalId: CogniteSourceable
+      type: container
+    constraintType: requires

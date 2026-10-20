@@ -1,0 +1,39 @@
+key,category,code,description,name
+fmech_10,Mechanical failure,1.0,A failure related to some mechanical defect but where no further details are known,General
+fmech_11,Mechanical failure,1.1,"External and internal leakage, either liquids or gases: If the failure mode at equipment unit level is coded as “leakage”, a more causally oriented failure mechanism should be used wherever possible.",Leakage
+fmech_12,Mechanical failure,1.2,"Abnormal vibration: If the failure mode at equipment level is “vibration”, which is a more causally oriented failure mechanism, the failure cause (root cause) should be recorded wherever possible.",Vibration
+fmech_13,Mechanical failure,1.3,Failure caused by faulty clearance or alignment,Clearance /alignment failure
+fmech_14,Mechanical failure,1.4,"Distortion, bending, buckling, denting, yielding, shrinking, blistering, creeping, etc.",Deformation
+fmech_15,Mechanical failure,1.5,"Disconnection, loose items",Looseness
+fmech_16,Mechanical failure,1.6,"Sticking, seizure, jamming due to reasons other than deformation or clearance/alignment failures",Sticking
+fmech_20,Material failure,2.0,A failure related to a material defect but no further details known,General
+fmech_21,Material failure,2.1,Relevant for equipment such as pumps and valves,Cavitation
+fmech_22,Material failure,2.2,"All types of corrosion, both wet (electrochemical) and dry (chemical)",Corrosion
+fmech_23,Material failure,2.3,Erosive wear,Erosion
+fmech_24,Material failure,2.4,"Abrasive and adhesive wear, e.g. scoring, galling, scuffing, fretting",Wear
+fmech_25,Material failure,2.5,"Fracture, breach, crack",Breakage
+fmech_26,Material failure,2.6,"If the cause of breakage can be traced to fatigue, this code should be used",Fatigue
+fmech_27,Material failure,2.7,Material damage due to overheating/burning,Overheating
+fmech_28,Material failure,2.8,"Item burst, blown, exploded, imploded, etc.",Burst
+fmech_30,Instrument failure,3.0,Failure related to instrumentation but no details known,General
+fmech_31,Instrument failure,3.1,"No, or faulty, regulation",Control failure
+fmech_32,Instrument failure,3.2,No signal/indication/alarm when expected,No signal /indication/alarm
+fmech_33,Instrument failure,3.3,"Signal/indication/alarm is wrong in relation to actual process. Can be spurious, intermittent, oscillating, arbitrary",Faulty signal/indication/alarm
+fmech_34,Instrument failure,3.4,"Calibration error, parameter drift",Out of adjustment
+fmech_35,Instrument failure,3.5,"Faulty, or no, control/monitoring/operation due to software error",Software error
+fmech_36,Instrument failure,3.6,"Several instrument items failed simultaneously, e.g. redundant fire and gas detectors; also failures related to a common cause",Common cause/Common mode failure
+fmech_40,Electrical failure,4.0,"Failures related to the supply and transmission of electrical power, but where no further details are known",General
+fmech_41,Electrical failure,4.1,Short circuit,Short circuiting
+fmech_42,Electrical failure,4.2,"Disconnection, interruption, broken wire/cable",Open circuit
+fmech_43,Electrical failure,4.3,Missing or insufficient electrical power supply,No power/voltage
+fmech_44,Electrical failure,4.4,"Faulty electrical power supply, e.g. overvoltage",Faulty power/voltage
+fmech_45,Electrical failure,4.5,"Earth fault, low electrical resistance",Earth/isolation fault
+fmech_50,External influence,5.0,Failure caused by some external events or substances outside the boundary but no further details are known,General
+fmech_51,External influence,5.1,"Flow restricted/blocked due to fouling, contamination, icing, flow assurance (hydrates), etc.",Blockage/plugged
+fmech_52,External influence,5.2,"Contaminated fluid/gas/surface, e.g. lubrication oil contaminated, gas-detector head contaminated",Contamination
+fmech_53,External influence,5.3,"Foreign objects, impacts, environmental influence from neighbouring systems",Miscellaneous external influences
+fmech_60,Miscellaneous,6.0,Failure mechanism that does not fall into one of the categories listed above,General
+fmech_61,Miscellaneous,6.1,Failure investigated but cause not revealed or too uncertain,No cause found
+fmech_62,Miscellaneous,6.2,Several causes: If there is one predominant cause this should be coded,Combined causes
+fmech_63,Miscellaneous,6.3,No code applicable: Use free text,Other
+fmech_64,Miscellaneous,6.4,No information available,Unknown

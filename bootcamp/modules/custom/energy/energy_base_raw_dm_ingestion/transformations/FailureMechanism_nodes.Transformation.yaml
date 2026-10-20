@@ -1,0 +1,12 @@
+externalId: tr_energy_base_raw_FailureMechanism_nodes
+name: RAW → FailureMechanism nodes
+destination:
+  type: nodes
+  view:
+    space: energy_dm
+    externalId: FailureMechanism
+    version: v1
+  instanceSpace: "{{energyInstanceSpace}}"
+dataSetExternalId: '{{ energy_base_raw_ingestion_dataset_external_id }}'
+ignoreNullFields: false
+conflictMode: upsert

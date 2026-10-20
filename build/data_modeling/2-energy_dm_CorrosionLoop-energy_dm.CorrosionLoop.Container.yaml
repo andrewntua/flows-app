@@ -1,0 +1,64 @@
+space: energy_dm
+externalId: CorrosionLoop
+name: Corrosion Loop
+properties:
+  system:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: System
+    description: Process system number for the corrosion loop.
+  loopNo:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Loop no
+    description: Corrosion loop number from risk assessment.
+  loopComment:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Loop comment
+    description: Corrosion loop description/comment.
+  material:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Material
+    description: Primary material listed for the corrosion loop.
+  developmentType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Development type
+    description: Greenfield, Brownfield, or existing VRD list.
+  sourceTable:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Source table
+    description: Source table/page in the risk assessment document.

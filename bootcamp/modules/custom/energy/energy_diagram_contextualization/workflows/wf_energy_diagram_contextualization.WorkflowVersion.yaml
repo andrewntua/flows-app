@@ -1,0 +1,43 @@
+workflowExternalId: wf_energy_diagram_contextualization
+version: "{{ diagramWorkflowVersion }}"
+workflowDefinition:
+  description: Delete CogniteDiagramAnnotation edges, then detect asset tags and file references in parallel
+  tasks:
+    - externalId: diagram-delete
+      type: function
+      name: Delete Diagram Annotations
+      retries: 0
+      timeout: 1800
+      onFailure: abortWorkflow
+      dependsOn: []
+      parameters:
+        function:
+          externalId: fn_diagram_delete_annotations
+          data: {}
+        isAsyncComplete: false
+    - externalId: diagram-detect-tags
+      type: function
+      name: Detect Tag Annotations
+      retries: 0
+      timeout: 43200
+      onFailure: abortWorkflow
+      dependsOn:
+        - externalId: diagram-delete
+      parameters:
+        function:
+          externalId: fn_diagram_detect_tag_annotations
+          data: {}
+        isAsyncComplete: false
+    - externalId: diagram-detect-files
+      type: function
+      name: Detect File Reference Annotations
+      retries: 0
+      timeout: 43200
+      onFailure: abortWorkflow
+      dependsOn:
+        - externalId: diagram-delete
+      parameters:
+        function:
+          externalId: fn_diagram_detect_file_annotations
+          data: {}
+        isAsyncComplete: false

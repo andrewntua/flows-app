@@ -1,0 +1,6 @@
+kind: RawRows
+type: rawTable
+table:
+  dbName: energy_dm_base_demo
+  tableName: FailureMechanism
+key: key

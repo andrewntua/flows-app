@@ -1,0 +1,489 @@
+space: energy_dm
+externalId: EnergyEquipment
+name: Equipment
+description: 'Equipment specific to energy industry operations, extending CogniteEquipment
+  with energy-specific fields.
+
+  @name Equipment'
+implements:
+- space: cdf_cdm
+  externalId: CogniteSourceable
+  version: v1
+  type: view
+- space: cdf_cdm
+  externalId: CogniteDescribable
+  version: v1
+  type: view
+- space: cdf_cdm
+  externalId: CogniteEquipment
+  version: v1
+  type: view
+version: v1
+properties:
+  asset:
+    container:
+      space: cdf_cdm
+      externalId: CogniteEquipment
+      type: container
+    containerPropertyIdentifier: asset
+    name: Asset
+    description: 'The asset the equipment is related to.
+
+      @name Asset'
+    source:
+      space: energy_dm
+      externalId: EnergyAsset
+      version: v1
+      type: view
+  files:
+    container:
+      space: cdf_cdm
+      externalId: CogniteEquipment
+      type: container
+    containerPropertyIdentifier: files
+    name: Files
+    description: 'A list of files the equipment relates to.
+
+      @name Files'
+    source:
+      space: energy_dm
+      externalId: EnergyFile
+      version: v1
+      type: view
+  equipmentType:
+    container:
+      space: cdf_cdm
+      externalId: CogniteEquipment
+      type: container
+    containerPropertyIdentifier: equipmentType
+    name: Equipment Type
+    description: 'The type of the equipment.
+
+      @name Equipment Type'
+    source:
+      space: energy_dm
+      externalId: EquipmentType
+      version: v1
+      type: view
+  timeSeries:
+    source:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: EnergyTimeSeries
+        version: v1
+        type: view
+      identifier: equipment
+    name: Time series
+    description: 'An automatically updated list of time series related to the equipment.
+
+      @name Time series'
+    connectionType: multi_reverse_direct_relation
+  maintenanceOrders:
+    source:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: EnergyMaintenanceOrder
+        version: v1
+        type: view
+      identifier: equipment
+    name: Maintenance Orders
+    description: 'An automatically updated list of maintenance orders related to this equipment.
+
+      @name Maintenance Orders'
+    connectionType: multi_reverse_direct_relation
+  notifications:
+    source:
+      space: energy_dm
+      externalId: EnergyNotification
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: EnergyNotification
+        version: v1
+        type: view
+      identifier: equipment
+    name: Notifications
+    description: 'An automatically updated list of notifications related to this equipment.
+
+      @name Notifications'
+    connectionType: multi_reverse_direct_relation
+  area:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: area
+    name: area
+    description: Area where the equipment is located
+  categoryCode:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: categoryCode
+    name: categoryCode
+    description: Category code for the equipment
+  classId:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: classId
+    name: classId
+    description: Class identifier for the equipment
+  className:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: className
+    name: className
+    description: Class name for the equipment
+  continuousVibrationMonitoring:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: continuousVibrationMonitoring
+    name: continuousVibrationMonitoring
+    description: Continuous vibration monitoring flag
+  equipmentIdentifier:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: equipmentIdentifier
+    name: equipmentIdentifier
+    description: Equipment identifier
+  equipmentLineNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: equipmentLineNumber
+    name: equipmentLineNumber
+    description: Equipment line number
+  exCertificateNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: exCertificateNumber
+    name: exCertificateNumber
+    description: Ex certificate number
+  exEquipmentFlag:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: exEquipmentFlag
+    name: exEquipmentFlag
+    description: Ex equipment flag
+  explosionProtection:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: explosionProtection
+    name: explosionProtection
+    description: Explosion protection information
+  eqHubLink:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: eqHubLink
+    name: eqHubLink
+    description: Equipment hub link URL
+  facility:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: facility
+    name: facility
+    description: Facility where the equipment is located
+  functionCode:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: functionCode
+    name: functionCode
+    description: Function code for the equipment
+  functionCodeDescription:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: functionCodeDescription
+    name: functionCodeDescription
+    description: Description of the function code
+  gasGroup:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: gasGroup
+    name: gasGroup
+    description: Gas group classification
+  hazardousAreaClassificationArea:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: hazardousAreaClassificationArea
+    name: hazardousAreaClassificationArea
+    description: Hazardous area classification area
+  intrinsicallySafeFlag:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: intrinsicallySafeFlag
+    name: intrinsicallySafeFlag
+    description: Intrinsically safe flag
+  ipRating:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: ipRating
+    name: ipRating
+    description: IP rating for the equipment
+  originatingContractor:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: originatingContractor
+    name: originatingContractor
+    description: Originating contractor for the equipment
+  parentTag:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: parentTag
+    name: parentTag
+    description: Parent tag identifier
+  partNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: partNumber
+    name: partNumber
+    description: Part number for the equipment
+  platformCode:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: platformCode
+    name: platformCode
+    description: Platform code for the equipment
+  powerConsumption:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: powerConsumption
+    name: powerConsumption
+    description: Power consumption of the equipment
+  purchaseOrderNo:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: purchaseOrderNo
+    name: purchaseOrderNo
+    description: Purchase order number
+  remarks:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: remarks
+    name: remarks
+    description: Remarks or notes about the equipment
+  sapCatalogProfile:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: sapCatalogProfile
+    name: sapCatalogProfile
+    description: SAP catalog profile
+  sapExportFlag:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: sapExportFlag
+    name: sapExportFlag
+    description: SAP export flag
+  sapMmNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: sapMmNumber
+    name: sapMmNumber
+    description: SAP MM number
+  sapObjectType:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: sapObjectType
+    name: sapObjectType
+    description: SAP object type
+  serialNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: serialNumber
+    name: serialNumber
+    description: Serial number of the equipment
+  setPointCritFlag:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: setPointCritFlag
+    name: setPointCritFlag
+    description: Set point critical flag
+  subSystemNo:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: subSystemNo
+    name: subSystemNo
+    description: Sub-system number
+  system:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: system
+    name: system
+    description: System identifier
+  tagDiscipline:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: tagDiscipline
+    name: tagDiscipline
+    description: Tag discipline
+  tagNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: tagNumber
+    name: tagNumber
+    description: Tag number for the equipment
+  temperatureClass:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: temperatureClass
+    name: temperatureClass
+    description: Temperature class classification
+  thermodynamicConditionMonitoring:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: thermodynamicConditionMonitoring
+    name: thermodynamicConditionMonitoring
+    description: Thermodynamic condition monitoring flag
+  updatedDate:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: updatedDate
+    name: updatedDate
+    description: Date when the equipment was last updated
+  useProjectStatus:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: useProjectStatus
+    name: useProjectStatus
+    description: Use project status flag
+  weightDry:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: weightDry
+    name: weightDry
+    description: Dry weight of the equipment
+  weightOperating:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: weightOperating
+    name: weightOperating
+    description: Operating weight of the equipment
+  weightFlag:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: weightFlag
+    name: weightFlag
+    description: Weight flag
+  workflowStatus:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: workflowStatus
+    name: workflowStatus
+    description: Workflow status of the equipment
+  workingSetId:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: workingSetId
+    name: workingSetId
+    description: Working set identifier
+  objectId:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: objectId
+    name: objectId
+    description: Object identifier
+  state:
+    container:
+      space: energy_dm
+      externalId: EnergyEquipment
+      type: container
+    containerPropertyIdentifier: state
+    name: state
+    description: State of the equipment

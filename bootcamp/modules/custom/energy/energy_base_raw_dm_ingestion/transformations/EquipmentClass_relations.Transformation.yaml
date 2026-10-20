@@ -1,0 +1,12 @@
+externalId: tr_energy_base_raw_EquipmentClass_relations
+name: RAW → EquipmentClass relations
+destination:
+  type: nodes
+  view:
+    space: energy_dm
+    externalId: EquipmentClass
+    version: v1
+  instanceSpace: "{{energyInstanceSpace}}"
+dataSetExternalId: '{{ energy_base_raw_ingestion_dataset_external_id }}'
+ignoreNullFields: true
+conflictMode: upsert

@@ -1,0 +1,12 @@
+externalId: tr_energy_base_raw_InspectionRecommendation_nodes
+name: RAW → InspectionRecommendation nodes
+destination:
+  type: nodes
+  view:
+    space: energy_dm
+    externalId: InspectionRecommendation
+    version: v1
+  instanceSpace: "{{energyInstanceSpace}}"
+dataSetExternalId: '{{ energy_base_raw_ingestion_dataset_external_id }}'
+ignoreNullFields: false
+conflictMode: upsert

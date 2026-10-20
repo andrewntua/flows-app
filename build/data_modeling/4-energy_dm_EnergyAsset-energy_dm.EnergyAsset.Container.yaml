@@ -1,0 +1,930 @@
+space: energy_dm
+externalId: EnergyAsset
+name: Assets
+properties:
+  areaId:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: areaId
+    description: The area where the asset is located
+  tagComment:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: tagComment
+    description: Comments related to the tag
+  elcStatusId:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: elcStatusId
+    description: 'Source metadata: elcStatusId'
+  sourceDb:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: sourceDb
+    description: 'Source metadata: sourceDb'
+  sourceTable:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: sourceTable
+    description: 'Source metadata: sourceTable'
+  categoryId:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: categoryId
+    description: 'Source metadata: categoryId'
+  contractorId:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: contractorId
+    description: 'Source metadata: contractorId'
+  funcCodeId:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: funcCodeId
+    description: 'Source metadata: funcCodeId'
+  locationId:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: locationId
+    description: 'Source metadata: locationId'
+  safetyCriticalElementId:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: safetyCriticalElementId
+    description: 'Source metadata: safetyCriticalElementId'
+  systemId:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: systemId
+    description: 'Source metadata: systemId'
+  tagCreatedDate:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: tagCreatedDate
+    description: 'Source metadata: tagCreatedDate'
+  tagCriticalLine:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: tagCriticalLine
+    description: 'Source metadata: tagCriticalLine'
+  tagDesc:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: tagDesc
+    description: 'Source metadata: tagDesc'
+  tagGlobalId:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: tagGlobalId
+    description: 'Source metadata: tagGlobalId'
+  tagHistoryRequired:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: tagHistoryRequired
+    description: 'Source metadata: tagHistoryRequired'
+  tagId:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: tagId
+    description: 'Source metadata: tagId'
+  tagIdAncestor:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: tagIdAncestor
+    description: 'Source metadata: tagIdAncestor'
+  tagIsActive:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: tagIsActive
+    description: 'Source metadata: tagIsActive'
+  tagIsOwnedByProject:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: tagIsOwnedByProject
+    description: 'Source metadata: tagIsOwnedByProject'
+  tagLoop:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: tagLoop
+    description: 'Source metadata: tagLoop'
+  tagMainId:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: tagMainId
+    description: 'Source metadata: tagMainId'
+  tagName:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: tagName
+    description: 'Source metadata: tagName'
+  tagStatusChgDate:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: tagStatusChgDate
+    description: 'Source metadata: tagStatusChgDate'
+  tagUpdatedBy:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: tagUpdatedBy
+    description: 'Source metadata: tagUpdatedBy'
+  tagUpdatedDate:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: tagUpdatedDate
+    description: 'Source metadata: tagUpdatedDate'
+  abcIndicator:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: abcIndicator
+    description: ABC indicator for the functional location. @name ABC Indicator
+  barrierArea:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: barrierArea
+    description: Barrier area for the functional location. @name Barrier Area
+  barrierElementPrimary:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: barrierElementPrimary
+    description: Primary barrier element for the functional location. @name Barrier
+      Element Primary
+  barrierElementSecondary:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: barrierElementSecondary
+    description: Secondary barrier element for the functional location. @name Barrier
+      Element Secondary
+  barrierElementTertiary:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: barrierElementTertiary
+    description: Tertiary barrier element for the functional location. @name Barrier
+      Element Tertiary
+  catalogProfile:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: catalogProfile
+    description: Catalog profile for the functional location. @name Catalog Profile
+  catalogProfileDesc:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: catalogProfileDesc
+    description: Description of the catalog profile. @name Catalog Profile Description
+  category:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: category
+    description: Category of the functional location. @name Category
+  createdDate:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: createdDate
+    description: Creation date of the functional location. @name Created Date
+  criticalityCombined:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: criticalityCombined
+    description: Combined criticality of the functional location. @name Criticality
+      Combined
+  criticalityCost:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: criticalityCost
+    description: Cost criticality of the functional location. @name Criticality Cost
+  criticalityEnvironment:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: criticalityEnvironment
+    description: Environmental criticality of the functional location. @name Criticality
+      Environment
+  criticalityProduction:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: criticalityProduction
+    description: Production criticality of the functional location. @name Criticality
+      Production
+  criticalitySafety:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: criticalitySafety
+    description: Safety criticality of the functional location. @name Criticality
+      Safety
+  discipline:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: discipline
+    description: Discipline associated with the functional location. @name Discipline
+  disciplineType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: disciplineType
+    description: Discipline type associated with the functional location. @name Discipline
+      Type
+  exAtexNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: exAtexNumber
+    description: Ex Atex number for the functional location. @name Ex Atex Number
+  exCode:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: exCode
+    description: Ex code for the functional location. @name Ex Code
+  functionalLocation:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: functionalLocation
+    description: Functional location identifier. @name Functional Location
+  functionalLocationDesc:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: functionalLocationDesc
+    description: Description of the functional location. @name Functional Location
+      Description
+  groupDesc:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: groupDesc
+    description: Description of the group associated with the functional location.
+      @name Group Description
+  groupId:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: groupId
+    description: Group identifier associated with the functional location. @name Group
+      ID
+  inspCritCombined:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: inspCritCombined
+    description: Combined inspection criticality. @name Inspection Criticality Combined
+  inspCritCost:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: inspCritCost
+    description: Inspection cost criticality. @name Inspection Criticality Cost
+  inspCritEnvironment:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: inspCritEnvironment
+    description: Inspection environmental criticality. @name Inspection Criticality
+      Environment
+  inspCritSafety:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: inspCritSafety
+    description: Inspection safety criticality. @name Inspection Criticality Safety
+  itemRedundancy:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: itemRedundancy
+    description: Item redundancy of the functional location. @name Item Redundancy
+  location:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: location
+    description: Location of the functional location. @name Location
+  locationDesc:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: locationDesc
+    description: Description of the location. @name Location Description
+  mainAsset:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: mainAsset
+    description: Main asset associated with the functional location. @name Main Asset
+  mainFunctionDesc:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: mainFunctionDesc
+    description: Description of the main function. @name Main Function Description
+  mainWorkCenter:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: mainWorkCenter
+    description: Main work center for the functional location. @name Main Work Center
+  mainWorkCenterDesc:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: mainWorkCenterDesc
+    description: Description of the main work center. @name Main Work Center Description
+  maintenancePlant:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenancePlant
+    description: Maintenance plant for the functional location. @name Maintenance
+      Plant
+  maintenancePlantDesc:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: maintenancePlantDesc
+    description: Description of the maintenance plant. @name Maintenance Plant Description
+  objectNumber:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: objectNumber
+    description: Object number for the functional location. @name Object Number
+  objectType:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: objectType
+    description: Object type for the functional location. @name Object Type
+  objectTypeDesc:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: objectTypeDesc
+    description: Description of the object type. @name Object Type Description
+  performanceStandard:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: performanceStandard
+    description: Performance standard for the functional location. @name Performance
+      Standard
+  plannerGroup:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: plannerGroup
+    description: Planner group for the functional location. @name Planner Group
+  plannerGroupDesc:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: plannerGroupDesc
+    description: Description of the planner group. @name Planner Group Description
+  planningPlant:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: planningPlant
+    description: Planning plant for the functional location. @name Planning Plant
+  planningPlantDesc:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: planningPlantDesc
+    description: Description of the planning plant. @name Planning Plant Description
+  rbaConsequenceCost:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: rbaConsequenceCost
+    description: RBA consequence cost. @name RBA Consequence Cost
+  rbaConsequenceEnvironment:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: rbaConsequenceEnvironment
+    description: RBA consequence environment. @name RBA Consequence Environment
+  rbaConsequenceMax:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: rbaConsequenceMax
+    description: Maximum RBA consequence. @name RBA Consequence Max
+  rbaConsequenceProduction:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: rbaConsequenceProduction
+    description: RBA consequence production. @name RBA Consequence Production
+  rbaConsequenceSafety:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: rbaConsequenceSafety
+    description: RBA consequence safety. @name RBA Consequence Safety
+  rbaProbability:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: rbaProbability
+    description: RBA probability. @name RBA Probability
+  rbaRisk:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: rbaRisk
+    description: RBA risk. @name RBA Risk
+  rcmConsequenceCost:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: rcmConsequenceCost
+    description: RCM consequence cost. @name RCM Consequence Cost
+  rcmConsequenceEnvironment:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: rcmConsequenceEnvironment
+    description: RCM consequence environment. @name RCM Consequence Environment
+  rcmConsequenceMax:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: rcmConsequenceMax
+    description: Maximum RCM consequence. @name RCM Consequence Max
+  rcmConsequenceProduction:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: rcmConsequenceProduction
+    description: RCM consequence production. @name RCM Consequence Production
+  rcmConsequenceSafety:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: rcmConsequenceSafety
+    description: RCM consequence safety. @name RCM Consequence Safety
+  rcmCriticality:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: rcmCriticality
+    description: RCM criticality. @name RCM Criticality
+  rcmFrequency:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: rcmFrequency
+    description: RCM frequency. @name RCM Frequency
+  subFunctionCode:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: subFunctionCode
+    description: Sub-function code for the functional location. @name Sub Function
+      Code
+  subFunctionDesc:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: subFunctionDesc
+    description: Description of the sub-function. @name Sub Function Description
+  superiorFunctionalLocation:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: superiorFunctionalLocation
+    description: Superior functional location. @name Superior Functional Location
+  systemDesc:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: systemDesc
+    description: System description for the functional location. @name System Description
+  systemStatus:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: systemStatus
+    description: System status of the functional location. @name System Status
+  userStatus:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: userStatus
+    description: User status of the functional location. @name User Status
+  wbs:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: wbs
+    description: WBS element for the functional location. @name WBS
+  superiorFuncLocationTagDesc:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: superiorFuncLocationTagDesc
+    description: Description of the superior functional location tag. @name Superior
+      Functional Location Tag Description

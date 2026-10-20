@@ -1,0 +1,40 @@
+space: energy_dm
+externalId: EquipmentClass
+name: Equipment Class
+description: Class of similar type of equipment units (e.g. all pumps)
+implements:
+- space: cdf_cdm
+  externalId: CogniteDescribable
+  version: v1
+  type: view
+version: v1
+properties:
+  code:
+    container:
+      space: energy_dm
+      externalId: EquipmentClass
+      type: container
+    containerPropertyIdentifier: code
+    name: Code
+    description: A unique identifier for the class of asset.
+  standard:
+    container:
+      space: energy_dm
+      externalId: EquipmentClass
+      type: container
+    containerPropertyIdentifier: standard
+    name: Standard
+    description: A text string to specify which standard the class is from.
+  failureModes:
+    container:
+      space: energy_dm
+      externalId: EquipmentClass
+      type: container
+    containerPropertyIdentifier: failureModes
+    name: Failure Modes
+    description: The distinct ways in which an asset or component can fail.
+    source:
+      space: energy_dm
+      externalId: FailureMode
+      version: v1
+      type: view

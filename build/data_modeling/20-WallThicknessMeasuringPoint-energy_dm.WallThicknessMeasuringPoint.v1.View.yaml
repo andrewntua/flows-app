@@ -1,0 +1,120 @@
+space: energy_dm
+externalId: WallThicknessMeasuringPoint
+name: Wall Thickness Measuring Point
+description: Wall thickness inspection reading linked to a condition monitoring location.
+implements:
+- space: cdf_cdm
+  externalId: CogniteDescribable
+  version: v1
+  type: view
+version: v1
+properties:
+  name:
+    container:
+      space: energy_dm
+      externalId: WallThicknessMeasuringPoint
+      type: container
+    containerPropertyIdentifier: name
+    name: Name
+    description: Display label
+  measurementId:
+    container:
+      space: energy_dm
+      externalId: WallThicknessMeasuringPoint
+      type: container
+    containerPropertyIdentifier: measurementId
+    name: Measurement ID
+    description: Reading identifier
+  inspectionDate:
+    container:
+      space: energy_dm
+      externalId: WallThicknessMeasuringPoint
+      type: container
+    containerPropertyIdentifier: inspectionDate
+    name: Inspection date
+    description: Date of measurement
+  measuredThicknessMm:
+    container:
+      space: energy_dm
+      externalId: WallThicknessMeasuringPoint
+      type: container
+    containerPropertyIdentifier: measuredThicknessMm
+    name: Measured thickness
+    description: Measured wall thickness (mm)
+  technique:
+    container:
+      space: energy_dm
+      externalId: WallThicknessMeasuringPoint
+      type: container
+    containerPropertyIdentifier: technique
+    name: Technique
+    description: NDE technique
+  measuredBy:
+    container:
+      space: energy_dm
+      externalId: WallThicknessMeasuringPoint
+      type: container
+    containerPropertyIdentifier: measuredBy
+    name: Measured by
+    description: Inspector or contractor
+  findings:
+    container:
+      space: energy_dm
+      externalId: WallThicknessMeasuringPoint
+      type: container
+    containerPropertyIdentifier: findings
+    name: Findings
+    description: Inspection observations
+  corrosionRateMmPerYr:
+    container:
+      space: energy_dm
+      externalId: WallThicknessMeasuringPoint
+      type: container
+    containerPropertyIdentifier: corrosionRateMmPerYr
+    name: Corrosion rate
+    description: Calculated corrosion rate (mm/yr)
+  inspectionEffectiveness:
+    container:
+      space: energy_dm
+      externalId: WallThicknessMeasuringPoint
+      type: container
+    containerPropertyIdentifier: inspectionEffectiveness
+    name: Inspection effectiveness
+    description: API 581 effectiveness category
+  positionX:
+    container:
+      space: energy_dm
+      externalId: WallThicknessMeasuringPoint
+      type: container
+    containerPropertyIdentifier: positionX
+    name: Position X
+    description: Model-space X on pipe surface (m)
+  positionY:
+    container:
+      space: energy_dm
+      externalId: WallThicknessMeasuringPoint
+      type: container
+    containerPropertyIdentifier: positionY
+    name: Position Y
+    description: Model-space Y on pipe surface (m)
+  positionZ:
+    container:
+      space: energy_dm
+      externalId: WallThicknessMeasuringPoint
+      type: container
+    containerPropertyIdentifier: positionZ
+    name: Position Z
+    description: Model-space Z on pipe surface (m)
+  conditionMonitoringLocation:
+    container:
+      space: energy_dm
+      externalId: WallThicknessMeasuringPoint
+      type: container
+    containerPropertyIdentifier: conditionMonitoringLocation
+    name: Condition monitoring location
+    description: Parent CML
+    source:
+      space: energy_dm
+      externalId: ConditionMonitoringLocation
+      version: v1
+      type: view

@@ -1,0 +1,11 @@
+externalId: fn_diagram_detect_tag_annotations
+name: Diagram Detect Tag Annotations
+description: Detect asset tags on P&ID PDFs and create diagrams.AssetLink edges
+space: "{{ energyInstanceSpace }}"
+functionPath: ./handler.py
+runtime: py311
+envVars:
+  INSTANCE_SPACE: "{{ energyInstanceSpace }}"
+  DATA_MODEL_SPACE: "{{ energyDataModelSpace }}"
+  VIEW_VERSION: "{{ viewVersion }}"
+  ASSET_PREFIX: "{{ energyAssetPrefix }}"

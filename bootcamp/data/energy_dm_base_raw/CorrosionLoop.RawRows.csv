@@ -1,0 +1,93 @@
+key,developmentType,loopComment,loopNo,material,sourceTable,system,description,name
+CL-BF-11-1,Brownfield,PT from DP/IP/WP to test manifold on PH,11-1,22% Cr Duplex,Table 4-9,11,PT from DP/IP/WP to test manifold on PH,Loop 11-1
+CL-BF-11-2,Brownfield,PT from WP test separator to PCP production header (C steel),11-2,Carbon steel,Table 4-9,11,PT from WP test separator to PCP production header (C steel),Loop 11-2
+CL-BF-14-1,Brownfield,Crude oil from PH oil export pipeline to WP/IP future connection (C steel),14-1,Carbon steel,Table 4-9,14,Crude oil from PH oil export pipeline to WP/IP future connection (C steel),Loop 14-1
+CL-BF-16-1,Brownfield,Nitrogen lines,16-1,316 SS,Table 4-9,16,Nitrogen lines,Loop 16-1
+CL-BF-16-2,Brownfield,Nitrogen lines,16-2,22% Cr Duplex,Table 4-9,16,Nitrogen lines,Loop 16-2
+CL-BF-17-1,Brownfield,PV connected to gas export on PH,17-1,Carbon steel,Table 4-9,17,PV connected to gas export on PH,Loop 17-1
+CL-BF-17-3,Brownfield,VF to relief header on WP/PCP,17-3,22% Cr Duplex,Table 4-9,17,VF to relief header on WP/PCP,Loop 17-3
+CL-BF-31-1,Brownfield,VF connected to VF low pressure on PH,31-1,22% Cr Duplex,Table 4-9,31,VF connected to VF low pressure on PH,Loop 31-1
+CL-BF-31-2a,Brownfield,VF connected to vent to flare HP on PH,31-2a,22% Cr Duplex,Table 4-9,31,VF connected to vent to flare HP on PH,Loop 31-2a
+CL-BF-31-2b,Brownfield,VF connected to vent to flare HP on PH,31-2b,316 SS,Table 4-9,31,VF connected to vent to flare HP on PH,Loop 31-2b
+CL-BF-31-3,Brownfield,VF piping connected to PL condensate on PH,31-3,Carbon steel,Table 4-9,31,VF piping connected to PL condensate on PH,Loop 31-3
+CL-BF-40-1,Brownfield,OF lines from PH to DP/WP and IP,40-1,316 SS,Table 4-9,40,OF lines from PH to DP/WP and IP,Loop 40-1
+CL-BF-42-1,Brownfield,GF connected to buy-back gas HP on PH,42-1,22% Cr Duplex,Table 4-9,42,GF connected to buy-back gas HP on PH,Loop 42-1
+CL-BF-42-2,Brownfield,VA from IP to atmosphere at safe location,42-2,Carbon steel,Table 4-9,42,VA from IP to atmosphere at safe location,Loop 42-2
+CL-BF-43-1,Brownfield,Antifoam and emulsion breaker (CE) from PH to VP/DP and IP,43-1,316 SS,Table 4-9,43,Antifoam and emulsion breaker (CE) from PH to VP/DP and IP,Loop 43-1
+CL-BF-43-10,Brownfield,Defoamer and emulsion breaker from chemical injection panels,43-10,Carbon steel,Table 4-9,43,Defoamer and emulsion breaker from chemical injection panels,Loop 43-10
+CL-BF-43-2,Brownfield,Scale inhibitor (CD) from PH to DP/WP and IP,43-2,316 SS,Table 4-9,43,Scale inhibitor (CD) from PH to DP/WP and IP,Loop 43-2
+CL-BF-43-3,Brownfield,Corrosion inhibitor (CK) from PH to DP/WP,43-3,316 SS,Table 4-9,43,Corrosion inhibitor (CK) from PH to DP/WP,Loop 43-3
+CL-BF-43-4,Brownfield,Wax inhibitor (CV) from PH to WP/DP,43-4,316 SS,Table 4-9,43,Wax inhibitor (CV) from PH to WP/DP,Loop 43-4
+CL-BF-43-5,Brownfield,Methanol (CA/ME) from PH to IP,43-5,316 SS,Table 4-9,43,Methanol (CA/ME) from PH to IP,Loop 43-5
+CL-BF-43-6,Brownfield,Biocide (CB) from PH to IP,43-6,316 SS,Table 4-9,43,Biocide (CB) from PH to IP,Loop 43-6
+CL-BF-43-7,Brownfield,Oxygen scavenger (CO) from PH to IP,43-7,316 SS,Table 4-9,43,Oxygen scavenger (CO) from PH to IP,Loop 43-7
+CL-BF-43-8,Brownfield,Antifoam and emulsion breaker (CE) from chemical injection distribution panel to test- and production manifolds,43-8,6Mo,Table 4-9,43,Antifoam and emulsion breaker (CE) from chemical injection distribution panel to test- and production manifolds,Loop 43-8
+CL-BF-43-9,Brownfield,Scale inhibitor (CD) from chemical injection distribution panel to test- and production manifolds,43-9,6Mo,Table 4-9,43,Scale inhibitor (CD) from chemical injection distribution panel to test- and production manifolds,Loop 43-9
+CL-BF-46-1,Brownfield,Compressed air instrument,46-1,316 SS,Table 4-9,46,Compressed air instrument,Loop 46-1
+CL-BF-47-1,Brownfield,"Potable water (WP) connected to PH, WP and WD",47-1,316 SS,Table 4-9,47,"Potable water (WP) connected to PH, WP and WD",Loop 47-1
+CL-BF-47-3,Brownfield,WS drain over board,47-3,Titanium,Table 4-9,47,WS drain over board,Loop 47-3
+CL-BF-48-1,Brownfield,WF connected to fire water and seawater pipes on PH,48-1,Titanium,Table 4-9,48,WF connected to fire water and seawater pipes on PH,Loop 48-1
+CL-BF-48-2,Brownfield,Pipes connected to AFFF tank,48-2,Carbon steel,Table 4-9,48,Pipes connected to AFFF tank,Loop 48-2
+CL-BF-80-1,Brownfield,PW connected to produced water pipes on PH,80-1,22% Cr Duplex,Table 4-9,80,PW connected to produced water pipes on PH,Loop 80-1
+CL-BF-80-2,Brownfield,"WJ unused, connected to Jet water pipes on PH",80-2,22% Cr Duplex,Table 4-9,80,"WJ unused, connected to Jet water pipes on PH",Loop 80-2
+CL-BF-80-5,Brownfield,Jet water return connected to used jet water pipes at PH,80-5,22% Cr Duplex,Table 4-9,80,Jet water return connected to used jet water pipes at PH,Loop 80-5
+CL-BF-81-1,Brownfield,Closed drain,81-1,Carbon steel,Table 4-9,81,Closed drain,Loop 81-1
+CL-BF-81-3,Brownfield,Closed drain,81-3,Carbon steel,Table 4-9,81,Closed drain,Loop 81-3
+CL-BF-81-4,Brownfield,Closed drain,81-4,Carbon steel,Table 4-9,81,Closed drain,Loop 81-4
+CL-BF-84-2,Brownfield,6Mo welded outlet connected to 6Mo seawater line on IP,84-2,6Mo,Table 4-9,84,6Mo welded outlet connected to 6Mo seawater line on IP,Loop 84-2
+CL-BF-85-1,Brownfield,Cutting slurry (DM) from IP to storage on PH,85-1,22% Cr Duplex,Table 4-9,85,Cutting slurry (DM) from IP to storage on PH,Loop 85-1
+CL-BF-85-2,Brownfield,Cutting slurry (DM) on IP,85-2,Carbon steel,Table 4-9,85,Cutting slurry (DM) on IP,Loop 85-2
+CL-GF-11-10,Greenfield,Produced water,11-10,22% Cr Duplex,Table 4-8,11,Produced water,Loop 11-10
+CL-GF-11-11,Greenfield,PV from 2nd stage separator,11-11,22% Cr Duplex,Table 4-8,11,PV from 2nd stage separator,Loop 11-11
+CL-GF-11-12,Greenfield,Lube oil,11-12,316 SS,Table 4-8,11,Lube oil,Loop 11-12
+CL-GF-11-13,Greenfield,Lube oil,11-13,22% Cr Duplex,Table 4-8,11,Lube oil,Loop 11-13
+CL-GF-11-1a,Greenfield,"PT from Hod and Flank N/S, DP/WP and IP to 1st sep rear or desander multipurpose separator",11-1a,22% Cr Duplex,Table 4-8,11,"PT from Hod and Flank N/S, DP/WP and IP to 1st sep rear or desander multipurpose separator",Loop 11-1a
+CL-GF-11-1b,Greenfield,PL to separator from suction scrubber and LP flare knock out drum,11-1b,22% Cr Duplex,Table 4-8,11,PL to separator from suction scrubber and LP flare knock out drum,Loop 11-1b
+CL-GF-11-2,Greenfield,PT manifold to multipurpose separator via desander test header,11-2,22% Cr Duplex,Table 4-8,11,PT manifold to multipurpose separator via desander test header,Loop 11-2
+CL-GF-11-3,Greenfield,PT from Flanke,11-3,22% Cr Duplex,Table 4-8,11,PT from Flanke,Loop 11-3
+CL-GF-11-4,Greenfield,PT from Hod,11-4,22% Cr Duplex,Table 4-8,11,PT from Hod,Loop 11-4
+CL-GF-11-5,Greenfield,PT from DP/IP/WP production manifold,11-5,22% Cr Duplex,Table 4-8,11,PT from DP/IP/WP production manifold,Loop 11-5
+CL-GF-11-6,Greenfield,PL to oil export pump 910273,11-6,22% Cr Duplex,Table 4-8,11,PL to oil export pump 910273,Loop 11-6
+CL-GF-11-7,Greenfield,HC to 2nd stage separator,11-7,22% Cr Duplex,Table 4-8,11,HC to 2nd stage separator,Loop 11-7
+CL-GF-11-8,Greenfield,PT from DP/IP/WP test manifold,11-8,22% Cr Duplex,Table 4-8,11,PT from DP/IP/WP test manifold,Loop 11-8
+CL-GF-11-9,Greenfield,PV from separator towards 1st suction cooler,11-9,22% Cr Duplex,Table 4-8,11,PV from separator towards 1st suction cooler,Loop 11-9
+CL-GF-13-1,Greenfield,PL to NGL stabilizer,13-1,22% Cr Duplex,Table 4-8,13,PL to NGL stabilizer,Loop 13-1
+CL-GF-13-2,Greenfield,PL to NGL pumps,13-2,22% Cr Duplex,Table 4-8,13,PL to NGL pumps,Loop 13-2
+CL-GF-13-3,Greenfield,PV from NG stabilizer towards 2 stage suction scrubber,13-3,22% Cr Duplex,Table 4-8,13,PV from NG stabilizer towards 2 stage suction scrubber,Loop 13-3
+CL-GF-14-1,Greenfield,PL export,14-1,Carbon steel,Table 4-8,14,PL export,Loop 14-1
+CL-GF-16-1,Greenfield,Inert gas,16-1,316 SS,Table 4-8,16,Inert gas,Loop 16-1
+CL-GF-17-1,Greenfield,PL to metering,17-1,22% Cr Duplex,Table 4-8,17,PL to metering,Loop 17-1
+CL-GF-23-1,Greenfield,PV to 1st stage suction cooler,23-1,22% Cr Duplex,Table 4-8,23,PV to 1st stage suction cooler,Loop 23-1
+CL-GF-23-2,Greenfield,PV after 1st stage suction scrubber,23-2,22% Cr Duplex,Table 4-8,23,PV after 1st stage suction scrubber,Loop 23-2
+CL-GF-23-3,Greenfield,PV after 1st stage compressor,23-3,22% Cr Duplex,Table 4-8,23,PV after 1st stage compressor,Loop 23-3
+CL-GF-23-4,Greenfield,PV to suction 1st and 2nd stage suction scrubbers,23-4,22% Cr Duplex,Table 4-8,23,PV to suction 1st and 2nd stage suction scrubbers,Loop 23-4
+CL-GF-23-5,Greenfield,PV to 2nd stage suction scrubber,23-5,22% Cr Duplex,Table 4-8,23,PV to 2nd stage suction scrubber,Loop 23-5
+CL-GF-23-6,Greenfield,PV from 2nd stage compressor,23-6,22% Cr Duplex,Table 4-8,23,PV from 2nd stage compressor,Loop 23-6
+CL-GF-23-7a,Greenfield,PV from 3rd stage suction scrubber,23-7a,22% Cr Duplex,Table 4-8,23,PV from 3rd stage suction scrubber,Loop 23-7a
+CL-VRD-P16-23-7b,VRD Existing,PV from 3rd stage suction scrubber,23-7b,316 SS,VRD p16,23,PV from 3rd stage suction scrubber,Loop 23-7b
+CL-VRD-P16-24-1a,VRD Existing,PV from TEG inlet scrubber,24-1a,22% Cr Duplex,VRD p16,24,PV from TEG inlet scrubber,Loop 24-1a
+CL-VRD-P16-24-1b,VRD Existing,PV from TEG inlet scrubber,24-1b,316 SS,VRD p16,24,PV from TEG inlet scrubber,Loop 24-1b
+CL-VRD-P16-25-1a,VRD Existing,PV to 4th stage compressor,25-1a,22% Cr Duplex,VRD p16,25,PV to 4th stage compressor,Loop 25-1a
+CL-VRD-P16-27-1a,VRD Existing,Gas export,27-1a,22% Cr Duplex,VRD p16,27,Gas export,Loop 27-1a
+CL-VRD-P16-31-1a,VRD Existing,Vent to flare HP,31-1a,316 SS,VRD p16,31,Vent to flare HP,Loop 31-1a
+CL-VRD-P16-32-1b,VRD Existing,Rich glycol,32-1b,316 SS,VRD p16,32,Rich glycol,Loop 32-1b
+CL-VRD-P16-40-1-N,VRD Existing,Fuel oil (diesel),40-1-N,316 SS,VRD p16,40,Fuel oil (diesel),Loop 40-1-N
+CL-VRD-P16-42-1a,VRD Existing,"Buy back gas HP, high pressure",42-1a,22% Cr Duplex,VRD p16,42,"Buy back gas HP, high pressure",Loop 42-1a
+CL-VRD-P16-43-1,VRD Existing,Scale inhibitor,43-1,316 SS,VRD p16,43,Scale inhibitor,Loop 43-1
+CL-VRD-P16-43-2,VRD Existing,Scale inhibitor,43-2,6Mo,VRD p16,43,Scale inhibitor,Loop 43-2
+CL-VRD-P17-43-10,VRD Existing,Demulsifier or defoamer,43-10,6Mo,VRD p17,43,Demulsifier or defoamer,Loop 43-10
+CL-VRD-P17-43-13,VRD Existing,Corrosion inhibitor,43-13,316 SS,VRD p17,43,Corrosion inhibitor,Loop 43-13
+CL-VRD-P17-43-14a,VRD Existing,Corrosion inhibitor,43-14a,6Mo,VRD p17,43,Corrosion inhibitor,Loop 43-14a
+CL-VRD-P17-43-14b,VRD Existing,Corrosion inhibitor,43-14b,316 SS,VRD p17,43,Corrosion inhibitor,Loop 43-14b
+CL-VRD-P17-43-15,VRD Existing,Wax inhibitor,43-15,316 SS,VRD p17,43,Wax inhibitor,Loop 43-15
+CL-VRD-P17-43-16,VRD Existing,Wax inhibitor,43-16,6Mo,VRD p17,43,Wax inhibitor,Loop 43-16
+CL-VRD-P17-43-8,VRD Existing,Biocide,43-8,6Mo,VRD p17,43,Biocide,Loop 43-8
+CL-VRD-P17-43-9,VRD Existing,Demulsified or defoamer,43-9,316 SS,VRD p17,43,Demulsified or defoamer,Loop 43-9
+CL-VRD-P17-45-1b,VRD Existing,"Cooling medium, cold",45-1b,316 SS,VRD p17,45,"Cooling medium, cold",Loop 45-1b
+CL-VRD-P17-45-2a,VRD Existing,"Cooling medium, hot, low temp",45-2a,22% Cr Duplex,VRD p17,45,"Cooling medium, hot, low temp",Loop 45-2a
+CL-VRD-P17-47-2,VRD Existing,Potable water,47-2,316 SS,VRD p17,47,Potable water,Loop 47-2
+CL-VRD-P17-48-2,VRD Existing,Fire water and seawater,48-2,Titanium,VRD p17,48,Fire water and seawater,Loop 48-2
+CL-VRD-P17-80-1,VRD Existing,Produced water,80-1,22% Cr Duplex,VRD p17,80,Produced water,Loop 80-1
+CL-VRD-P17-81-1a,VRD Existing,"Closed drain, from System 11/23",81-1a,22% Cr Duplex,VRD p17,81,"Closed drain, from System 11/23",Loop 81-1a
+CL-VRD-P17-84-1,VRD Existing,Sodium hypochlorite solution,84-1,Titanium,VRD p17,84,Sodium hypochlorite solution,Loop 84-1
+CL-VRD-P17-85-4,VRD Existing,Drain mud,85-4,22% Cr Duplex,VRD p17,85,Drain mud,Loop 85-4

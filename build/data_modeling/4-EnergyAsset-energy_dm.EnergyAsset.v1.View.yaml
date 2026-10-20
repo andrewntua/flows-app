@@ -1,0 +1,958 @@
+space: energy_dm
+externalId: EnergyAsset
+name: Assets
+description: 'Assets represent systems that support industrial functions or processes.
+  Assets are often called ''functional location''.
+
+  @name Assets'
+implements:
+- space: cdf_cdm
+  externalId: CogniteSourceable
+  version: v1
+  type: view
+- space: cdf_cdm
+  externalId: CogniteVisualizable
+  version: v1
+  type: view
+- space: cdf_cdm
+  externalId: CogniteDescribable
+  version: v1
+  type: view
+- space: cdf_cdm
+  externalId: CogniteAsset
+  version: v1
+  type: view
+version: v1
+properties:
+  parent:
+    container:
+      space: cdf_cdm
+      externalId: CogniteAsset
+      type: container
+    containerPropertyIdentifier: assetHierarchy_parent
+    name: Parent
+    description: 'The parent of the asset.
+
+      @name Parent'
+    source:
+      space: energy_dm
+      externalId: EnergyAsset
+      version: v1
+      type: view
+  root:
+    container:
+      space: cdf_cdm
+      externalId: CogniteAsset
+      type: container
+    containerPropertyIdentifier: assetHierarchy_root
+    name: Root
+    description: 'An automatically updated reference to the top-level asset of the
+      hierarchy.
+
+      @name Root'
+    source:
+      space: energy_dm
+      externalId: EnergyAsset
+      version: v1
+      type: view
+  path:
+    container:
+      space: cdf_cdm
+      externalId: CogniteAsset
+      type: container
+    containerPropertyIdentifier: assetHierarchy_path
+    name: Path
+    description: 'An automatically updated ordered list of this asset''s ancestors,
+      starting with the root asset. Enables subtree filtering to find all assets under
+      a parent.
+
+      @name Path'
+    source:
+      space: energy_dm
+      externalId: EnergyAsset
+      version: v1
+      type: view
+  children:
+    source:
+      space: energy_dm
+      externalId: EnergyAsset
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: EnergyAsset
+        version: v1
+        type: view
+      identifier: parent
+    name: Children
+    description: 'An automatically updated list of assets with this asset as their
+      parent.
+
+      @name Children'
+    connectionType: multi_reverse_direct_relation
+  equipment:
+    source:
+      space: energy_dm
+      externalId: EnergyEquipment
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: EnergyEquipment
+        version: v1
+        type: view
+      identifier: asset
+    name: Equipment
+    description: 'An automatically updated list of equipment related to the asset.
+
+      @name Equipment'
+    connectionType: multi_reverse_direct_relation
+  timeSeries:
+    source:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: EnergyTimeSeries
+        version: v1
+        type: view
+      identifier: assets
+    name: Time series
+    description: 'An automatically updated list of time series related to the asset.
+
+      @name Time series'
+    connectionType: multi_reverse_direct_relation
+  maintenanceOrders:
+    source:
+      space: energy_dm
+      externalId: EnergyMaintenanceOrder
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: EnergyMaintenanceOrder
+        version: v1
+        type: view
+      identifier: mainAsset
+    name: Maintenance Orders
+    description: 'An automatically updated list of maintenance orders related to this
+      asset.
+
+      @name Maintenance Orders'
+    connectionType: multi_reverse_direct_relation
+  notifications:
+    source:
+      space: energy_dm
+      externalId: EnergyNotification
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: EnergyNotification
+        version: v1
+        type: view
+      identifier: asset
+    name: Notifications
+    description: 'An automatically updated list of notifications related to this asset.
+
+      @name Notifications'
+    connectionType: multi_reverse_direct_relation
+  piping:
+    source:
+      space: energy_dm
+      externalId: EnergyPiping
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: EnergyPiping
+        version: v1
+        type: view
+      identifier: asset
+    name: Piping
+    description: An automatically updated list of piping lines related to this asset.
+    connectionType: multi_reverse_direct_relation
+  areaId:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: areaId
+    name: areaId
+    description: The area where the asset is located
+  tagComment:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: tagComment
+    name: tagComment
+    description: Comments related to the tag
+  elcStatusId:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: elcStatusId
+    name: elcStatusId
+    description: 'Source metadata: elcStatusId'
+  sourceDb:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: sourceDb
+    name: sourceDb
+    description: 'Source metadata: sourceDb'
+  sourceTable:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: sourceTable
+    name: sourceTable
+    description: 'Source metadata: sourceTable'
+  categoryId:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: categoryId
+    name: categoryId
+    description: 'Source metadata: categoryId'
+  contractorId:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: contractorId
+    name: contractorId
+    description: 'Source metadata: contractorId'
+  funcCodeId:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: funcCodeId
+    name: funcCodeId
+    description: 'Source metadata: funcCodeId'
+  locationId:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: locationId
+    name: locationId
+    description: 'Source metadata: locationId'
+  safetyCriticalElementId:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: safetyCriticalElementId
+    name: safetyCriticalElementId
+    description: 'Source metadata: safetyCriticalElementId'
+  systemId:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: systemId
+    name: systemId
+    description: 'Source metadata: systemId'
+  tagCreatedDate:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: tagCreatedDate
+    name: tagCreatedDate
+    description: 'Source metadata: tagCreatedDate'
+  tagCriticalLine:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: tagCriticalLine
+    name: tagCriticalLine
+    description: 'Source metadata: tagCriticalLine'
+  tagDesc:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: tagDesc
+    name: tagDesc
+    description: 'Source metadata: tagDesc'
+  tagGlobalId:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: tagGlobalId
+    name: tagGlobalId
+    description: 'Source metadata: tagGlobalId'
+  tagHistoryRequired:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: tagHistoryRequired
+    name: tagHistoryRequired
+    description: 'Source metadata: tagHistoryRequired'
+  tagId:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: tagId
+    name: tagId
+    description: 'Source metadata: tagId'
+  tagIdAncestor:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: tagIdAncestor
+    name: tagIdAncestor
+    description: 'Source metadata: tagIdAncestor'
+  tagIsActive:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: tagIsActive
+    name: tagIsActive
+    description: 'Source metadata: tagIsActive'
+  tagIsOwnedByProject:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: tagIsOwnedByProject
+    name: tagIsOwnedByProject
+    description: 'Source metadata: tagIsOwnedByProject'
+  tagLoop:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: tagLoop
+    name: tagLoop
+    description: 'Source metadata: tagLoop'
+  tagMainId:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: tagMainId
+    name: tagMainId
+    description: 'Source metadata: tagMainId'
+  tagName:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: tagName
+    name: tagName
+    description: 'Source metadata: tagName'
+  tagStatusChgDate:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: tagStatusChgDate
+    name: tagStatusChgDate
+    description: 'Source metadata: tagStatusChgDate'
+  tagUpdatedBy:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: tagUpdatedBy
+    name: tagUpdatedBy
+    description: 'Source metadata: tagUpdatedBy'
+  tagUpdatedDate:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: tagUpdatedDate
+    name: tagUpdatedDate
+    description: 'Source metadata: tagUpdatedDate'
+  abcIndicator:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: abcIndicator
+    name: abcIndicator
+    description: ABC indicator for the functional location. @name ABC Indicator
+  barrierArea:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: barrierArea
+    name: barrierArea
+    description: Barrier area for the functional location. @name Barrier Area
+  barrierElementPrimary:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: barrierElementPrimary
+    name: barrierElementPrimary
+    description: Primary barrier element for the functional location. @name Barrier
+      Element Primary
+  barrierElementSecondary:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: barrierElementSecondary
+    name: barrierElementSecondary
+    description: Secondary barrier element for the functional location. @name Barrier
+      Element Secondary
+  barrierElementTertiary:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: barrierElementTertiary
+    name: barrierElementTertiary
+    description: Tertiary barrier element for the functional location. @name Barrier
+      Element Tertiary
+  catalogProfile:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: catalogProfile
+    name: catalogProfile
+    description: Catalog profile for the functional location. @name Catalog Profile
+  catalogProfileDesc:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: catalogProfileDesc
+    name: catalogProfileDesc
+    description: Description of the catalog profile. @name Catalog Profile Description
+  category:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: category
+    name: category
+    description: Category of the functional location. @name Category
+  createdDate:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: createdDate
+    name: createdDate
+    description: Creation date of the functional location. @name Created Date
+  criticalityCombined:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: criticalityCombined
+    name: criticalityCombined
+    description: Combined criticality of the functional location. @name Criticality
+      Combined
+  criticalityCost:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: criticalityCost
+    name: criticalityCost
+    description: Cost criticality of the functional location. @name Criticality Cost
+  criticalityEnvironment:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: criticalityEnvironment
+    name: criticalityEnvironment
+    description: Environmental criticality of the functional location. @name Criticality
+      Environment
+  criticalityProduction:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: criticalityProduction
+    name: criticalityProduction
+    description: Production criticality of the functional location. @name Criticality
+      Production
+  criticalitySafety:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: criticalitySafety
+    name: criticalitySafety
+    description: Safety criticality of the functional location. @name Criticality
+      Safety
+  discipline:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: discipline
+    name: discipline
+    description: Discipline associated with the functional location. @name Discipline
+  disciplineType:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: disciplineType
+    name: disciplineType
+    description: Discipline type associated with the functional location. @name Discipline
+      Type
+  exAtexNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: exAtexNumber
+    name: exAtexNumber
+    description: Ex Atex number for the functional location. @name Ex Atex Number
+  exCode:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: exCode
+    name: exCode
+    description: Ex code for the functional location. @name Ex Code
+  functionalLocation:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: functionalLocation
+    name: functionalLocation
+    description: Functional location identifier. @name Functional Location
+  functionalLocationDesc:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: functionalLocationDesc
+    name: functionalLocationDesc
+    description: Description of the functional location. @name Functional Location
+      Description
+  groupDesc:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: groupDesc
+    name: groupDesc
+    description: Description of the group associated with the functional location.
+      @name Group Description
+  groupId:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: groupId
+    name: groupId
+    description: Group identifier associated with the functional location. @name Group
+      ID
+  inspCritCombined:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: inspCritCombined
+    name: inspCritCombined
+    description: Combined inspection criticality. @name Inspection Criticality Combined
+  inspCritCost:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: inspCritCost
+    name: inspCritCost
+    description: Inspection cost criticality. @name Inspection Criticality Cost
+  inspCritEnvironment:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: inspCritEnvironment
+    name: inspCritEnvironment
+    description: Inspection environmental criticality. @name Inspection Criticality
+      Environment
+  inspCritSafety:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: inspCritSafety
+    name: inspCritSafety
+    description: Inspection safety criticality. @name Inspection Criticality Safety
+  itemRedundancy:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: itemRedundancy
+    name: itemRedundancy
+    description: Item redundancy of the functional location. @name Item Redundancy
+  location:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: location
+    name: location
+    description: Location of the functional location. @name Location
+  locationDesc:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: locationDesc
+    name: locationDesc
+    description: Description of the location. @name Location Description
+  mainAsset:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: mainAsset
+    name: mainAsset
+    description: Main asset associated with the functional location. @name Main Asset
+  mainFunctionDesc:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: mainFunctionDesc
+    name: mainFunctionDesc
+    description: Description of the main function. @name Main Function Description
+  mainWorkCenter:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: mainWorkCenter
+    name: mainWorkCenter
+    description: Main work center for the functional location. @name Main Work Center
+  mainWorkCenterDesc:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: mainWorkCenterDesc
+    name: mainWorkCenterDesc
+    description: Description of the main work center. @name Main Work Center Description
+  maintenancePlant:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: maintenancePlant
+    name: maintenancePlant
+    description: Maintenance plant for the functional location. @name Maintenance
+      Plant
+  maintenancePlantDesc:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: maintenancePlantDesc
+    name: maintenancePlantDesc
+    description: Description of the maintenance plant. @name Maintenance Plant Description
+  objectNumber:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: objectNumber
+    name: objectNumber
+    description: Object number for the functional location. @name Object Number
+  objectType:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: objectType
+    name: objectType
+    description: Object type for the functional location. @name Object Type
+  objectTypeDesc:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: objectTypeDesc
+    name: objectTypeDesc
+    description: Description of the object type. @name Object Type Description
+  performanceStandard:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: performanceStandard
+    name: performanceStandard
+    description: Performance standard for the functional location. @name Performance
+      Standard
+  plannerGroup:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: plannerGroup
+    name: plannerGroup
+    description: Planner group for the functional location. @name Planner Group
+  plannerGroupDesc:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: plannerGroupDesc
+    name: plannerGroupDesc
+    description: Description of the planner group. @name Planner Group Description
+  planningPlant:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: planningPlant
+    name: planningPlant
+    description: Planning plant for the functional location. @name Planning Plant
+  planningPlantDesc:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: planningPlantDesc
+    name: planningPlantDesc
+    description: Description of the planning plant. @name Planning Plant Description
+  rbaConsequenceCost:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: rbaConsequenceCost
+    name: rbaConsequenceCost
+    description: RBA consequence cost. @name RBA Consequence Cost
+  rbaConsequenceEnvironment:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: rbaConsequenceEnvironment
+    name: rbaConsequenceEnvironment
+    description: RBA consequence environment. @name RBA Consequence Environment
+  rbaConsequenceMax:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: rbaConsequenceMax
+    name: rbaConsequenceMax
+    description: Maximum RBA consequence. @name RBA Consequence Max
+  rbaConsequenceProduction:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: rbaConsequenceProduction
+    name: rbaConsequenceProduction
+    description: RBA consequence production. @name RBA Consequence Production
+  rbaConsequenceSafety:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: rbaConsequenceSafety
+    name: rbaConsequenceSafety
+    description: RBA consequence safety. @name RBA Consequence Safety
+  rbaProbability:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: rbaProbability
+    name: rbaProbability
+    description: RBA probability. @name RBA Probability
+  rbaRisk:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: rbaRisk
+    name: rbaRisk
+    description: RBA risk. @name RBA Risk
+  rcmConsequenceCost:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: rcmConsequenceCost
+    name: rcmConsequenceCost
+    description: RCM consequence cost. @name RCM Consequence Cost
+  rcmConsequenceEnvironment:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: rcmConsequenceEnvironment
+    name: rcmConsequenceEnvironment
+    description: RCM consequence environment. @name RCM Consequence Environment
+  rcmConsequenceMax:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: rcmConsequenceMax
+    name: rcmConsequenceMax
+    description: Maximum RCM consequence. @name RCM Consequence Max
+  rcmConsequenceProduction:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: rcmConsequenceProduction
+    name: rcmConsequenceProduction
+    description: RCM consequence production. @name RCM Consequence Production
+  rcmConsequenceSafety:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: rcmConsequenceSafety
+    name: rcmConsequenceSafety
+    description: RCM consequence safety. @name RCM Consequence Safety
+  rcmCriticality:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: rcmCriticality
+    name: rcmCriticality
+    description: RCM criticality. @name RCM Criticality
+  rcmFrequency:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: rcmFrequency
+    name: rcmFrequency
+    description: RCM frequency. @name RCM Frequency
+  subFunctionCode:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: subFunctionCode
+    name: subFunctionCode
+    description: Sub-function code for the functional location. @name Sub Function
+      Code
+  subFunctionDesc:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: subFunctionDesc
+    name: subFunctionDesc
+    description: Description of the sub-function. @name Sub Function Description
+  superiorFunctionalLocation:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: superiorFunctionalLocation
+    name: superiorFunctionalLocation
+    description: Superior functional location. @name Superior Functional Location
+  systemDesc:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: systemDesc
+    name: systemDesc
+    description: System description for the functional location. @name System Description
+  systemStatus:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: systemStatus
+    name: systemStatus
+    description: System status of the functional location. @name System Status
+  userStatus:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: userStatus
+    name: userStatus
+    description: User status of the functional location. @name User Status
+  wbs:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: wbs
+    name: wbs
+    description: WBS element for the functional location. @name WBS
+  superiorFuncLocationTagDesc:
+    container:
+      space: energy_dm
+      externalId: EnergyAsset
+      type: container
+    containerPropertyIdentifier: superiorFuncLocationTagDesc
+    name: superiorFuncLocationTagDesc
+    description: Description of the superior functional location tag. @name Superior
+      Functional Location Tag Description
+  pipingFromThis:
+    source:
+      space: energy_dm
+      externalId: EnergyPiping
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: EnergyPiping
+        version: v1
+        type: view
+      identifier: fromAsset
+    name: Piping from this asset
+    description: Piping lines that originate from this asset (reverse of EnergyPiping.fromAsset).
+    connectionType: multi_reverse_direct_relation
+  pipingToThis:
+    source:
+      space: energy_dm
+      externalId: EnergyPiping
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: EnergyPiping
+        version: v1
+        type: view
+      identifier: toAsset
+    name: Piping to this asset
+    description: Piping lines that connect into this asset (reverse of EnergyPiping.toAsset).
+    connectionType: multi_reverse_direct_relation

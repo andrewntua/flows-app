@@ -1,0 +1,22 @@
+key,category,code,description,name
+fcause_10,Design-related causes,1.0,"Inadequate equipment design or configuration (shape, size, technology, configuration, operability, maintainability, etc.), but no further details known",General
+fcause_11,Design-related causes,1.1,Inadequate dimensioning/capacity,Improper capacity
+fcause_12,Design-related causes,1.2,Improper material selection,Improper material
+fcause_20,Fabrication/installation-related causes,2.0,"Failure related to fabrication or installation, but no further details known",General
+fcause_21,Fabrication/installation-related causes,2.1,Manufacturing or processing failure,Fabrication failure
+fcause_22,Fabrication/installation-related causes,2.2,Installation or assembly failure (assembly after maintenance not included),Installation failure
+fcause_30,Failure related to operation/maintenance,3.0,Failure related to operation/use or maintenance of the equipment but no further details known,General
+fcause_31,Failure related to operation/maintenance,3.1,"Off-design or unintended service conditions, e.g. compressor operation outside envelope, pressure above specification, etc.",Off-design service
+fcause_32,Failure related to operation/maintenance,3.2,"Human error: Mistake, misuse, negligence, oversights, etc. during operation (e.g. due to human fatigue)",Operating error
+fcause_33,Failure related to operation/maintenance,3.3,"Human error: Mistake, misuse, negligence, oversights, etc. during maintenance (e.g. due to human fatigue)",Maintenance error
+fcause_34,Failure related to operation/maintenance,3.4,Failure caused by wear and tear resulting from normal operation of the equipment unit,Expected wear and tear
+fcause_40,Failure related to management,4.0,"Failure related to management issues, but no further details known",General
+fcause_41,Failure related to management,4.1,"Human error: Failure related to procedures, specifications, drawings, reporting, etc. (e.g. due to human fatigue)",Documentation error
+fcause_42,Failure related to management,4.2,"Failure related to planning, organization, quality assurance, etc.",Management error
+fcause_50,Miscellaneous,5.0,Causes that do not fall into one of the categories listed above,Miscellaneous - general
+fcause_51,Miscellaneous,5.1,Failure investigated but no specific cause found,No cause found
+fcause_52,Miscellaneous,5.2,Common cause/mode,Common cause
+fcause_53,Miscellaneous,5.3,"Several causes are acting simultaneously. If one cause is predominant, this cause should be highlighted",Combined causes
+fcause_54,Miscellaneous,5.4,"Failure caused by the failure of another equipment unit, subunit or maintainable item (cascading failure)",Other unit/ cascading failure
+fcause_55,Miscellaneous,5.5,None of the above codes applies. Specify cause as free text,Other
+fcause_56,Miscellaneous,5.6,No information available related to the failure cause,Unknown

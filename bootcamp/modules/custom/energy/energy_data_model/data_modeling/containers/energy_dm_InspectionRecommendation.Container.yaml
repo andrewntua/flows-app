@@ -1,0 +1,184 @@
+space: energy_dm
+externalId: InspectionRecommendation
+name: Inspection Recommendation Container
+description: RBI inspection recommendation for a piping line with risk, NDE scope, cost, and deadlines
+usedFor: node
+properties:
+  timeframe:
+    type:
+      type: enum
+      values:
+        Immediate:
+          name: Immediate
+          description: Inspect immediately; risk threshold exceeded or imminent.
+        NearTerm:
+          name: Near-term
+          description: Inspect within the near-term planning window.
+        MediumTerm:
+          name: Medium-term
+          description: Inspect within the medium-term planning window.
+        Deferral:
+          name: Deferral
+          description: Defer inspection to a later campaign or turnaround.
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Timeframe
+    description: Recommended inspection urgency (Immediate, Near-term, Medium-term, Deferral)
+  currentRisk:
+    type:
+      type: enum
+      values:
+        VeryHigh:
+          name: Very High
+          description: Very high current risk classification.
+        High:
+          name: High
+          description: High current risk classification.
+        Medium:
+          name: Medium
+          description: Medium current risk classification.
+        Low:
+          name: Low
+          description: Low current risk classification.
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Current risk
+    description: Current RBI risk classification for the recommended line (Very High, High, Medium, Low)
+  futureRisk:
+    type:
+      type: enum
+      values:
+        VeryHigh:
+          name: Very High
+          description: Very high projected risk classification after inspection deferral.
+        High:
+          name: High
+          description: High projected risk classification after inspection deferral.
+        Medium:
+          name: Medium
+          description: Medium projected risk classification after inspection deferral.
+        Low:
+          name: Low
+          description: Low projected risk classification after inspection deferral.
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Future risk
+    description: Projected RBI risk if inspection is deferred (Very High, High, Medium, Low)
+  ndeMethod:
+    type:
+      type: enum
+      values:
+        PulsedEddyCurrentPEC:
+          name: Pulsed Eddy Current (PEC)
+          description: Pulsed eddy current survey with insulation in situ.
+        UTGridMapping:
+          name: UT Grid Mapping (partial insulation removal)
+          description: Ultrasonic thickness grid mapping with partial insulation removal.
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: NDE method
+    description: Recommended non-destructive examination technique
+  coverage:
+    type:
+      list: false
+      type: float64
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Coverage
+    description: Required inspection coverage as a percentage (0–100)
+  inspectionEffectiveness:
+    type:
+      type: enum
+      values:
+        A:
+          name: A
+          description: Highly effective (>90% POD)
+        B:
+          name: B
+          description: Usually effective (>70% POD)
+        C:
+          name: C
+          description: Fairly effective (>50% POD)
+        D:
+          name: D
+          description: Poorly effective (<50% POD)
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Inspection effectiveness
+    description: API 581 target inspection effectiveness category (A–D)
+  latestDeadline:
+    type:
+      list: false
+      type: timestamp
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Latest deadline
+    description: Latest allowable date to complete the recommended inspection
+  cost:
+    type:
+      list: false
+      type: int32
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Cost
+    description: Estimated inspection cost as a whole number
+  costUnit:
+    type:
+      type: enum
+      values:
+        USD:
+          name: USD
+          description: United States dollars.
+        NOK:
+          name: NOK
+          description: Norwegian kroner.
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Cost unit
+    description: Currency for the estimated inspection cost (USD, NOK)
+  loop:
+    type:
+      list: false
+      type: direct
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Loop
+    description: Corrosion loop this recommendation belongs to
+  asset:
+    type:
+      list: false
+      type: direct
+    immutable: false
+    nullable: true
+    autoIncrement: false
+    name: Asset
+    description: Piping EnergyAsset this inspection recommendation applies to
+indexes:
+  byLatestDeadline:
+    indexType: btree
+    properties:
+      - latestDeadline
+    bySpace: false
+    cursorable: true
+  byLoop:
+    indexType: btree
+    properties:
+      - loop
+    bySpace: false
+    cursorable: true
+  byAsset:
+    indexType: btree
+    properties:
+      - asset
+    bySpace: false
+    cursorable: true

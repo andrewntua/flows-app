@@ -1,0 +1,13 @@
+externalId: fn_diagram_detect_tag_annotations
+name: Diagram Detect Tag Annotations
+description: Detect asset tags on P&ID PDFs and create diagrams.AssetLink edges
+space: energy_instances
+functionPath: ./handler.py
+runtime: py311
+envVars:
+  INSTANCE_SPACE: energy_instances
+  DATA_MODEL_SPACE: energy_dm
+  VIEW_VERSION: v1
+  ASSET_PREFIX: 'WMT:'
+metadata:
+  cognite-toolkit-hash: /=ab35e415;config.py=66c2c223;diagram_annotations.py=0d1a4397;handler.py=bea8c60d;requirements.txt=265fa676

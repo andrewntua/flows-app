@@ -1,0 +1,9 @@
+- space: energy_dm
+  description: energy_dm
+  name: energy_dm
+- space: energy_instances
+  description: energy_instances
+  name: energy_instances
+- space: energy_time_series
+  description: energy_time_series
+  name: energy_time_series

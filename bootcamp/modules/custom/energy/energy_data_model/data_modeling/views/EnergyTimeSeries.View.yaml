@@ -1,0 +1,569 @@
+space: energy_dm
+externalId: EnergyTimeSeries
+name: Time Series
+description: 'Represents a series of data points in time order.
+
+  @name Time Series'
+implements:
+- space: cdf_cdm
+  externalId: CogniteSourceable
+  version: v1
+  type: view
+- space: cdf_cdm
+  externalId: CogniteDescribable
+  version: v1
+  type: view
+- space: cdf_cdm
+  externalId: CogniteTimeSeries
+  version: v1
+  type: view
+version: v1
+properties:
+  assets:
+    container:
+      space: cdf_cdm
+      externalId: CogniteTimeSeries
+      type: container
+    containerPropertyIdentifier: assets
+    name: Assets
+    description: 'A list of assets the time series is related to.
+
+      @name Assets'
+    source:
+      space: energy_dm
+      externalId: EnergyAsset
+      version: v1
+      type: view
+  equipment:
+    container:
+      space: cdf_cdm
+      externalId: CogniteTimeSeries
+      type: container
+    containerPropertyIdentifier: equipment
+    name: Equipment
+    description: 'A list of equipment the time series is related to.
+
+      @name Equipment'
+    source:
+      space: energy_dm
+      externalId: EnergyEquipment
+      version: v1
+      type: view
+  piping:
+    source:
+      space: energy_dm
+      externalId: EnergyPiping
+      version: v1
+      type: view
+    through:
+      source:
+        space: energy_dm
+        externalId: EnergyPiping
+        version: v1
+        type: view
+      identifier: timeSeries
+    name: Piping
+    description: An automatically updated list of piping lines related to this time series.
+    connectionType: multi_reverse_direct_relation
+  pointId:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: pointId
+    name: Point ID
+    description: 'A unique numeric identifier assigned by the PI Data Archive
+
+      @name Point ID'
+  pointSource:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: pointSource
+    name: Point Source
+    description: 'A 1- or 2-character code that identifies the source of the data
+      (e.g., a system or interface). Used in naming conventions and data routing.
+
+      @name Point Source'
+  pointType:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: pointType
+    name: Point Type
+    description: 'The data type of the value (e.g., float32, float64, int32, digital,
+      string, timestamp).
+
+      @name Point Type'
+  compdev:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: compdev
+    name: Comp Dev
+    description: 'Source metadata: compdev
+
+      @name Comp Dev'
+  location5:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: location5
+    name: Location 5
+    description: 'Source metadata: location5
+
+      @name Location 5'
+  convers:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: convers
+    name: Convers
+    description: 'Source metadata: convers
+
+      @name Convers'
+  descriptor:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: descriptor
+    name: Descriptor
+    description: 'Source metadata: descriptor
+
+      @name Descriptor'
+  contextMatchString:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: contextMatchString
+    name: Context Match String
+    description: 'Source metadata: contextMatchString
+
+      @name Context Match String'
+  contextClass:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: contextClass
+    name: Context Class
+    description: 'Source metadata: contextClass
+
+      @name Context Class'
+  digitalset:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: digitalset
+    name: Digital Set
+    description: 'Source metadata: digitalset
+
+      @name Digital Set'
+  zero:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: zero
+    name: Zero
+    description: 'Source metadata: zero
+
+      @name Zero'
+  filtercode:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: filtercode
+    name: Filter Code
+    description: 'Source metadata: filtercode
+
+      @name Filter Code'
+  compdevpercent:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: compdevpercent
+    name: Comp Dev Percent
+    description: 'Source metadata: compdevpercent
+
+      @name Comp Dev Percent'
+  compressing:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: compressing
+    name: Compressing
+    description: 'Source metadata: compressing
+
+      @name Compressing'
+  tag:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: tag
+    name: Tag
+    description: 'Source metadata: tag
+
+      @name Tag'
+  srcptid:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: srcptid
+    name: Source Point ID
+    description: 'Source metadata: srcptid
+
+      @name Source Point ID'
+  displaydigits:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: displaydigits
+    name: Display Digits
+    description: 'Source metadata: displaydigits
+
+      @name Display Digits'
+  recno:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: recno
+    name: Record Number
+    description: 'Source metadata: recno
+
+      @name Record Number'
+  excdev:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: excdev
+    name: Exc Dev
+    description: 'Source metadata: excdev
+
+      @name Exc Dev'
+  userreal2:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: userreal2
+    name: User Real 2
+    description: 'Source metadata: userreal2
+
+      @name User Real 2'
+  userreal1:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: userreal1
+    name: User Real 1
+    description: 'Source metadata: userreal1
+
+      @name User Real 1'
+  contextAlgorithm:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: contextAlgorithm
+    name: Context Algorithm
+    description: 'Source metadata: contextAlgorithm
+
+      @name Context Algorithm'
+  totalcode:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: totalcode
+    name: Total Code
+    description: 'Source metadata: totalcode
+
+      @name Total Code'
+  ptclassname:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: ptclassname
+    name: Point Class Name
+    description: 'Source metadata: ptclassname
+
+      @name Point Class Name'
+  typicalvalue:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: typicalvalue
+    name: Typical Value
+    description: 'Source metadata: typicalvalue
+
+      @name Typical Value'
+  location1:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: location1
+    name: Location 1
+    description: 'Source metadata: location1
+
+      @name Location 1'
+  location2:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: location2
+    name: Location 2
+    description: 'Source metadata: location2
+
+      @name Location 2'
+  location3:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: location3
+    name: Location 3
+    description: 'Source metadata: location3
+
+      @name Location 3'
+  location4:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: location4
+    name: Location 4
+    description: 'Source metadata: location4
+
+      @name Location 4'
+  shutdown:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: shutdown
+    name: Shutdown
+    description: 'Source metadata: shutdown
+
+      @name Shutdown'
+  compmin:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: compmin
+    name: Comp Min
+    description: 'Source metadata: compmin
+
+      @name Comp Min'
+  ptclassrev:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: ptclassrev
+    name: Point Class Rev
+    description: 'Source metadata: ptclassrev
+
+      @name Point Class Rev'
+  scan:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: scan
+    name: Scan
+    description: 'Source metadata: scan
+
+      @name Scan'
+  userint2:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: userint2
+    name: User Int 2
+    description: 'Source metadata: userint2
+
+      @name User Int 2'
+  userint1:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: userint1
+    name: User Int 1
+    description: 'Source metadata: userint1
+
+      @name User Int 1'
+  excdevpercent:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: excdevpercent
+    name: Exc Dev Percent
+    description: 'Source metadata: excdevpercent
+
+      @name Exc Dev Percent'
+  archiving:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: archiving
+    name: Archiving
+    description: 'Source metadata: archiving
+
+      @name Archiving'
+  instrumenttag:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: instrumenttag
+    name: Instrument Tag
+    description: 'Source metadata: instrumenttag
+
+      @name Instrument Tag'
+  compmax:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: compmax
+    name: Comp Max
+    description: 'Source metadata: compmax
+
+      @name Comp Max'
+  ptclassid:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: ptclassid
+    name: Point Class ID
+    description: 'Source metadata: ptclassid
+
+      @name Point Class ID'
+  squareroot:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: squareroot
+    name: Square Root
+    description: 'Source metadata: squareroot
+
+      @name Square Root'
+  sourcetag:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: sourcetag
+    name: Source Tag
+    description: 'Source metadata: sourcetag
+
+      @name Source Tag'
+  excmin:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: excmin
+    name: Exc Min
+    description: 'Source metadata: excmin
+
+      @name Exc Min'
+  contextConfidenceScore:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: contextConfidenceScore
+    name: Context Confidence Score
+    description: 'Source metadata: contextConfidenceScore
+
+      @name Context Confidence Score'
+  contextAgent:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: contextAgent
+    name: Context Agent
+    description: 'Source metadata: contextAgent
+
+      @name Context Agent'
+  future:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: future
+    name: Future
+    description: 'Source metadata: future
+
+      @name Future'
+  excmax:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: excmax
+    name: Exc Max
+    description: 'Source metadata: excmax
+
+      @name Exc Max'
+  step:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: step
+    name: Step
+    description: 'Source metadata: step
+
+      @name Step'
+  engunits:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: engunits
+    name: Engineering Units
+    description: 'Source metadata: engunits
+
+      @name Engineering Units'
+  span:
+    container:
+      space: energy_dm
+      externalId: EnergyTimeSeries
+      type: container
+    containerPropertyIdentifier: span
+    name: Span
+    description: 'Source metadata: span
+
+      @name Span'

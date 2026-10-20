@@ -1,0 +1,11 @@
+externalId: fn_oid_replicate_data_points
+name: OID replicate data points
+description: Copy Open Industrial Data time series datapoints from publicdata into energy time series instances
+space: "{{ energyTimeSeriesSpace }}"
+functionPath: ./handler.py
+runtime: py311
+secrets:
+  oid-secret: ${OID_PUBLICDATA_CLIENT_SECRET}
+envVars:
+  INSTANCE_SPACE: "{{ energyTimeSeriesSpace }}"
+  OID_ROOT_ASSET_EXTERNAL_ID: "{{ oidRootAssetExternalId }}"

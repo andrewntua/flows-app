@@ -1,0 +1,5 @@
+externalId: wf_energy_base_raw_to_dm
+description: >-
+  Parallel node upsert from RAW for all energy_dm domain views, then direct-relation
+  overlays. Run after energy_data_model is deployed and RAW rows are uploaded.
+dataSetExternalId: '{{ energy_base_raw_ingestion_dataset_external_id }}'

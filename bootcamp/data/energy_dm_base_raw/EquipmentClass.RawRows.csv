@@ -1,0 +1,111 @@
+key,code,failureModesSpace,failureModesExternalIds,failureModesJson,standard,description,name
+AI,AI,,,[],ISO 14224,Utilities,Air-supply equipment
+AM,AM,,,[],ISO 14224,Marine,Anchor windlasses and mooring equipment
+BL,BL,,,[],ISO 14224,Rotating,Blowers and fans
+BO,BO,,,[],ISO 14224,Drilling,Subsea blowout preventers (BOP)
+BT,BT,,,[],ISO 14224,Drilling,Surface blowout preventers (BOP)
+CA,CA,,,[],ISO 14224,"Analysis, Test, and Calculation",CA
+CE,CE,energy_instances,air|brd|elf|elu|ero|fts|hio|inl|loo|noi|ohe|oth|pde|plu|ser|std|stp|unk|ust|vib,,ISO 14224,Rotating,Combustion engines
+CF,CF,,,[],ISO 14224,Rotating,Centrifuges
+CG,CG,,,[],ISO 14224,Drilling,Cementing equipment
+CI,CI,,,[],ISO 14224,Subsea,Subsea intervention
+CL,CL,energy_instances,ero|ftf|hio|loo|ser|spo|unk,,ISO 14224,Safety and control,Control logic units
+CO,CO,energy_instances,air|brd|elp|elu|ero|fts|hio|inl|loo|noi|ohe|oth|pde|plu|ser|std|stp|unk|ust|vib,,ISO 14224,Rotating,Compressors
+CR,CR,energy_instances,air|brd|elu|fro|fti|fts|inl|loa|noi|ohe|oth|pde|ser|slp|spo|std|unk|vib,,ISO 14224,Mechanical,Cranes
+CS,CS,,,[],ISO 14224,Subsea,Subsea production control
+CV,CV,,,[],ISO 14224,Mechanical,Converyors and elevators
+DC,DC,,,[],ISO 14224,Drilling,Choke and manifolds
+DD,DD,,,[],ISO 14224,Drilling,Drilling and completion risers
+DE,DE,,,[],ISO 14224,Drilling,Derrick
+DH,DH,,,[],ISO 14224,Drilling,Pipe handling equipment
+DI,DI,,,[],ISO 14224,Drilling,Diverters
+DM,DM,,,[],ISO 14224,Drilling,Mud-treatment equipment
+DP,DP,,,[],ISO 14224,Marine,Dynamic positioning equipment
+DR,DR,,,[],ISO 14224,Drilling,Riser compensators
+DS,DS,,,[],ISO 14224,Data Sheets,DS
+DT,DT,,,[],ISO 14224,Subsea,Dry tree risers
+DW,DW,,,[],ISO 14224,Drilling,Drawworks
+EC,EC,,,[],ISO 14224,Safety and control,Emergency communication equipment
+EG,EG,energy_instances,air|brd|elu|fts|loo|noi|ohe|oth|pde|ser|std|stp|unk|ust|vib,,ISO 14224,Rotating,Electric generators
+EM,EM,energy_instances,air|brd|elu|ero|fts|hio|loo|noi|ohe|oth|pde|ser|std|stp|unk|ust|vib,,ISO 14224,Rotating,Electric motors
+EP,EP,,,[],ISO 14224,Subsea,Subsea electrical power distribution
+ER,ER,,,[],ISO 14224,Safety and control,"Escape, evacuation and rescue"
+ESP,ESP,,,[],ISO 14224,Well completion,Electrical submersible pumps
+FC,FC,energy_instances,air|brd|dop|elu|ero|ftf|fti|ftr|hio|inl|loo|ohe|oth|pde|ser|spo|unk|ust,,ISO 14224,Electrical,Frequency converters
+FE,FE,,,[],ISO 14224,Utilities,Flare ignition equipment
+FF,FF,,,[],ISO 14224,Safety and control,Fire-fighting equipment
+FG,FG,energy_instances,ero|ftf|hio|loo|noo|oth|ser|shh|sll|spo|unk|vlo,,ISO 14224,Safety and control,Fire and gas detectors
+FGA,FGA,energy_instances,ero|ftf|hio|loo|noo|oth|ser|shh|sll|spo|unk,,ISO 14224,Safety and control,Fire detectors
+FGB,FGB,energy_instances,ero|ftf|hio|loo|noo|oth|shh|sll|spo|unk|vlo,,ISO 14224,Safety and control,Gas detectors
+FI,FI,,,[],ISO 14224,Safety and control,Flare ignition
+FL,FL,,,[],ISO 14224,Subsea,Subsea flowlines
+FS,FS,,,[],ISO 14224,Mechanical,Filters and strainers
+GT,GT,energy_instances,air|brd|elf|elp|elu|ero|fts|hio|inl|loo|noi|ohe|oth|pde|plu|ser|std|unk|ust|vib,,ISO 14224,Rotating,Gas turbines
+HB,HB,energy_instances,air|elp|elu|iht|inl|ohe|oth|pde|plu|ser|std|unk,,ISO 14224,Mechanical,Heaters and boilers
+HC,HC,,,[],ISO 14224,Utilities,Heating/cooling media
+HE,HE,energy_instances,air|elp|elu|iht|inl|oth|pde|plu|ser|std|unk,,ISO 14224,Mechanical,Heat exchangers
+HP,HP,,,[],ISO 14224,Utilities,Hydraulic power units
+HT,HT,,,[],ISO 14224,Marine,Helicopter deck with equipment
+HV,HV,,,[],ISO 14224,Auxiliaries,HVAC equipment
+IC,IC,,,[],ISO 14224,Marine,De-icing equipment
+IG,IG,,,[],ISO 14224,Safety and control,Inert-gas equipment
+IP,IP,energy_instances,elp|elu|ero|ftf|hio|loo|noo|oth|ser|spo|unk,,ISO 14224,Safety and control,Input devices
+JF,JF,,,[],ISO 14224,Marine,Jacking and fixation
+LA,LA,,,[],ISO 14224,Lists/Registers,LA
+LB,LB,energy_instances,air|brd|dop|elu|ftf|fts|inl|loa|loo|noi|ohe|oth|pow|ptf|ser|slp|spo|std|stp|unk|ust|vib,,ISO 14224,Safety and control,Lifeboats
+LE,LE,,,[],ISO 14224,Rotating,Liquid expanders
+MA,MA,,,[],ISO 14224,Equipment User Manual (ref. NS5820),MA
+MC,MC,,,[],ISO 14224,Spare Parts List,MC
+MD,MD,,,[],ISO 14224,Marine,Marine disconnection equipment
+MI,MI,,,[],ISO 14224,Rotating,Mixers
+NI,NI,,,[],ISO 14224,Utilities,Nitrogen-supply equipment
+NO,NO,energy_instances,dop|fto|oth|plu|ser|spo|std,,ISO 14224,Safety and control,Nozzles
+OC,OC,,,[],ISO 14224,Utilities,Open /Close drain equipment
+OI,OI,,,[],ISO 14224,Well intervention,Subsea well intervention
+PC,PC,,,[],ISO 14224,Electrical,Power cables and terminations (topside/onshore)
+PI,PI,energy_instances,air|brd|elp|elu|inl|noi|ohe|oth|pde|plu|ptf|ser|std|unk|vib,,ISO 14224,Mechanical,Piping
+PL,PL,,,[],ISO 14224,Mechanical,Onshore pipelines
+PR,PR,,,[],ISO 14224,Subsea,Risers
+PT,PT,energy_instances,air|elu|fov|ftf|inl|ohe|oth|pde|plu|ser|std|unk,,ISO 14224,Electrical,Power transformers
+PU,PU,energy_instances,air|brd|elp|elu|ero|fts|hio|inl|loo|noi|ohe|oth|pde|plu|ser|std|unk|ust|vib,,ISO 14224,Rotating,Pumps
+SC,SC,,,[],ISO 14224,Subsea,Subsea compressors
+SD,SD,,,[],ISO 14224,Subsea,Subsea diving equipment
+SE,SE,,,[],ISO 14224,Mechanical,Steam ejectors
+SG,SG,energy_instances,elu|ftc|ftf|fti|fto|noi|ohe|oth|spo|unk|ust|vib,,ISO 14224,Electrical,Switchgears
+SH,SH,,,[],ISO 14224,Subsea,Subsea heat exchangers
+SI,SI,,,[],ISO 14224,Mechanical,Silos
+SL,SL,,,[],ISO 14224,Subsea,Subsea pipelines
+SP,SP,,,[],ISO 14224,Subsea,Subsea pumps
+SS,SS,,,[],ISO 14224,Well completion,Downhole safety valves
+ST,ST,energy_instances,air|brd|elf|elp|elu|ero|fts|hio|inl|loo|noi|ohe|oth|pde|plu|ser|std|unk|ust|vib,,ISO 14224,Rotating,Steam turbines
+SU,SU,,,[],ISO 14224,Utilities,De-superheaters
+SV,SV,,,[],ISO 14224,Subsea,Subsea pressure vessels
+SW,SW,energy_instances,air|elp|elu|fco|fro|fti|inl|lbp|oth|pde|plu|ptf|ser|std|unk,,ISO 14224,Mechanical,Swivels
+TA,TA,energy_instances,air|elp|elu|flp|iht|inl|lob|oth|pde|plu|sbu|ser|std|unk,,ISO 14224,Plans/Schedules,TA
+TB,TB,,,[],ISO 14224,Work Plans,TB
+TC,TC,,,[],ISO 14224,Safety and control,Telecommunications
+TD,TD,,,[],ISO 14224,Drilling,Top drives
+TE,TE,energy_instances,air|brd|elp|elu|ero|fts|hio|inl|loo|noi|ohe|oth|pde|plu|ser|std|unk|ust|vib,,ISO 14224,Estimates,TE
+TH,TH,,,[],ISO 14224,Marine,Thrusters
+TM,TM,,,[],ISO 14224,Subsea,Subsea templates
+TO,TO,,,[],ISO 14224,Marine,Towing equipment
+TU,TU,energy_instances,air|fco|fro|ftd|fti|lob|mof|noi|oth|pde|ser|std|unk,,ISO 14224,Mechanical,Turrets
+UP,UP,energy_instances,ero|fof|fov|ftf|ohe|oth|pde|ser|spo|unk,,ISO 14224,Electrical,Uninterruptible power supply
+VA,VA,energy_instances,air|dop|elp|elu|ftc|fto|hio|inl|lcp|loo|noi|oth|plu|ser|spo|std|unk|vib,,ISO 14224,Manufacturing/Fabrication and Verifying Documentation,VA
+VE,VE,energy_instances,air|elp|elu|iht|oth|pde|plu|sbu|ser|std|unk,,ISO 14224,Mechanical,Pressure vessels
+W1,W1,,,[],ISO 14224,Well intervention,"Coiled tubing, surface equipment"
+W1-Snubbing,W1-Snubbing,,,[],ISO 14224,Well intervention,"Snubbing, surface equipment"
+W1-Wireline,W1-Wireline,,,[],ISO 14224,Well intervention,"Wireline, surface equipment"
+W2,W2,,,[],ISO 14224,Well intervention,"Coiled tubing, work strings"
+W2-Snubbing,W2-Snubbing,,,[],ISO 14224,Well intervention,"Snubbing, work strings"
+W2-Wireline,W2-Wireline,,,[],ISO 14224,Well intervention,"Wireline, slick lines, braided cables and electric cables"
+W3,W3,,,[],ISO 14224,Well intervention,"Coiled tubing, bottom-hole assemblies"
+W3-Snubbing,W3-Snubbing,,,[],ISO 14224,Well intervention,"Snubbing, pipes and bottom hole assemblies"
+W3-Wireline,W3-Wireline,,,[],ISO 14224,Well intervention,"Wireline, bottom-hole assemblies"
+WC,WC,,,[],ISO 14224,Well intervention,"Coiled tubing, surface well control equipment"
+WC-Snubbing,WC-Snubbing,,,[],ISO 14224,Well intervention,"Snubbing, surface well control equipment"
+WC-Wireline,WC-Wireline,,,[],ISO 14224,Well intervention,"Wireline, surface well control equipment"
+WE,WE,,,[],ISO 14224,Well completion,Downhole well completion
+WI,WI,energy_instances,air|brd|elu|fro|fts|loa|loo|noi|ohe|oth|pde|ser|slp|spo|std|stp|unk|vib,,ISO 14224,Mechanical,Winches
+XD,XD,,,[],ISO 14224,General Arrangement,XD
+XT,XT,,,[],ISO 14224,Wiring Diagrams,XT

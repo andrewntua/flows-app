@@ -1,0 +1,12 @@
+externalId: energy_location
+name: Energy
+dataModels:
+- space: energy_dm
+  externalId: energy_dm
+  version: v1
+instanceSpaces:
+- energy_instances
+- energy_time_series
+scene:
+  externalId: energy_scene
+  space: energy_instances

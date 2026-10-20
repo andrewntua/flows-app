@@ -1,0 +1,124 @@
+space: energy_dm
+externalId: WallThicknessMeasuringPoint
+name: Wall Thickness Measuring Point Container
+description: Individual wall thickness inspection reading at a condition monitoring location.
+usedFor: node
+properties:
+  name:
+    type:
+      list: false
+      type: text
+    nullable: true
+    name: Name
+    description: Display label for this reading
+  measurementId:
+    type:
+      list: false
+      type: text
+    nullable: true
+    name: Measurement ID
+    description: Reading identifier (e.g. UT-2024-001)
+  inspectionDate:
+    type:
+      list: false
+      type: timestamp
+    nullable: false
+    name: Inspection date
+    description: Date of the thickness measurement
+  measuredThicknessMm:
+    type:
+      list: false
+      type: float64
+    nullable: false
+    name: Measured thickness
+    description: Measured wall thickness (mm)
+  technique:
+    type:
+      type: enum
+      values:
+        UT:
+          name: Ultrasonic (UT)
+        PEC:
+          name: Pulsed eddy current (PEC)
+        RT:
+          name: Radiography (RT)
+        EVI:
+          name: External visual (EVI)
+    nullable: true
+    name: Technique
+    description: NDE technique used
+  measuredBy:
+    type:
+      list: false
+      type: text
+    nullable: true
+    name: Measured by
+    description: Inspector or contractor
+  findings:
+    type:
+      list: false
+      type: text
+    nullable: true
+    name: Findings
+    description: Inspection observations
+  corrosionRateMmPerYr:
+    type:
+      list: false
+      type: float64
+    nullable: true
+    name: Corrosion rate
+    description: Calculated corrosion rate since previous reading (mm/yr)
+  inspectionEffectiveness:
+    type:
+      type: enum
+      values:
+        A:
+          name: A
+        B:
+          name: B
+        C:
+          name: C
+        D:
+          name: D
+    nullable: true
+    name: Inspection effectiveness
+    description: API 581 inspection effectiveness category
+  positionX:
+    type:
+      list: false
+      type: float64
+    nullable: true
+    name: Position X
+    description: Model-space X on pipe surface (metres); usually matches parent CML
+  positionY:
+    type:
+      list: false
+      type: float64
+    nullable: true
+    name: Position Y
+    description: Model-space Y on pipe surface (metres)
+  positionZ:
+    type:
+      list: false
+      type: float64
+    nullable: true
+    name: Position Z
+    description: Model-space Z on pipe surface (metres)
+  conditionMonitoringLocation:
+    type:
+      list: false
+      type: direct
+    nullable: true
+    name: Condition monitoring location
+    description: Parent CML for this reading
+indexes:
+  byCml:
+    indexType: btree
+    properties:
+      - conditionMonitoringLocation
+    cursorable: true
+  byInspectionDate:
+    indexType: btree
+    properties:
+      - inspectionDate
+    cursorable: true

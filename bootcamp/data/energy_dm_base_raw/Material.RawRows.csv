@@ -1,0 +1,4 @@
+key,coated,cuiPeakMaxC,cuiPeakMinC,cuiSusceptibilityMaxC,cuiSusceptibilityMinC,description,name
+MAT-22CR-DUPLEX,false,150,80,205,60,22% chromium duplex stainless steel,22% Cr Duplex
+MAT-316-SS,false,150,60,205,60,316 stainless steel,316 SS
+MAT-CARBON-STEEL,false,120,50,175,-12,Carbon steel,Carbon Steel

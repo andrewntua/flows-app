@@ -1,0 +1,14 @@
+externalId: fn_oid_replicate_data_points
+name: OID replicate data points
+description: Copy Open Industrial Data time series datapoints from publicdata into
+  energy time series instances
+space: energy_time_series
+functionPath: ./handler.py
+runtime: py311
+secrets:
+  oid-secret: ${OID_PUBLICDATA_CLIENT_SECRET}
+envVars:
+  INSTANCE_SPACE: energy_time_series
+  OID_ROOT_ASSET_EXTERNAL_ID: WMT:Aker BP
+metadata:
+  cognite-toolkit-hash: /=1838291d;handler.py=660b3d19;oid_replication.py=1e257396;requirements.txt=265fa676

@@ -1,0 +1,6 @@
+- externalId: "{{energy_base_raw_ingestion_dataset_external_id}}"
+  name: "{{energy_base_raw_ingestion_dataset_name}}"
+  description: Dataset for energy_dm RAW to DM transformations and workflow
+  writeProtected: false
+  metadata:
+    origin: cognite-toolkit
